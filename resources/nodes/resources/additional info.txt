@@ -1,0 +1,6 @@
+flags:{
+  highway: 991234
+  water: 987266/987267
+  city street: 987138
+}
+  

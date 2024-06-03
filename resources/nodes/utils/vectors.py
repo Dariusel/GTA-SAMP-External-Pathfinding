@@ -18,12 +18,15 @@ class Vector3():
     
     def distance(self, other):
         return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2 + (self.z - other.z)**2)
+    
+    def round(self, digits=2):
+        return Vector3(round(self.x, digits), round(self.y, digits), round(self.z, digits))
 
 
 class Vector2():
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
+        self.x = float(x)
+        self.y = float(y)
     
     
     def __repr__(self):
@@ -37,3 +40,6 @@ class Vector2():
     
     def distance(self, other):
         return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
+    
+    def round(self, digits=2):
+        return Vector2(round(self.x, digits), round(self.y, digits))
