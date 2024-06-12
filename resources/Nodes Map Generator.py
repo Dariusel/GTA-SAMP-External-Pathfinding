@@ -2,7 +2,7 @@ from PIL import Image
 from matplotlib import pyplot as plt
 
 from utils.vectors import Vector2
-from utils.json_utils import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA
+from utils.file_paths import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA
 from utils.nodes_classes import PathNode
 from utils.map_conversions import ingame_to_image_coords, image_to_ingame_coords
 from resources.utils import json_utils
@@ -15,14 +15,14 @@ MAP_LOGS = 'data/nodes_data/debug/map_logs.json'
 
 
 def display_map(nodes_array=None):
-    mapImg = Image.open(MAP_PATH)
+    map_img = Image.open(MAP_PATH)
 
     fig, ax = plt.subplots()
-    plt.imshow(mapImg)
+    plt.imshow(map_img)
 
     if nodes_array:
         for node in nodes_array:
-            node_pos = ingame_to_image_coords(Vector2(node.x, node.y), MAP_PATH)
+            node_pos = ingame_to_image_coords(Vector2(node.x, node.y), map_img)
             plt.plot(node_pos.x, node_pos.y, 'r.', markersize=2)
 
     fig.canvas.mpl_connect('button_press_event', on_figure_click)
@@ -32,11 +32,12 @@ def display_map(nodes_array=None):
 
 def on_figure_click(event):
     click_pos = Vector2(event.xdata, event.ydata)
-    click_pos_ingame = image_to_ingame_coords(click_pos, MAP_PATH).round()
+    map_img = Image.open(MAP_PATH)
+    click_pos_ingame = image_to_ingame_coords(click_pos, map_img).round()
 
-    clicked_node = get_closest_node_to_click(click_pos_ingame)
+    clicked_node = PathNode.get_closest_node_to_pos(nodes_data, click_pos_ingame)
 
-    print(f'ID: {clicked_node[0]}\n{clicked_node[1].to_dict()}')
+    print(f'ID: {clicked_node.node_id}\n{clicked_node.to_dict()}')
 
 
 def get_closest_node_to_click(click_pos):
@@ -66,7 +67,7 @@ def get_nodes_data(nodes_percent=100, only_display_nodes=[], only_display_segmen
 
 
     # Do not modify variables
-    nodes_data = json_utils.load_json(json_utils.SOLVED_PATH_NODES_DATA)
+    nodes_data = json_utils.load_json(NODES_DATA_JSON)
 
     total_nodes = sum(len(segment) for segment in nodes_data.values())
     target_nodes = int(total_nodes * (nodes_percent / 100))
@@ -132,7 +133,7 @@ def get_nodes_pos_array(nodes_data):
 
 
 if __name__ == '__main__':
-    nodes_data = get_nodes_data(100)
+    nodes_data = get_nodes_data(10)
     nodes_pos_array = get_nodes_pos_array(nodes_data)
 
     display_map(nodes_pos_array)

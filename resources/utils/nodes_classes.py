@@ -1,11 +1,11 @@
 from enum import Enum
-from resources.utils.vectors import Vector3
+from resources.utils.vectors import Vector3, Vector2
 
 class PathNode():
 	def __init__(self, position=None, adj_nodes=None, node_id=None, link_id_start=None, link_id_end=None, area_id=None, node_type=None, flags=None):
 		self.position = position
 		self.adj_nodes = adj_nodes
-		self.node_id = int(node_id)
+		self.node_id = int(node_id) if not isinstance(node_id, int) else node_id
 		self.link_id_start = int(link_id_start) if link_id_start is not None else link_id_start
 		self.link_id_end = int(link_id_end) if link_id_end is not None else link_id_end
 		self.area_id = int(area_id) if area_id is not None else area_id
@@ -39,7 +39,24 @@ class PathNode():
 			 dict_data["area_id"],
 			 dict_data["node_type"],
 			 dict_data["flags"])
-		
+	
+	@classmethod
+	def get_closest_node_to_pos(cls, nodes_data, position):
+		closest_node = None
+		closest_node_distance = float('inf')
+
+		for node in nodes_data.values():
+			node_obj = cls.from_dict(node)
+			node_pos = Vector2(node_obj.position.x, node_obj.position.z)
+
+			node_distance = Vector2.distance(node_pos, position)
+
+			if node_distance < closest_node_distance:
+				closest_node = node_obj
+				closest_node_distance = node_distance
+
+		return closest_node
+			
 
 
 class Link():

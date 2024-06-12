@@ -1,5 +1,5 @@
 from PIL import Image
-from utils.vectors import Vector2
+from resources.utils.vectors import Vector2
 
 MAP_SIZE = 6000 # 6000x6000
 
