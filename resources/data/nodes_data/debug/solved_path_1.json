@@ -1,0 +1,7592 @@
+{
+  "1": {
+    "position": {
+      "x": 173.75,
+      "y": 16.125,
+      "z": 1646.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22690,
+        "link_length": 30
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22689,
+        "link_length": 21
+      }
+    },
+    "node_id": 1,
+    "link_id_start": 493,
+    "link_id_end": 495,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22690": {
+    "position": {
+      "x": 143.75,
+      "y": 16.125,
+      "z": 1646.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22680,
+        "link_length": 30
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22691,
+        "link_length": 18
+      }
+    },
+    "node_id": 22690,
+    "link_id_start": 513,
+    "link_id_end": 515,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22691": {
+    "position": {
+      "x": 125.25,
+      "y": 16.125,
+      "z": 1646.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22690,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22692,
+        "link_length": 16
+      }
+    },
+    "node_id": 22691,
+    "link_id_start": 515,
+    "link_id_end": 517,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22692": {
+    "position": {
+      "x": 108.75,
+      "y": 16.125,
+      "z": 1646.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22691,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22693,
+        "link_length": 25
+      }
+    },
+    "node_id": 22692,
+    "link_id_start": 517,
+    "link_id_end": 519,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22693": {
+    "position": {
+      "x": 83.375,
+      "y": 16.125,
+      "z": 1646.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22692,
+        "link_length": 25
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22694,
+        "link_length": 19
+      }
+    },
+    "node_id": 22693,
+    "link_id_start": 519,
+    "link_id_end": 521,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22694": {
+    "position": {
+      "x": 64.0,
+      "y": 16.125,
+      "z": 1646.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22693,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22695,
+        "link_length": 22
+      }
+    },
+    "node_id": 22694,
+    "link_id_start": 521,
+    "link_id_end": 523,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22695": {
+    "position": {
+      "x": 41.375,
+      "y": 16.125,
+      "z": 1646.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22694,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22696,
+        "link_length": 18
+      }
+    },
+    "node_id": 22695,
+    "link_id_start": 523,
+    "link_id_end": 525,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22696": {
+    "position": {
+      "x": 22.875,
+      "y": 16.125,
+      "z": 1646.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 52,
+        "node_id": 22695,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22697,
+        "link_length": 16
+      }
+    },
+    "node_id": 22696,
+    "link_id_start": 525,
+    "link_id_end": 527,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22697": {
+    "position": {
+      "x": 6.875,
+      "y": 16.125,
+      "z": 1646.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22404,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22696,
+        "link_length": 16
+      }
+    },
+    "node_id": 22697,
+    "link_id_start": 527,
+    "link_id_end": 529,
+    "area_id": 52,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22404": {
+    "position": {
+      "x": -11.625,
+      "y": 16.125,
+      "z": 1646.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22403,
+        "link_length": 5
+      },
+      "Adjacent 1": {
+        "area_id": 52,
+        "node_id": 22697,
+        "link_length": 18
+      }
+    },
+    "node_id": 22404,
+    "link_id_start": 331,
+    "link_id_end": 333,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22403": {
+    "position": {
+      "x": -16.875,
+      "y": 16.125,
+      "z": 1647.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22406,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22404,
+        "link_length": 5
+      }
+    },
+    "node_id": 22403,
+    "link_id_start": 329,
+    "link_id_end": 331,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22406": {
+    "position": {
+      "x": -27.875,
+      "y": 16.125,
+      "z": 1651.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22403,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22407,
+        "link_length": 8
+      }
+    },
+    "node_id": 22406,
+    "link_id_start": 335,
+    "link_id_end": 337,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22407": {
+    "position": {
+      "x": -33.75,
+      "y": 16.125,
+      "z": 1658.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22406,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22408,
+        "link_length": 13
+      }
+    },
+    "node_id": 22407,
+    "link_id_start": 337,
+    "link_id_end": 339,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22408": {
+    "position": {
+      "x": -41.0,
+      "y": 16.125,
+      "z": 1669.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22407,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22409,
+        "link_length": 15
+      }
+    },
+    "node_id": 22408,
+    "link_id_start": 339,
+    "link_id_end": 341,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22409": {
+    "position": {
+      "x": -48.875,
+      "y": 16.125,
+      "z": 1683.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22408,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22410,
+        "link_length": 16
+      }
+    },
+    "node_id": 22409,
+    "link_id_start": 341,
+    "link_id_end": 343,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22410": {
+    "position": {
+      "x": -55.75,
+      "y": 16.125,
+      "z": 1698.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22409,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22411,
+        "link_length": 9
+      }
+    },
+    "node_id": 22410,
+    "link_id_start": 343,
+    "link_id_end": 345,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22411": {
+    "position": {
+      "x": -60.5,
+      "y": 16.125,
+      "z": 1707.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22410,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22412,
+        "link_length": 8
+      }
+    },
+    "node_id": 22411,
+    "link_id_start": 345,
+    "link_id_end": 347,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22412": {
+    "position": {
+      "x": -63.75,
+      "y": 16.125,
+      "z": 1714.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22411,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22413,
+        "link_length": 7
+      }
+    },
+    "node_id": 22412,
+    "link_id_start": 347,
+    "link_id_end": 349,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22413": {
+    "position": {
+      "x": -66.0,
+      "y": 16.125,
+      "z": 1722.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22412,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22414,
+        "link_length": 9
+      }
+    },
+    "node_id": 22413,
+    "link_id_start": 349,
+    "link_id_end": 351,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22414": {
+    "position": {
+      "x": -67.125,
+      "y": 16.125,
+      "z": 1731.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22405,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22413,
+        "link_length": 9
+      }
+    },
+    "node_id": 22414,
+    "link_id_start": 351,
+    "link_id_end": 353,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22405": {
+    "position": {
+      "x": -67.25,
+      "y": 16.125,
+      "z": 1739.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22416,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22414,
+        "link_length": 8
+      }
+    },
+    "node_id": 22405,
+    "link_id_start": 333,
+    "link_id_end": 335,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22416": {
+    "position": {
+      "x": -66.625,
+      "y": 16.125,
+      "z": 1761.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22405,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22417,
+        "link_length": 18
+      }
+    },
+    "node_id": 22416,
+    "link_id_start": 355,
+    "link_id_end": 357,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22417": {
+    "position": {
+      "x": -66.75,
+      "y": 16.125,
+      "z": 1779.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22416,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22418,
+        "link_length": 16
+      }
+    },
+    "node_id": 22417,
+    "link_id_start": 357,
+    "link_id_end": 359,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22418": {
+    "position": {
+      "x": -66.25,
+      "y": 16.125,
+      "z": 1796.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22417,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22419,
+        "link_length": 17
+      }
+    },
+    "node_id": 22418,
+    "link_id_start": 359,
+    "link_id_end": 361,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22419": {
+    "position": {
+      "x": -66.25,
+      "y": 16.125,
+      "z": 1813.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22418,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22420,
+        "link_length": 14
+      }
+    },
+    "node_id": 22419,
+    "link_id_start": 361,
+    "link_id_end": 363,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22420": {
+    "position": {
+      "x": -66.5,
+      "y": 16.125,
+      "z": 1828.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22419,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22421,
+        "link_length": 23
+      }
+    },
+    "node_id": 22420,
+    "link_id_start": 363,
+    "link_id_end": 365,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22421": {
+    "position": {
+      "x": -65.625,
+      "y": 16.125,
+      "z": 1852.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22415,
+        "link_length": 20
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22420,
+        "link_length": 23
+      }
+    },
+    "node_id": 22421,
+    "link_id_start": 365,
+    "link_id_end": 367,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22415": {
+    "position": {
+      "x": -65.375,
+      "y": 16.125,
+      "z": 1872.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22423,
+        "link_length": 24
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22421,
+        "link_length": 20
+      }
+    },
+    "node_id": 22415,
+    "link_id_start": 353,
+    "link_id_end": 355,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22423": {
+    "position": {
+      "x": -65.125,
+      "y": 16.125,
+      "z": 1896.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22415,
+        "link_length": 24
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22424,
+        "link_length": 21
+      }
+    },
+    "node_id": 22423,
+    "link_id_start": 369,
+    "link_id_end": 371,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22424": {
+    "position": {
+      "x": -65.25,
+      "y": 16.125,
+      "z": 1918.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22423,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22425,
+        "link_length": 22
+      }
+    },
+    "node_id": 22424,
+    "link_id_start": 371,
+    "link_id_end": 373,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22425": {
+    "position": {
+      "x": -65.125,
+      "y": 16.125,
+      "z": 1940.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22424,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22426,
+        "link_length": 14
+      }
+    },
+    "node_id": 22425,
+    "link_id_start": 373,
+    "link_id_end": 375,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22426": {
+    "position": {
+      "x": -64.625,
+      "y": 16.125,
+      "z": 1954.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22425,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22427,
+        "link_length": 7
+      }
+    },
+    "node_id": 22426,
+    "link_id_start": 375,
+    "link_id_end": 377,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22427": {
+    "position": {
+      "x": -64.125,
+      "y": 16.125,
+      "z": 1961.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22426,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22428,
+        "link_length": 7
+      }
+    },
+    "node_id": 22427,
+    "link_id_start": 377,
+    "link_id_end": 379,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22428": {
+    "position": {
+      "x": -61.75,
+      "y": 16.125,
+      "z": 1969.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22427,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22429,
+        "link_length": 7
+      }
+    },
+    "node_id": 22428,
+    "link_id_start": 379,
+    "link_id_end": 381,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22429": {
+    "position": {
+      "x": -57.75,
+      "y": 16.125,
+      "z": 1975.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22428,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22430,
+        "link_length": 9
+      }
+    },
+    "node_id": 22429,
+    "link_id_start": 381,
+    "link_id_end": 383,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22430": {
+    "position": {
+      "x": -49.375,
+      "y": 16.125,
+      "z": 1979.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22429,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22431,
+        "link_length": 10
+      }
+    },
+    "node_id": 22430,
+    "link_id_start": 383,
+    "link_id_end": 385,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22431": {
+    "position": {
+      "x": -40.25,
+      "y": 16.125,
+      "z": 1985.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22422,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22430,
+        "link_length": 10
+      }
+    },
+    "node_id": 22431,
+    "link_id_start": 385,
+    "link_id_end": 387,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22422": {
+    "position": {
+      "x": -33.5,
+      "y": 16.125,
+      "z": 1990.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22433,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22431,
+        "link_length": 8
+      }
+    },
+    "node_id": 22422,
+    "link_id_start": 367,
+    "link_id_end": 369,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22433": {
+    "position": {
+      "x": -20.25,
+      "y": 16.125,
+      "z": 2000.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22422,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22434,
+        "link_length": 4
+      }
+    },
+    "node_id": 22433,
+    "link_id_start": 389,
+    "link_id_end": 391,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22434": {
+    "position": {
+      "x": -17.625,
+      "y": 16.125,
+      "z": 2004.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22433,
+        "link_length": 4
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22435,
+        "link_length": 5
+      }
+    },
+    "node_id": 22434,
+    "link_id_start": 391,
+    "link_id_end": 393,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22435": {
+    "position": {
+      "x": -15.25,
+      "y": 16.125,
+      "z": 2010.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22434,
+        "link_length": 5
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22436,
+        "link_length": 7
+      }
+    },
+    "node_id": 22435,
+    "link_id_start": 393,
+    "link_id_end": 395,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22436": {
+    "position": {
+      "x": -13.375,
+      "y": 16.125,
+      "z": 2016.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22435,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22437,
+        "link_length": 8
+      }
+    },
+    "node_id": 22436,
+    "link_id_start": 395,
+    "link_id_end": 397,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22437": {
+    "position": {
+      "x": -13.0,
+      "y": 16.125,
+      "z": 2025.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22436,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22438,
+        "link_length": 12
+      }
+    },
+    "node_id": 22437,
+    "link_id_start": 397,
+    "link_id_end": 399,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22438": {
+    "position": {
+      "x": -12.5,
+      "y": 16.125,
+      "z": 2037.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22432,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22437,
+        "link_length": 12
+      }
+    },
+    "node_id": 22438,
+    "link_id_start": 399,
+    "link_id_end": 401,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22432": {
+    "position": {
+      "x": -12.5,
+      "y": 16.5,
+      "z": 2047.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22391,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22438,
+        "link_length": 10
+      }
+    },
+    "node_id": 22432,
+    "link_id_start": 387,
+    "link_id_end": 389,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22391": {
+    "position": {
+      "x": -12.875,
+      "y": 16.375,
+      "z": 2066.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22392,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22397,
+        "link_length": 19
+      },
+      "Adjacent 2": {
+        "area_id": 51,
+        "node_id": 22432,
+        "link_length": 19
+      },
+      "Adjacent 3": {
+        "area_id": 52,
+        "node_id": 22596,
+        "link_length": 24
+      }
+    },
+    "node_id": 22391,
+    "link_id_start": 303,
+    "link_id_end": 307,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987428
+  },
+  "22392": {
+    "position": {
+      "x": -29.25,
+      "y": 16.375,
+      "z": 2066.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22391,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22396,
+        "link_length": 15
+      }
+    },
+    "node_id": 22392,
+    "link_id_start": 307,
+    "link_id_end": 309,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22396": {
+    "position": {
+      "x": -44.625,
+      "y": 16.375,
+      "z": 2065.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22392,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22395,
+        "link_length": 11
+      }
+    },
+    "node_id": 22396,
+    "link_id_start": 315,
+    "link_id_end": 317,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22395": {
+    "position": {
+      "x": -55.875,
+      "y": 16.375,
+      "z": 2065.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22394,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22396,
+        "link_length": 11
+      }
+    },
+    "node_id": 22395,
+    "link_id_start": 313,
+    "link_id_end": 315,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22394": {
+    "position": {
+      "x": -73.0,
+      "y": 16.375,
+      "z": 2064.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22393,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22395,
+        "link_length": 17
+      }
+    },
+    "node_id": 22394,
+    "link_id_start": 311,
+    "link_id_end": 313,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22393": {
+    "position": {
+      "x": -86.125,
+      "y": 16.375,
+      "z": 2063.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22384,
+        "link_length": 45
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22394,
+        "link_length": 13
+      }
+    },
+    "node_id": 22393,
+    "link_id_start": 309,
+    "link_id_end": 311,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22384": {
+    "position": {
+      "x": -131.25,
+      "y": 16.375,
+      "z": 2061.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22393,
+        "link_length": 45
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22390,
+        "link_length": 17
+      }
+    },
+    "node_id": 22384,
+    "link_id_start": 289,
+    "link_id_end": 291,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22390": {
+    "position": {
+      "x": -148.5,
+      "y": 16.125,
+      "z": 2058.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22384,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22389,
+        "link_length": 13
+      }
+    },
+    "node_id": 22390,
+    "link_id_start": 301,
+    "link_id_end": 303,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22389": {
+    "position": {
+      "x": -160.125,
+      "y": 15.375,
+      "z": 2051.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22388,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22390,
+        "link_length": 13
+      }
+    },
+    "node_id": 22389,
+    "link_id_start": 299,
+    "link_id_end": 301,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22388": {
+    "position": {
+      "x": -167.25,
+      "y": 14.625,
+      "z": 2041.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22387,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22389,
+        "link_length": 11
+      }
+    },
+    "node_id": 22388,
+    "link_id_start": 297,
+    "link_id_end": 299,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22387": {
+    "position": {
+      "x": -171.0,
+      "y": 14.0,
+      "z": 2029.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22386,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22388,
+        "link_length": 12
+      }
+    },
+    "node_id": 22387,
+    "link_id_start": 295,
+    "link_id_end": 297,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22386": {
+    "position": {
+      "x": -172.25,
+      "y": 14.0,
+      "z": 2010.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22385,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22387,
+        "link_length": 19
+      }
+    },
+    "node_id": 22386,
+    "link_id_start": 293,
+    "link_id_end": 295,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22385": {
+    "position": {
+      "x": -170.375,
+      "y": 14.0,
+      "z": 1995.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22374,
+        "link_length": 41
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22386,
+        "link_length": 14
+      }
+    },
+    "node_id": 22385,
+    "link_id_start": 291,
+    "link_id_end": 293,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22374": {
+    "position": {
+      "x": -159.125,
+      "y": 14.0,
+      "z": 1956.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22385,
+        "link_length": 41
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22383,
+        "link_length": 30
+      }
+    },
+    "node_id": 22374,
+    "link_id_start": 269,
+    "link_id_end": 271,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22383": {
+    "position": {
+      "x": -149.625,
+      "y": 14.125,
+      "z": 1926.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22374,
+        "link_length": 30
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22382,
+        "link_length": 37
+      }
+    },
+    "node_id": 22383,
+    "link_id_start": 287,
+    "link_id_end": 289,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22382": {
+    "position": {
+      "x": -137.25,
+      "y": 15.375,
+      "z": 1891.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22381,
+        "link_length": 38
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22383,
+        "link_length": 37
+      }
+    },
+    "node_id": 22382,
+    "link_id_start": 285,
+    "link_id_end": 287,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22381": {
+    "position": {
+      "x": -124.75,
+      "y": 17.25,
+      "z": 1855.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22380,
+        "link_length": 36
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22382,
+        "link_length": 38
+      }
+    },
+    "node_id": 22381,
+    "link_id_start": 283,
+    "link_id_end": 285,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22380": {
+    "position": {
+      "x": -115.125,
+      "y": 18.75,
+      "z": 1819.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22379,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22381,
+        "link_length": 36
+      }
+    },
+    "node_id": 22380,
+    "link_id_start": 281,
+    "link_id_end": 283,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22379": {
+    "position": {
+      "x": -112.25,
+      "y": 19.375,
+      "z": 1803.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22378,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22380,
+        "link_length": 16
+      }
+    },
+    "node_id": 22379,
+    "link_id_start": 279,
+    "link_id_end": 281,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22378": {
+    "position": {
+      "x": -111.125,
+      "y": 19.5,
+      "z": 1788.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22377,
+        "link_length": 29
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22379,
+        "link_length": 14
+      }
+    },
+    "node_id": 22378,
+    "link_id_start": 277,
+    "link_id_end": 279,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22377": {
+    "position": {
+      "x": -110.125,
+      "y": 19.375,
+      "z": 1759.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22376,
+        "link_length": 24
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22378,
+        "link_length": 29
+      }
+    },
+    "node_id": 22377,
+    "link_id_start": 275,
+    "link_id_end": 277,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22376": {
+    "position": {
+      "x": -110.0,
+      "y": 19.25,
+      "z": 1734.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22375,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22377,
+        "link_length": 24
+      }
+    },
+    "node_id": 22376,
+    "link_id_start": 273,
+    "link_id_end": 275,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22375": {
+    "position": {
+      "x": -110.625,
+      "y": 18.875,
+      "z": 1713.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22365,
+        "link_length": 36
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22376,
+        "link_length": 21
+      }
+    },
+    "node_id": 22375,
+    "link_id_start": 271,
+    "link_id_end": 273,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22365": {
+    "position": {
+      "x": -112.75,
+      "y": 18.125,
+      "z": 1676.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22375,
+        "link_length": 36
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22373,
+        "link_length": 18
+      }
+    },
+    "node_id": 22365,
+    "link_id_start": 251,
+    "link_id_end": 253,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22373": {
+    "position": {
+      "x": -113.75,
+      "y": 17.75,
+      "z": 1658.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22365,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22372,
+        "link_length": 20
+      }
+    },
+    "node_id": 22373,
+    "link_id_start": 267,
+    "link_id_end": 269,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22372": {
+    "position": {
+      "x": -114.25,
+      "y": 17.375,
+      "z": 1637.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22371,
+        "link_length": 23
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22373,
+        "link_length": 20
+      }
+    },
+    "node_id": 22372,
+    "link_id_start": 265,
+    "link_id_end": 267,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22371": {
+    "position": {
+      "x": -114.0,
+      "y": 17.125,
+      "z": 1614.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22370,
+        "link_length": 27
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22372,
+        "link_length": 23
+      }
+    },
+    "node_id": 22371,
+    "link_id_start": 263,
+    "link_id_end": 265,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22370": {
+    "position": {
+      "x": -112.625,
+      "y": 17.125,
+      "z": 1586.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22369,
+        "link_length": 26
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22371,
+        "link_length": 27
+      }
+    },
+    "node_id": 22370,
+    "link_id_start": 261,
+    "link_id_end": 263,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22369": {
+    "position": {
+      "x": -110.625,
+      "y": 16.75,
+      "z": 1559.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22368,
+        "link_length": 20
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22370,
+        "link_length": 26
+      }
+    },
+    "node_id": 22369,
+    "link_id_start": 259,
+    "link_id_end": 261,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22368": {
+    "position": {
+      "x": -108.625,
+      "y": 16.0,
+      "z": 1539.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22367,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22369,
+        "link_length": 20
+      }
+    },
+    "node_id": 22368,
+    "link_id_start": 257,
+    "link_id_end": 259,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22367": {
+    "position": {
+      "x": -106.5,
+      "y": 14.75,
+      "z": 1524.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 51,
+        "node_id": 22366,
+        "link_length": 23
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22368,
+        "link_length": 15
+      }
+    },
+    "node_id": 22367,
+    "link_id_start": 255,
+    "link_id_end": 257,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22366": {
+    "position": {
+      "x": -101.0,
+      "y": 12.0,
+      "z": 1502.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19504,
+        "link_length": 26
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22367,
+        "link_length": 23
+      }
+    },
+    "node_id": 22366,
+    "link_id_start": 253,
+    "link_id_end": 255,
+    "area_id": 51,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19504": {
+    "position": {
+      "x": -93.0,
+      "y": 9.375,
+      "z": 1477.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19498,
+        "link_length": 80
+      },
+      "Adjacent 1": {
+        "area_id": 51,
+        "node_id": 22366,
+        "link_length": 26
+      }
+    },
+    "node_id": 19504,
+    "link_id_start": 765,
+    "link_id_end": 767,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19498": {
+    "position": {
+      "x": -73.0,
+      "y": 8.5,
+      "z": 1399.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19504,
+        "link_length": 80
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19503,
+        "link_length": 42
+      }
+    },
+    "node_id": 19498,
+    "link_id_start": 753,
+    "link_id_end": 755,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19503": {
+    "position": {
+      "x": -65.625,
+      "y": 9.125,
+      "z": 1357.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19498,
+        "link_length": 42
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19502,
+        "link_length": 20
+      }
+    },
+    "node_id": 19503,
+    "link_id_start": 763,
+    "link_id_end": 765,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19502": {
+    "position": {
+      "x": -64.125,
+      "y": 9.875,
+      "z": 1336.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19501,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19503,
+        "link_length": 20
+      }
+    },
+    "node_id": 19502,
+    "link_id_start": 761,
+    "link_id_end": 763,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19501": {
+    "position": {
+      "x": -65.125,
+      "y": 10.375,
+      "z": 1322.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19500,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19502,
+        "link_length": 14
+      }
+    },
+    "node_id": 19501,
+    "link_id_start": 759,
+    "link_id_end": 761,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19500": {
+    "position": {
+      "x": -68.0,
+      "y": 10.5,
+      "z": 1301.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19499,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19501,
+        "link_length": 21
+      }
+    },
+    "node_id": 19500,
+    "link_id_start": 757,
+    "link_id_end": 759,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19499": {
+    "position": {
+      "x": -70.125,
+      "y": 10.625,
+      "z": 1286.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19548,
+        "link_length": 26
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19500,
+        "link_length": 15
+      }
+    },
+    "node_id": 19499,
+    "link_id_start": 755,
+    "link_id_end": 757,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "19548": {
+    "position": {
+      "x": -73.0,
+      "y": 11.0,
+      "z": 1260.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19499,
+        "link_length": 26
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19549,
+        "link_length": 12
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19554,
+        "link_length": 15
+      }
+    },
+    "node_id": 19548,
+    "link_id_start": 857,
+    "link_id_end": 860,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "19549": {
+    "position": {
+      "x": -85.0,
+      "y": 12.25,
+      "z": 1259.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19548,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19552,
+        "link_length": 6
+      }
+    },
+    "node_id": 19549,
+    "link_id_start": 860,
+    "link_id_end": 862,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19552": {
+    "position": {
+      "x": -91.25,
+      "y": 13.0,
+      "z": 1258.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19549,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19551,
+        "link_length": 7
+      }
+    },
+    "node_id": 19552,
+    "link_id_start": 866,
+    "link_id_end": 868,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19551": {
+    "position": {
+      "x": -99.125,
+      "y": 13.875,
+      "z": 1257.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19550,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19552,
+        "link_length": 7
+      }
+    },
+    "node_id": 19551,
+    "link_id_start": 864,
+    "link_id_end": 866,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19550": {
+    "position": {
+      "x": -108.625,
+      "y": 15.375,
+      "z": 1256.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19547,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19551,
+        "link_length": 9
+      }
+    },
+    "node_id": 19550,
+    "link_id_start": 862,
+    "link_id_end": 864,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19547": {
+    "position": {
+      "x": -119.875,
+      "y": 17.125,
+      "z": 1254.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19351,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19495,
+        "link_length": 35
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19550,
+        "link_length": 11
+      }
+    },
+    "node_id": 19547,
+    "link_id_start": 854,
+    "link_id_end": 857,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "19351": {
+    "position": {
+      "x": -117.875,
+      "y": 16.5,
+      "z": 1242.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19547,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19356,
+        "link_length": 5
+      }
+    },
+    "node_id": 19351,
+    "link_id_start": 451,
+    "link_id_end": 453,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19356": {
+    "position": {
+      "x": -117.125,
+      "y": 16.75,
+      "z": 1237.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19351,
+        "link_length": 5
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19355,
+        "link_length": 4
+      }
+    },
+    "node_id": 19356,
+    "link_id_start": 461,
+    "link_id_end": 463,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19355": {
+    "position": {
+      "x": -116.625,
+      "y": 17.0,
+      "z": 1232.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19354,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19356,
+        "link_length": 4
+      }
+    },
+    "node_id": 19355,
+    "link_id_start": 459,
+    "link_id_end": 461,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19354": {
+    "position": {
+      "x": -115.625,
+      "y": 17.5,
+      "z": 1222.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19353,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19355,
+        "link_length": 10
+      }
+    },
+    "node_id": 19354,
+    "link_id_start": 457,
+    "link_id_end": 459,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19353": {
+    "position": {
+      "x": -115.5,
+      "y": 18.0,
+      "z": 1215.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19352,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19354,
+        "link_length": 6
+      }
+    },
+    "node_id": 19353,
+    "link_id_start": 455,
+    "link_id_end": 457,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19352": {
+    "position": {
+      "x": -115.5,
+      "y": 18.5,
+      "z": 1208.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19256,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19353,
+        "link_length": 7
+      }
+    },
+    "node_id": 19352,
+    "link_id_start": 453,
+    "link_id_end": 455,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19256": {
+    "position": {
+      "x": -115.625,
+      "y": 18.5,
+      "z": 1198.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19352,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19258,
+        "link_length": 12
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19346,
+        "link_length": 15
+      },
+      "Adjacent 3": {
+        "area_id": 43,
+        "node_id": 19263,
+        "link_length": 10
+      }
+    },
+    "node_id": 19256,
+    "link_id_start": 246,
+    "link_id_end": 250,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987140
+  },
+  "19263": {
+    "position": {
+      "x": -115.5,
+      "y": 18.5,
+      "z": 1188.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19256,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19264,
+        "link_length": 6
+      }
+    },
+    "node_id": 19263,
+    "link_id_start": 262,
+    "link_id_end": 264,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19264": {
+    "position": {
+      "x": -115.5,
+      "y": 18.5,
+      "z": 1182.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19263,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19265,
+        "link_length": 8
+      }
+    },
+    "node_id": 19264,
+    "link_id_start": 264,
+    "link_id_end": 266,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19265": {
+    "position": {
+      "x": -115.5,
+      "y": 18.5,
+      "z": 1173.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19264,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19266,
+        "link_length": 15
+      }
+    },
+    "node_id": 19265,
+    "link_id_start": 266,
+    "link_id_end": 268,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19266": {
+    "position": {
+      "x": -115.5,
+      "y": 18.5,
+      "z": 1158.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19265,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19267,
+        "link_length": 3
+      }
+    },
+    "node_id": 19266,
+    "link_id_start": 268,
+    "link_id_end": 270,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19267": {
+    "position": {
+      "x": -116.125,
+      "y": 18.5,
+      "z": 1154.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19266,
+        "link_length": 3
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19268,
+        "link_length": 4
+      }
+    },
+    "node_id": 19267,
+    "link_id_start": 270,
+    "link_id_end": 272,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19268": {
+    "position": {
+      "x": -118.375,
+      "y": 18.5,
+      "z": 1151.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19267,
+        "link_length": 4
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19269,
+        "link_length": 3
+      }
+    },
+    "node_id": 19268,
+    "link_id_start": 272,
+    "link_id_end": 274,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19269": {
+    "position": {
+      "x": -121.625,
+      "y": 18.5,
+      "z": 1149.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19268,
+        "link_length": 3
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19270,
+        "link_length": 3
+      }
+    },
+    "node_id": 19269,
+    "link_id_start": 274,
+    "link_id_end": 276,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19270": {
+    "position": {
+      "x": -125.5,
+      "y": 18.5,
+      "z": 1148.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19269,
+        "link_length": 3
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19271,
+        "link_length": 8
+      }
+    },
+    "node_id": 19270,
+    "link_id_start": 276,
+    "link_id_end": 278,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19271": {
+    "position": {
+      "x": -133.75,
+      "y": 18.5,
+      "z": 1148.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19262,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19270,
+        "link_length": 8
+      }
+    },
+    "node_id": 19271,
+    "link_id_start": 278,
+    "link_id_end": 280,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19262": {
+    "position": {
+      "x": -142.25,
+      "y": 18.5,
+      "z": 1148.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19273,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19271,
+        "link_length": 8
+      }
+    },
+    "node_id": 19262,
+    "link_id_start": 260,
+    "link_id_end": 262,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19273": {
+    "position": {
+      "x": -158.25,
+      "y": 18.5,
+      "z": 1148.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19262,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19275,
+        "link_length": 10
+      }
+    },
+    "node_id": 19273,
+    "link_id_start": 283,
+    "link_id_end": 285,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19275": {
+    "position": {
+      "x": -168.375,
+      "y": 18.5,
+      "z": 1148.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19273,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19274,
+        "link_length": 9
+      }
+    },
+    "node_id": 19275,
+    "link_id_start": 287,
+    "link_id_end": 289,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19274": {
+    "position": {
+      "x": -177.625,
+      "y": 18.5,
+      "z": 1148.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19272,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19275,
+        "link_length": 9
+      }
+    },
+    "node_id": 19274,
+    "link_id_start": 285,
+    "link_id_end": 287,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19272": {
+    "position": {
+      "x": -187.625,
+      "y": 18.5,
+      "z": 1148.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19274,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19278,
+        "link_length": 14
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19292,
+        "link_length": 13
+      }
+    },
+    "node_id": 19272,
+    "link_id_start": 280,
+    "link_id_end": 283,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "19292": {
+    "position": {
+      "x": -187.625,
+      "y": 18.5,
+      "z": 1135.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19272,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19296,
+        "link_length": 6
+      }
+    },
+    "node_id": 19292,
+    "link_id_start": 327,
+    "link_id_end": 329,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19296": {
+    "position": {
+      "x": -187.625,
+      "y": 18.5,
+      "z": 1128.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19292,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19295,
+        "link_length": 6
+      }
+    },
+    "node_id": 19296,
+    "link_id_start": 335,
+    "link_id_end": 337,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19295": {
+    "position": {
+      "x": -187.625,
+      "y": 18.5,
+      "z": 1122.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19294,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19296,
+        "link_length": 6
+      }
+    },
+    "node_id": 19295,
+    "link_id_start": 333,
+    "link_id_end": 335,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19294": {
+    "position": {
+      "x": -187.5,
+      "y": 18.5,
+      "z": 1115.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19293,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19295,
+        "link_length": 6
+      }
+    },
+    "node_id": 19294,
+    "link_id_start": 331,
+    "link_id_end": 333,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19293": {
+    "position": {
+      "x": -187.375,
+      "y": 18.5,
+      "z": 1108.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19290,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19294,
+        "link_length": 7
+      }
+    },
+    "node_id": 19293,
+    "link_id_start": 329,
+    "link_id_end": 331,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19290": {
+    "position": {
+      "x": -187.875,
+      "y": 18.5,
+      "z": 1098.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19341,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19293,
+        "link_length": 10
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19291,
+        "link_length": 4
+      },
+      "Adjacent 3": {
+        "area_id": 43,
+        "node_id": 19315,
+        "link_length": 13
+      }
+    },
+    "node_id": 19290,
+    "link_id_start": 321,
+    "link_id_end": 325,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987140
+  },
+  "19315": {
+    "position": {
+      "x": -187.75,
+      "y": 18.5,
+      "z": 1084.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19290,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19320,
+        "link_length": 15
+      }
+    },
+    "node_id": 19315,
+    "link_id_start": 376,
+    "link_id_end": 378,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19320": {
+    "position": {
+      "x": -188.0,
+      "y": 18.5,
+      "z": 1068.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19315,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19319,
+        "link_length": 13
+      }
+    },
+    "node_id": 19320,
+    "link_id_start": 386,
+    "link_id_end": 388,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19319": {
+    "position": {
+      "x": -188.0,
+      "y": 18.5,
+      "z": 1055.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19318,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19320,
+        "link_length": 13
+      }
+    },
+    "node_id": 19319,
+    "link_id_start": 384,
+    "link_id_end": 386,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19318": {
+    "position": {
+      "x": -187.875,
+      "y": 18.5,
+      "z": 1045.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19317,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19319,
+        "link_length": 9
+      }
+    },
+    "node_id": 19318,
+    "link_id_start": 382,
+    "link_id_end": 384,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19317": {
+    "position": {
+      "x": -188.0,
+      "y": 18.5,
+      "z": 1034.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19316,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19318,
+        "link_length": 11
+      }
+    },
+    "node_id": 19317,
+    "link_id_start": 380,
+    "link_id_end": 382,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19316": {
+    "position": {
+      "x": -187.875,
+      "y": 18.5,
+      "z": 1025.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19304,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19317,
+        "link_length": 8
+      }
+    },
+    "node_id": 19316,
+    "link_id_start": 378,
+    "link_id_end": 380,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19304": {
+    "position": {
+      "x": -188.0,
+      "y": 18.5,
+      "z": 1018.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19302,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19305,
+        "link_length": 5
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19316,
+        "link_length": 7
+      }
+    },
+    "node_id": 19304,
+    "link_id_start": 353,
+    "link_id_end": 356,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "19302": {
+    "position": {
+      "x": -188.0,
+      "y": 18.5,
+      "z": 1007.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19304,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19303,
+        "link_length": 5
+      }
+    },
+    "node_id": 19302,
+    "link_id_start": 349,
+    "link_id_end": 351,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19303": {
+    "position": {
+      "x": -188.0,
+      "y": 18.5,
+      "z": 1002.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19301,
+        "link_length": 4
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19302,
+        "link_length": 5
+      }
+    },
+    "node_id": 19303,
+    "link_id_start": 351,
+    "link_id_end": 353,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19301": {
+    "position": {
+      "x": -188.0,
+      "y": 18.5,
+      "z": 998.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19546,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19303,
+        "link_length": 4
+      }
+    },
+    "node_id": 19301,
+    "link_id_start": 347,
+    "link_id_end": 349,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19546": {
+    "position": {
+      "x": -193.125,
+      "y": 17.75,
+      "z": 977.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19299,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19301,
+        "link_length": 21
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19542,
+        "link_length": 18
+      }
+    },
+    "node_id": 19546,
+    "link_id_start": 851,
+    "link_id_end": 854,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "19542": {
+    "position": {
+      "x": -193.125,
+      "y": 16.25,
+      "z": 958.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19546,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19545,
+        "link_length": 12
+      }
+    },
+    "node_id": 19542,
+    "link_id_start": 843,
+    "link_id_end": 845,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19545": {
+    "position": {
+      "x": -193.125,
+      "y": 14.75,
+      "z": 946.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19542,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19544,
+        "link_length": 11
+      }
+    },
+    "node_id": 19545,
+    "link_id_start": 849,
+    "link_id_end": 851,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19544": {
+    "position": {
+      "x": -193.375,
+      "y": 13.25,
+      "z": 934.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19543,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19545,
+        "link_length": 11
+      }
+    },
+    "node_id": 19544,
+    "link_id_start": 847,
+    "link_id_end": 849,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19543": {
+    "position": {
+      "x": -194.5,
+      "y": 11.875,
+      "z": 923.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19532,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19544,
+        "link_length": 11
+      }
+    },
+    "node_id": 19543,
+    "link_id_start": 845,
+    "link_id_end": 847,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19532": {
+    "position": {
+      "x": -199.875,
+      "y": 9.875,
+      "z": 902.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19543,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19541,
+        "link_length": 11
+      }
+    },
+    "node_id": 19532,
+    "link_id_start": 823,
+    "link_id_end": 825,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19541": {
+    "position": {
+      "x": -204.0,
+      "y": 9.375,
+      "z": 891.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19532,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19540,
+        "link_length": 11
+      }
+    },
+    "node_id": 19541,
+    "link_id_start": 841,
+    "link_id_end": 843,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19540": {
+    "position": {
+      "x": -209.375,
+      "y": 9.125,
+      "z": 881.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19539,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19541,
+        "link_length": 11
+      }
+    },
+    "node_id": 19540,
+    "link_id_start": 839,
+    "link_id_end": 841,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19539": {
+    "position": {
+      "x": -216.125,
+      "y": 9.375,
+      "z": 870.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19538,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19540,
+        "link_length": 12
+      }
+    },
+    "node_id": 19539,
+    "link_id_start": 837,
+    "link_id_end": 839,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19538": {
+    "position": {
+      "x": -223.625,
+      "y": 9.875,
+      "z": 860.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19537,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19539,
+        "link_length": 13
+      }
+    },
+    "node_id": 19538,
+    "link_id_start": 835,
+    "link_id_end": 837,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19537": {
+    "position": {
+      "x": -232.0,
+      "y": 10.625,
+      "z": 849.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19536,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19538,
+        "link_length": 13
+      }
+    },
+    "node_id": 19537,
+    "link_id_start": 833,
+    "link_id_end": 835,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19536": {
+    "position": {
+      "x": -241.5,
+      "y": 11.5,
+      "z": 840.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19535,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19537,
+        "link_length": 13
+      }
+    },
+    "node_id": 19536,
+    "link_id_start": 831,
+    "link_id_end": 833,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19535": {
+    "position": {
+      "x": -253.0,
+      "y": 12.375,
+      "z": 833.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19534,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19536,
+        "link_length": 13
+      }
+    },
+    "node_id": 19535,
+    "link_id_start": 829,
+    "link_id_end": 831,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19534": {
+    "position": {
+      "x": -262.625,
+      "y": 13.125,
+      "z": 827.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19533,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19535,
+        "link_length": 11
+      }
+    },
+    "node_id": 19534,
+    "link_id_start": 827,
+    "link_id_end": 829,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19533": {
+    "position": {
+      "x": -273.875,
+      "y": 13.375,
+      "z": 821.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19509,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19534,
+        "link_length": 12
+      }
+    },
+    "node_id": 19533,
+    "link_id_start": 825,
+    "link_id_end": 827,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19509": {
+    "position": {
+      "x": -293.75,
+      "y": 13.5,
+      "z": 811.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19491,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19511,
+        "link_length": 26
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19533,
+        "link_length": 22
+      }
+    },
+    "node_id": 19509,
+    "link_id_start": 775,
+    "link_id_end": 778,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991235
+  },
+  "19491": {
+    "position": {
+      "x": -299.0,
+      "y": 11.75,
+      "z": 832.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19509,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19494,
+        "link_length": 20
+      }
+    },
+    "node_id": 19491,
+    "link_id_start": 739,
+    "link_id_end": 741,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19494": {
+    "position": {
+      "x": -299.875,
+      "y": 9.5,
+      "z": 853.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19491,
+        "link_length": 20
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19493,
+        "link_length": 23
+      }
+    },
+    "node_id": 19494,
+    "link_id_start": 745,
+    "link_id_end": 747,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19493": {
+    "position": {
+      "x": -300.375,
+      "y": 8.375,
+      "z": 876.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19492,
+        "link_length": 21
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19494,
+        "link_length": 23
+      }
+    },
+    "node_id": 19493,
+    "link_id_start": 743,
+    "link_id_end": 745,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19492": {
+    "position": {
+      "x": -302.25,
+      "y": 9.0,
+      "z": 898.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19144,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19493,
+        "link_length": 21
+      }
+    },
+    "node_id": 19492,
+    "link_id_start": 741,
+    "link_id_end": 743,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19144": {
+    "position": {
+      "x": -309.375,
+      "y": 10.0,
+      "z": 916.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19492,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19145,
+        "link_length": 10
+      }
+    },
+    "node_id": 19144,
+    "link_id_start": 20,
+    "link_id_end": 22,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19145": {
+    "position": {
+      "x": -316.375,
+      "y": 10.25,
+      "z": 923.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19144,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19152,
+        "link_length": 10
+      }
+    },
+    "node_id": 19145,
+    "link_id_start": 22,
+    "link_id_end": 24,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19152": {
+    "position": {
+      "x": -324.625,
+      "y": 10.25,
+      "z": 929.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19145,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19151,
+        "link_length": 10
+      }
+    },
+    "node_id": 19152,
+    "link_id_start": 36,
+    "link_id_end": 38,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19151": {
+    "position": {
+      "x": -333.125,
+      "y": 10.125,
+      "z": 935.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19150,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19152,
+        "link_length": 10
+      }
+    },
+    "node_id": 19151,
+    "link_id_start": 34,
+    "link_id_end": 36,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19150": {
+    "position": {
+      "x": -341.75,
+      "y": 10.0,
+      "z": 941.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19149,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19151,
+        "link_length": 10
+      }
+    },
+    "node_id": 19150,
+    "link_id_start": 32,
+    "link_id_end": 34,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19149": {
+    "position": {
+      "x": -350.25,
+      "y": 9.75,
+      "z": 947.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19148,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19150,
+        "link_length": 10
+      }
+    },
+    "node_id": 19149,
+    "link_id_start": 30,
+    "link_id_end": 32,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19148": {
+    "position": {
+      "x": -358.5,
+      "y": 9.375,
+      "z": 956.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19147,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19149,
+        "link_length": 11
+      }
+    },
+    "node_id": 19148,
+    "link_id_start": 28,
+    "link_id_end": 30,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19147": {
+    "position": {
+      "x": -366.25,
+      "y": 9.0,
+      "z": 966.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19146,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19148,
+        "link_length": 13
+      }
+    },
+    "node_id": 19147,
+    "link_id_start": 26,
+    "link_id_end": 28,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19146": {
+    "position": {
+      "x": -373.375,
+      "y": 8.5,
+      "z": 980.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19241,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19147,
+        "link_length": 15
+      }
+    },
+    "node_id": 19146,
+    "link_id_start": 24,
+    "link_id_end": 26,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19241": {
+    "position": {
+      "x": -376.625,
+      "y": 9.375,
+      "z": 985.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19146,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19242,
+        "link_length": 6
+      }
+    },
+    "node_id": 19241,
+    "link_id_start": 215,
+    "link_id_end": 217,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19242": {
+    "position": {
+      "x": -380.625,
+      "y": 9.5,
+      "z": 991.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19240,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19241,
+        "link_length": 6
+      }
+    },
+    "node_id": 19242,
+    "link_id_start": 217,
+    "link_id_end": 219,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19240": {
+    "position": {
+      "x": -385.25,
+      "y": 9.625,
+      "z": 996.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19235,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19242,
+        "link_length": 6
+      }
+    },
+    "node_id": 19240,
+    "link_id_start": 213,
+    "link_id_end": 215,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19235": {
+    "position": {
+      "x": -390.625,
+      "y": 9.625,
+      "z": 1001.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19240,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19236,
+        "link_length": 7
+      }
+    },
+    "node_id": 19235,
+    "link_id_start": 203,
+    "link_id_end": 205,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19236": {
+    "position": {
+      "x": -396.375,
+      "y": 9.625,
+      "z": 1005.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19235,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19237,
+        "link_length": 7
+      }
+    },
+    "node_id": 19236,
+    "link_id_start": 205,
+    "link_id_end": 207,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19237": {
+    "position": {
+      "x": -402.125,
+      "y": 9.875,
+      "z": 1010.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19236,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19238,
+        "link_length": 7
+      }
+    },
+    "node_id": 19237,
+    "link_id_start": 207,
+    "link_id_end": 209,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19238": {
+    "position": {
+      "x": -408.375,
+      "y": 10.0,
+      "z": 1014.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19237,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19239,
+        "link_length": 7
+      }
+    },
+    "node_id": 19238,
+    "link_id_start": 209,
+    "link_id_end": 211,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19239": {
+    "position": {
+      "x": -414.5,
+      "y": 10.0,
+      "z": 1017.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19234,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19238,
+        "link_length": 7
+      }
+    },
+    "node_id": 19239,
+    "link_id_start": 211,
+    "link_id_end": 213,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19234": {
+    "position": {
+      "x": -422.375,
+      "y": 10.0,
+      "z": 1022.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19233,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19239,
+        "link_length": 9
+      }
+    },
+    "node_id": 19234,
+    "link_id_start": 201,
+    "link_id_end": 203,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19233": {
+    "position": {
+      "x": -432.625,
+      "y": 10.0,
+      "z": 1028.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19232,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19234,
+        "link_length": 11
+      }
+    },
+    "node_id": 19233,
+    "link_id_start": 199,
+    "link_id_end": 201,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19232": {
+    "position": {
+      "x": -442.0,
+      "y": 10.0,
+      "z": 1033.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19244,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19233,
+        "link_length": 10
+      }
+    },
+    "node_id": 19232,
+    "link_id_start": 197,
+    "link_id_end": 199,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19244": {
+    "position": {
+      "x": -456.375,
+      "y": 10.0,
+      "z": 1041.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19232,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19245,
+        "link_length": 11
+      }
+    },
+    "node_id": 19244,
+    "link_id_start": 221,
+    "link_id_end": 223,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19245": {
+    "position": {
+      "x": -466.25,
+      "y": 10.0,
+      "z": 1047.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19244,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19246,
+        "link_length": 12
+      }
+    },
+    "node_id": 19245,
+    "link_id_start": 223,
+    "link_id_end": 225,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19246": {
+    "position": {
+      "x": -476.875,
+      "y": 10.0,
+      "z": 1053.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19245,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19247,
+        "link_length": 11
+      }
+    },
+    "node_id": 19246,
+    "link_id_start": 225,
+    "link_id_end": 227,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19247": {
+    "position": {
+      "x": -487.125,
+      "y": 10.0,
+      "z": 1059.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19246,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19248,
+        "link_length": 15
+      }
+    },
+    "node_id": 19247,
+    "link_id_start": 227,
+    "link_id_end": 229,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19248": {
+    "position": {
+      "x": -500.5,
+      "y": 10.0,
+      "z": 1067.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19247,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19249,
+        "link_length": 10
+      }
+    },
+    "node_id": 19248,
+    "link_id_start": 229,
+    "link_id_end": 231,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19249": {
+    "position": {
+      "x": -509.875,
+      "y": 10.0,
+      "z": 1072.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19243,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19248,
+        "link_length": 10
+      }
+    },
+    "node_id": 19249,
+    "link_id_start": 231,
+    "link_id_end": 233,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19243": {
+    "position": {
+      "x": -520.125,
+      "y": 10.0,
+      "z": 1078.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19251,
+        "link_length": 23
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19249,
+        "link_length": 11
+      }
+    },
+    "node_id": 19243,
+    "link_id_start": 219,
+    "link_id_end": 221,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19251": {
+    "position": {
+      "x": -540.25,
+      "y": 10.0,
+      "z": 1089.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19243,
+        "link_length": 23
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19252,
+        "link_length": 8
+      }
+    },
+    "node_id": 19251,
+    "link_id_start": 235,
+    "link_id_end": 237,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19252": {
+    "position": {
+      "x": -547.25,
+      "y": 10.0,
+      "z": 1093.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19251,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19253,
+        "link_length": 14
+      }
+    },
+    "node_id": 19252,
+    "link_id_start": 237,
+    "link_id_end": 239,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19253": {
+    "position": {
+      "x": -559.5,
+      "y": 10.0,
+      "z": 1101.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19252,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19254,
+        "link_length": 6
+      }
+    },
+    "node_id": 19253,
+    "link_id_start": 239,
+    "link_id_end": 241,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19254": {
+    "position": {
+      "x": -565.25,
+      "y": 10.0,
+      "z": 1105.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19250,
+        "link_length": 2
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19253,
+        "link_length": 6
+      }
+    },
+    "node_id": 19254,
+    "link_id_start": 241,
+    "link_id_end": 243,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19250": {
+    "position": {
+      "x": -567.5,
+      "y": 10.125,
+      "z": 1106.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19475,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19254,
+        "link_length": 2
+      }
+    },
+    "node_id": 19250,
+    "link_id_start": 233,
+    "link_id_end": 235,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19475": {
+    "position": {
+      "x": -574.75,
+      "y": 9.875,
+      "z": 1113.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19250,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19476,
+        "link_length": 13
+      },
+      "Adjacent 2": {
+        "area_id": 43,
+        "node_id": 19485,
+        "link_length": 9
+      }
+    },
+    "node_id": 19475,
+    "link_id_start": 706,
+    "link_id_end": 709,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "19485": {
+    "position": {
+      "x": -581.5,
+      "y": 9.75,
+      "z": 1120.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19475,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19486,
+        "link_length": 10
+      }
+    },
+    "node_id": 19485,
+    "link_id_start": 727,
+    "link_id_end": 729,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19486": {
+    "position": {
+      "x": -587.5,
+      "y": 9.25,
+      "z": 1129.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19485,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19487,
+        "link_length": 10
+      }
+    },
+    "node_id": 19486,
+    "link_id_start": 729,
+    "link_id_end": 731,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19487": {
+    "position": {
+      "x": -592.875,
+      "y": 8.25,
+      "z": 1138.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19486,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19488,
+        "link_length": 12
+      }
+    },
+    "node_id": 19487,
+    "link_id_start": 731,
+    "link_id_end": 733,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19488": {
+    "position": {
+      "x": -597.75,
+      "y": 7.25,
+      "z": 1149.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19487,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19489,
+        "link_length": 13
+      }
+    },
+    "node_id": 19488,
+    "link_id_start": 733,
+    "link_id_end": 735,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19489": {
+    "position": {
+      "x": -602.875,
+      "y": 6.875,
+      "z": 1162.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19488,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19490,
+        "link_length": 14
+      }
+    },
+    "node_id": 19489,
+    "link_id_start": 735,
+    "link_id_end": 737,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19490": {
+    "position": {
+      "x": -608.125,
+      "y": 7.625,
+      "z": 1175.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19484,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19489,
+        "link_length": 14
+      }
+    },
+    "node_id": 19490,
+    "link_id_start": 737,
+    "link_id_end": 739,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19484": {
+    "position": {
+      "x": -613.75,
+      "y": 8.75,
+      "z": 1188.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19134,
+        "link_length": 24
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19490,
+        "link_length": 14
+      }
+    },
+    "node_id": 19484,
+    "link_id_start": 725,
+    "link_id_end": 727,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19134": {
+    "position": {
+      "x": -625.375,
+      "y": 10.5,
+      "z": 1209.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19484,
+        "link_length": 24
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19143,
+        "link_length": 8
+      }
+    },
+    "node_id": 19134,
+    "link_id_start": 0,
+    "link_id_end": 2,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19143": {
+    "position": {
+      "x": -631.5,
+      "y": 10.75,
+      "z": 1216.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19134,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19142,
+        "link_length": 10
+      }
+    },
+    "node_id": 19143,
+    "link_id_start": 18,
+    "link_id_end": 20,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19142": {
+    "position": {
+      "x": -640.625,
+      "y": 10.875,
+      "z": 1220.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19141,
+        "link_length": 31
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19143,
+        "link_length": 10
+      }
+    },
+    "node_id": 19142,
+    "link_id_start": 16,
+    "link_id_end": 18,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19141": {
+    "position": {
+      "x": -671.125,
+      "y": 11.375,
+      "z": 1226.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19140,
+        "link_length": 34
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19142,
+        "link_length": 31
+      }
+    },
+    "node_id": 19141,
+    "link_id_start": 14,
+    "link_id_end": 16,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19140": {
+    "position": {
+      "x": -705.125,
+      "y": 12.0,
+      "z": 1230.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19139,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19141,
+        "link_length": 34
+      }
+    },
+    "node_id": 19140,
+    "link_id_start": 12,
+    "link_id_end": 14,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19139": {
+    "position": {
+      "x": -718.875,
+      "y": 12.25,
+      "z": 1233.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19138,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19140,
+        "link_length": 14
+      }
+    },
+    "node_id": 19139,
+    "link_id_start": 10,
+    "link_id_end": 12,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19138": {
+    "position": {
+      "x": -728.0,
+      "y": 12.375,
+      "z": 1236.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19137,
+        "link_length": 3
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19139,
+        "link_length": 9
+      }
+    },
+    "node_id": 19138,
+    "link_id_start": 8,
+    "link_id_end": 10,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19137": {
+    "position": {
+      "x": -730.75,
+      "y": 12.375,
+      "z": 1238.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19136,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19138,
+        "link_length": 3
+      }
+    },
+    "node_id": 19137,
+    "link_id_start": 6,
+    "link_id_end": 8,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19136": {
+    "position": {
+      "x": -738.375,
+      "y": 12.375,
+      "z": 1244.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19135,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19137,
+        "link_length": 9
+      }
+    },
+    "node_id": 19136,
+    "link_id_start": 4,
+    "link_id_end": 6,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "19135": {
+    "position": {
+      "x": -747.125,
+      "y": 12.375,
+      "z": 1252.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18949,
+        "link_length": 45
+      },
+      "Adjacent 1": {
+        "area_id": 43,
+        "node_id": 19136,
+        "link_length": 12
+      }
+    },
+    "node_id": 19135,
+    "link_id_start": 2,
+    "link_id_end": 4,
+    "area_id": 43,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "18949": {
+    "position": {
+      "x": -772.75,
+      "y": 12.5,
+      "z": 1290.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 43,
+        "node_id": 19135,
+        "link_length": 45
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 18951,
+        "link_length": 32
+      }
+    },
+    "node_id": 18949,
+    "link_id_start": 217,
+    "link_id_end": 219,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "18951": {
+    "position": {
+      "x": -790.125,
+      "y": 12.5,
+      "z": 1318.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18949,
+        "link_length": 32
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 18952,
+        "link_length": 31
+      }
+    },
+    "node_id": 18951,
+    "link_id_start": 221,
+    "link_id_end": 223,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "18952": {
+    "position": {
+      "x": -806.125,
+      "y": 12.5,
+      "z": 1344.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18951,
+        "link_length": 31
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 18953,
+        "link_length": 29
+      }
+    },
+    "node_id": 18952,
+    "link_id_start": 223,
+    "link_id_end": 225,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "18953": {
+    "position": {
+      "x": -820.75,
+      "y": 12.5,
+      "z": 1370.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18952,
+        "link_length": 29
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 18954,
+        "link_length": 26
+      }
+    },
+    "node_id": 18953,
+    "link_id_start": 225,
+    "link_id_end": 227,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "18954": {
+    "position": {
+      "x": -833.125,
+      "y": 12.5,
+      "z": 1393.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18950,
+        "link_length": 5
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 18953,
+        "link_length": 26
+      }
+    },
+    "node_id": 18954,
+    "link_id_start": 227,
+    "link_id_end": 229,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "18950": {
+    "position": {
+      "x": -835.375,
+      "y": 12.5,
+      "z": 1398.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19048,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 18954,
+        "link_length": 5
+      }
+    },
+    "node_id": 18950,
+    "link_id_start": 219,
+    "link_id_end": 221,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19048": {
+    "position": {
+      "x": -841.25,
+      "y": 12.5,
+      "z": 1411.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18950,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19063,
+        "link_length": 11
+      },
+      "Adjacent 2": {
+        "area_id": 42,
+        "node_id": 19050,
+        "link_length": 8
+      }
+    },
+    "node_id": 19048,
+    "link_id_start": 422,
+    "link_id_end": 425,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "19050": {
+    "position": {
+      "x": -844.5,
+      "y": 12.5,
+      "z": 1418.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19048,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19051,
+        "link_length": 6
+      }
+    },
+    "node_id": 19050,
+    "link_id_start": 427,
+    "link_id_end": 429,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19051": {
+    "position": {
+      "x": -846.625,
+      "y": 12.5,
+      "z": 1424.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19050,
+        "link_length": 6
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19052,
+        "link_length": 5
+      }
+    },
+    "node_id": 19051,
+    "link_id_start": 429,
+    "link_id_end": 431,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19052": {
+    "position": {
+      "x": -848.0,
+      "y": 12.625,
+      "z": 1429.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19051,
+        "link_length": 5
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19053,
+        "link_length": 4
+      }
+    },
+    "node_id": 19052,
+    "link_id_start": 431,
+    "link_id_end": 433,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19053": {
+    "position": {
+      "x": -849.0,
+      "y": 12.75,
+      "z": 1434.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19049,
+        "link_length": 3
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19052,
+        "link_length": 4
+      }
+    },
+    "node_id": 19053,
+    "link_id_start": 433,
+    "link_id_end": 435,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19049": {
+    "position": {
+      "x": -849.25,
+      "y": 13.0,
+      "z": 1438.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19047,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19053,
+        "link_length": 3
+      }
+    },
+    "node_id": 19049,
+    "link_id_start": 425,
+    "link_id_end": 427,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19047": {
+    "position": {
+      "x": -850.125,
+      "y": 13.375,
+      "z": 1446.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19049,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19046,
+        "link_length": 13
+      }
+    },
+    "node_id": 19047,
+    "link_id_start": 420,
+    "link_id_end": 422,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19046": {
+    "position": {
+      "x": -849.75,
+      "y": 14.375,
+      "z": 1459.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19133,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19047,
+        "link_length": 13
+      }
+    },
+    "node_id": 19046,
+    "link_id_start": 418,
+    "link_id_end": 420,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19133": {
+    "position": {
+      "x": -848.375,
+      "y": 16.0,
+      "z": 1479.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 19046,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19132,
+        "link_length": 5
+      }
+    },
+    "node_id": 19133,
+    "link_id_start": 598,
+    "link_id_end": 600,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "19132": {
+    "position": {
+      "x": -847.875,
+      "y": 16.5,
+      "z": 1485.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18897,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19133,
+        "link_length": 5
+      }
+    },
+    "node_id": 19132,
+    "link_id_start": 596,
+    "link_id_end": 598,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "18897": {
+    "position": {
+      "x": -847.125,
+      "y": 17.0,
+      "z": 1492.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22019,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 42,
+        "node_id": 19132,
+        "link_length": 7
+      },
+      "Adjacent 2": {
+        "area_id": 42,
+        "node_id": 18899,
+        "link_length": 15
+      },
+      "Adjacent 3": {
+        "area_id": 42,
+        "node_id": 19127,
+        "link_length": 14
+      }
+    },
+    "node_id": 18897,
+    "link_id_start": 110,
+    "link_id_end": 114,
+    "area_id": 42,
+    "node_type": 1,
+    "flags": 991236
+  },
+  "22019": {
+    "position": {
+      "x": -846.0,
+      "y": 18.5,
+      "z": 1505.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 42,
+        "node_id": 18897,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22023,
+        "link_length": 17
+      }
+    },
+    "node_id": 22019,
+    "link_id_start": 194,
+    "link_id_end": 196,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22023": {
+    "position": {
+      "x": -844.5,
+      "y": 20.0,
+      "z": 1522.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22019,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22022,
+        "link_length": 16
+      }
+    },
+    "node_id": 22023,
+    "link_id_start": 202,
+    "link_id_end": 204,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "22022": {
+    "position": {
+      "x": -843.75,
+      "y": 21.5,
+      "z": 1539.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22021,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22023,
+        "link_length": 16
+      }
+    },
+    "node_id": 22022,
+    "link_id_start": 200,
+    "link_id_end": 202,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "22021": {
+    "position": {
+      "x": -843.75,
+      "y": 22.875,
+      "z": 1556.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22020,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22022,
+        "link_length": 16
+      }
+    },
+    "node_id": 22021,
+    "link_id_start": 198,
+    "link_id_end": 200,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "22020": {
+    "position": {
+      "x": -845.0,
+      "y": 24.125,
+      "z": 1572.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21985,
+        "link_length": 31
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22021,
+        "link_length": 16
+      }
+    },
+    "node_id": 22020,
+    "link_id_start": 196,
+    "link_id_end": 198,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21985": {
+    "position": {
+      "x": -852.375,
+      "y": 25.625,
+      "z": 1603.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22188,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22007,
+        "link_length": 25
+      },
+      "Adjacent 2": {
+        "area_id": 50,
+        "node_id": 22020,
+        "link_length": 31
+      }
+    },
+    "node_id": 21985,
+    "link_id_start": 123,
+    "link_id_end": 126,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991235
+  },
+  "22188": {
+    "position": {
+      "x": -859.25,
+      "y": 25.875,
+      "z": 1616.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21984,
+        "link_length": 34
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21985,
+        "link_length": 15
+      },
+      "Adjacent 2": {
+        "area_id": 50,
+        "node_id": 21987,
+        "link_length": 28
+      }
+    },
+    "node_id": 22188,
+    "link_id_start": 534,
+    "link_id_end": 537,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991235
+  },
+  "21984": {
+    "position": {
+      "x": -876.875,
+      "y": 26.0,
+      "z": 1645.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21975,
+        "link_length": 80
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22188,
+        "link_length": 34
+      }
+    },
+    "node_id": 21984,
+    "link_id_start": 121,
+    "link_id_end": 123,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21975": {
+    "position": {
+      "x": -920.0,
+      "y": 26.5,
+      "z": 1713.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21984,
+        "link_length": 80
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21976,
+        "link_length": 11
+      }
+    },
+    "node_id": 21975,
+    "link_id_start": 103,
+    "link_id_end": 105,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21976": {
+    "position": {
+      "x": -928.125,
+      "y": 27.125,
+      "z": 1721.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21975,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21983,
+        "link_length": 9
+      }
+    },
+    "node_id": 21976,
+    "link_id_start": 105,
+    "link_id_end": 107,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21983": {
+    "position": {
+      "x": -936.875,
+      "y": 27.875,
+      "z": 1725.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21976,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21982,
+        "link_length": 12
+      }
+    },
+    "node_id": 21983,
+    "link_id_start": 119,
+    "link_id_end": 121,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21982": {
+    "position": {
+      "x": -949.375,
+      "y": 28.75,
+      "z": 1726.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21981,
+        "link_length": 32
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21983,
+        "link_length": 12
+      }
+    },
+    "node_id": 21982,
+    "link_id_start": 117,
+    "link_id_end": 119,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21981": {
+    "position": {
+      "x": -981.375,
+      "y": 29.75,
+      "z": 1725.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21980,
+        "link_length": 34
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21982,
+        "link_length": 32
+      }
+    },
+    "node_id": 21981,
+    "link_id_start": 115,
+    "link_id_end": 117,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21980": {
+    "position": {
+      "x": -1015.75,
+      "y": 30.0,
+      "z": 1726.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21979,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21981,
+        "link_length": 34
+      }
+    },
+    "node_id": 21980,
+    "link_id_start": 113,
+    "link_id_end": 115,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21979": {
+    "position": {
+      "x": -1035.25,
+      "y": 30.0,
+      "z": 1728.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21978,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21980,
+        "link_length": 19
+      }
+    },
+    "node_id": 21979,
+    "link_id_start": 111,
+    "link_id_end": 113,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21978": {
+    "position": {
+      "x": -1053.375,
+      "y": 30.25,
+      "z": 1732.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21977,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21979,
+        "link_length": 18
+      }
+    },
+    "node_id": 21978,
+    "link_id_start": 109,
+    "link_id_end": 111,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "21977": {
+    "position": {
+      "x": -1070.25,
+      "y": 30.75,
+      "z": 1737.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22226,
+        "link_length": 25
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 21978,
+        "link_length": 17
+      }
+    },
+    "node_id": 21977,
+    "link_id_start": 107,
+    "link_id_end": 109,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 991234
+  },
+  "22226": {
+    "position": {
+      "x": -1093.25,
+      "y": 31.625,
+      "z": 1747.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21977,
+        "link_length": 25
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22227,
+        "link_length": 8
+      }
+    },
+    "node_id": 22226,
+    "link_id_start": 614,
+    "link_id_end": 616,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22227": {
+    "position": {
+      "x": -1100.5,
+      "y": 31.875,
+      "z": 1751.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22225,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22226,
+        "link_length": 8
+      }
+    },
+    "node_id": 22227,
+    "link_id_start": 616,
+    "link_id_end": 618,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22225": {
+    "position": {
+      "x": -1114.625,
+      "y": 33.25,
+      "z": 1759.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22224,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22227,
+        "link_length": 16
+      }
+    },
+    "node_id": 22225,
+    "link_id_start": 612,
+    "link_id_end": 614,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22224": {
+    "position": {
+      "x": -1128.25,
+      "y": 35.25,
+      "z": 1767.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22046,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22229,
+        "link_length": 15
+      },
+      "Adjacent 2": {
+        "area_id": 50,
+        "node_id": 22225,
+        "link_length": 16
+      }
+    },
+    "node_id": 22224,
+    "link_id_start": 609,
+    "link_id_end": 612,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "22229": {
+    "position": {
+      "x": -1141.375,
+      "y": 37.375,
+      "z": 1775.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22224,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22230,
+        "link_length": 14
+      }
+    },
+    "node_id": 22229,
+    "link_id_start": 620,
+    "link_id_end": 622,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22230": {
+    "position": {
+      "x": -1154.125,
+      "y": 38.5,
+      "z": 1782.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22229,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22231,
+        "link_length": 14
+      }
+    },
+    "node_id": 22230,
+    "link_id_start": 622,
+    "link_id_end": 624,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22231": {
+    "position": {
+      "x": -1166.875,
+      "y": 39.125,
+      "z": 1789.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22228,
+        "link_length": 2
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22230,
+        "link_length": 14
+      }
+    },
+    "node_id": 22231,
+    "link_id_start": 624,
+    "link_id_end": 626,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22228": {
+    "position": {
+      "x": -1168.5,
+      "y": 39.0,
+      "z": 1790.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22204,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22231,
+        "link_length": 2
+      }
+    },
+    "node_id": 22228,
+    "link_id_start": 618,
+    "link_id_end": 620,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22204": {
+    "position": {
+      "x": -1169.25,
+      "y": 38.875,
+      "z": 1798.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22203,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22228,
+        "link_length": 7
+      },
+      "Adjacent 2": {
+        "area_id": 50,
+        "node_id": 22206,
+        "link_length": 17
+      }
+    },
+    "node_id": 22204,
+    "link_id_start": 568,
+    "link_id_end": 571,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "22203": {
+    "position": {
+      "x": -1180.5,
+      "y": 39.5,
+      "z": 1798.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 21974,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22211,
+        "link_length": 11
+      },
+      "Adjacent 2": {
+        "area_id": 50,
+        "node_id": 22204,
+        "link_length": 11
+      }
+    },
+    "node_id": 22203,
+    "link_id_start": 565,
+    "link_id_end": 568,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "22211": {
+    "position": {
+      "x": -1179.75,
+      "y": 40.0,
+      "z": 1810.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22203,
+        "link_length": 11
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22213,
+        "link_length": 9
+      }
+    },
+    "node_id": 22211,
+    "link_id_start": 583,
+    "link_id_end": 585,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22213": {
+    "position": {
+      "x": -1180.375,
+      "y": 40.125,
+      "z": 1819.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22211,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22212,
+        "link_length": 8
+      }
+    },
+    "node_id": 22213,
+    "link_id_start": 587,
+    "link_id_end": 589,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22212": {
+    "position": {
+      "x": -1182.125,
+      "y": 40.375,
+      "z": 1826.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22058,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22213,
+        "link_length": 8
+      }
+    },
+    "node_id": 22212,
+    "link_id_start": 585,
+    "link_id_end": 587,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22058": {
+    "position": {
+      "x": -1185.0,
+      "y": 40.5,
+      "z": 1833.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22212,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22059,
+        "link_length": 7
+      }
+    },
+    "node_id": 22058,
+    "link_id_start": 272,
+    "link_id_end": 274,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22059": {
+    "position": {
+      "x": -1188.875,
+      "y": 40.5,
+      "z": 1839.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22058,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22060,
+        "link_length": 14
+      }
+    },
+    "node_id": 22059,
+    "link_id_start": 274,
+    "link_id_end": 276,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22060": {
+    "position": {
+      "x": -1198.5,
+      "y": 40.0,
+      "z": 1850.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22059,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22061,
+        "link_length": 15
+      }
+    },
+    "node_id": 22060,
+    "link_id_start": 276,
+    "link_id_end": 278,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22061": {
+    "position": {
+      "x": -1210.0,
+      "y": 39.625,
+      "z": 1861.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22060,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22062,
+        "link_length": 8
+      }
+    },
+    "node_id": 22061,
+    "link_id_start": 278,
+    "link_id_end": 280,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22062": {
+    "position": {
+      "x": -1216.0,
+      "y": 39.75,
+      "z": 1867.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22057,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22061,
+        "link_length": 8
+      }
+    },
+    "node_id": 22062,
+    "link_id_start": 280,
+    "link_id_end": 282,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22057": {
+    "position": {
+      "x": -1221.875,
+      "y": 40.0,
+      "z": 1874.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22056,
+        "link_length": 20
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22062,
+        "link_length": 9
+      }
+    },
+    "node_id": 22057,
+    "link_id_start": 270,
+    "link_id_end": 272,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22056": {
+    "position": {
+      "x": -1232.875,
+      "y": 40.75,
+      "z": 1891.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22055,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22057,
+        "link_length": 20
+      }
+    },
+    "node_id": 22056,
+    "link_id_start": 268,
+    "link_id_end": 270,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22055": {
+    "position": {
+      "x": -1238.125,
+      "y": 41.0,
+      "z": 1901.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22063,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22056,
+        "link_length": 10
+      }
+    },
+    "node_id": 22055,
+    "link_id_start": 266,
+    "link_id_end": 268,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987138
+  },
+  "22063": {
+    "position": {
+      "x": -1249.75,
+      "y": 41.75,
+      "z": 1915.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22055,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22106,
+        "link_length": 17
+      },
+      "Adjacent 2": {
+        "area_id": 50,
+        "node_id": 22065,
+        "link_length": 17
+      }
+    },
+    "node_id": 22063,
+    "link_id_start": 282,
+    "link_id_end": 285,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987139
+  },
+  "22065": {
+    "position": {
+      "x": -1235.625,
+      "y": 41.75,
+      "z": 1926.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22063,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22066,
+        "link_length": 9
+      }
+    },
+    "node_id": 22065,
+    "link_id_start": 287,
+    "link_id_end": 289,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22066": {
+    "position": {
+      "x": -1232.125,
+      "y": 41.5,
+      "z": 1935.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22065,
+        "link_length": 9
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22067,
+        "link_length": 7
+      }
+    },
+    "node_id": 22066,
+    "link_id_start": 289,
+    "link_id_end": 291,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22067": {
+    "position": {
+      "x": -1235.0,
+      "y": 42.5,
+      "z": 1941.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22066,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22068,
+        "link_length": 7
+      }
+    },
+    "node_id": 22067,
+    "link_id_start": 291,
+    "link_id_end": 293,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22068": {
+    "position": {
+      "x": -1240.25,
+      "y": 44.0,
+      "z": 1947.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22067,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22069,
+        "link_length": 12
+      }
+    },
+    "node_id": 22068,
+    "link_id_start": 293,
+    "link_id_end": 295,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22069": {
+    "position": {
+      "x": -1249.0,
+      "y": 48.0,
+      "z": 1955.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22068,
+        "link_length": 12
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22070,
+        "link_length": 14
+      }
+    },
+    "node_id": 22069,
+    "link_id_start": 295,
+    "link_id_end": 297,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22070": {
+    "position": {
+      "x": -1258.625,
+      "y": 52.75,
+      "z": 1964.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22069,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22071,
+        "link_length": 13
+      }
+    },
+    "node_id": 22070,
+    "link_id_start": 297,
+    "link_id_end": 299,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22071": {
+    "position": {
+      "x": -1267.125,
+      "y": 57.125,
+      "z": 1974.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22070,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22072,
+        "link_length": 10
+      }
+    },
+    "node_id": 22071,
+    "link_id_start": 299,
+    "link_id_end": 301,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22072": {
+    "position": {
+      "x": -1272.125,
+      "y": 60.0,
+      "z": 1982.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22071,
+        "link_length": 10
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22073,
+        "link_length": 17
+      }
+    },
+    "node_id": 22072,
+    "link_id_start": 301,
+    "link_id_end": 303,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22073": {
+    "position": {
+      "x": -1274.75,
+      "y": 63.875,
+      "z": 1999.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22064,
+        "link_length": 16
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22072,
+        "link_length": 17
+      }
+    },
+    "node_id": 22073,
+    "link_id_start": 303,
+    "link_id_end": 305,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22064": {
+    "position": {
+      "x": -1272.0,
+      "y": 67.0,
+      "z": 2014.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22075,
+        "link_length": 32
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22073,
+        "link_length": 16
+      }
+    },
+    "node_id": 22064,
+    "link_id_start": 285,
+    "link_id_end": 287,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22075": {
+    "position": {
+      "x": -1256.625,
+      "y": 71.625,
+      "z": 2042.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22064,
+        "link_length": 32
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22076,
+        "link_length": 15
+      }
+    },
+    "node_id": 22075,
+    "link_id_start": 307,
+    "link_id_end": 309,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22076": {
+    "position": {
+      "x": -1247.625,
+      "y": 73.5,
+      "z": 2054.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22075,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22077,
+        "link_length": 20
+      }
+    },
+    "node_id": 22076,
+    "link_id_start": 309,
+    "link_id_end": 311,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22077": {
+    "position": {
+      "x": -1231.75,
+      "y": 75.875,
+      "z": 2067.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22076,
+        "link_length": 20
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22078,
+        "link_length": 29
+      }
+    },
+    "node_id": 22077,
+    "link_id_start": 311,
+    "link_id_end": 313,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22078": {
+    "position": {
+      "x": -1205.625,
+      "y": 79.0,
+      "z": 2080.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22077,
+        "link_length": 29
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22079,
+        "link_length": 33
+      }
+    },
+    "node_id": 22078,
+    "link_id_start": 313,
+    "link_id_end": 315,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22079": {
+    "position": {
+      "x": -1175.0,
+      "y": 82.125,
+      "z": 2093.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22078,
+        "link_length": 33
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22080,
+        "link_length": 30
+      }
+    },
+    "node_id": 22079,
+    "link_id_start": 315,
+    "link_id_end": 317,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22080": {
+    "position": {
+      "x": -1145.75,
+      "y": 84.625,
+      "z": 2103.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22079,
+        "link_length": 30
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22081,
+        "link_length": 22
+      }
+    },
+    "node_id": 22080,
+    "link_id_start": 317,
+    "link_id_end": 319,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22081": {
+    "position": {
+      "x": -1124.0,
+      "y": 85.5,
+      "z": 2107.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22080,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22082,
+        "link_length": 13
+      }
+    },
+    "node_id": 22081,
+    "link_id_start": 319,
+    "link_id_end": 321,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22082": {
+    "position": {
+      "x": -1110.375,
+      "y": 85.625,
+      "z": 2108.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22081,
+        "link_length": 13
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22083,
+        "link_length": 10
+      }
+    },
+    "node_id": 22082,
+    "link_id_start": 321,
+    "link_id_end": 323,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22083": {
+    "position": {
+      "x": -1100.375,
+      "y": 86.0,
+      "z": 2109.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22074,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22082,
+        "link_length": 10
+      }
+    },
+    "node_id": 22083,
+    "link_id_start": 323,
+    "link_id_end": 325,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22074": {
+    "position": {
+      "x": -1092.5,
+      "y": 86.5,
+      "z": 2110.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22084,
+        "link_length": 25
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22083,
+        "link_length": 8
+      }
+    },
+    "node_id": 22074,
+    "link_id_start": 305,
+    "link_id_end": 307,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22084": {
+    "position": {
+      "x": -1069.375,
+      "y": 86.875,
+      "z": 2120.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22074,
+        "link_length": 25
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22085,
+        "link_length": 7
+      }
+    },
+    "node_id": 22084,
+    "link_id_start": 325,
+    "link_id_end": 327,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22085": {
+    "position": {
+      "x": -1064.125,
+      "y": 86.75,
+      "z": 2126.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22084,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22086,
+        "link_length": 7
+      }
+    },
+    "node_id": 22085,
+    "link_id_start": 327,
+    "link_id_end": 329,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22086": {
+    "position": {
+      "x": -1060.875,
+      "y": 86.625,
+      "z": 2133.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22085,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22087,
+        "link_length": 7
+      }
+    },
+    "node_id": 22086,
+    "link_id_start": 329,
+    "link_id_end": 331,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22087": {
+    "position": {
+      "x": -1059.0,
+      "y": 86.375,
+      "z": 2141.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22086,
+        "link_length": 7
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22088,
+        "link_length": 8
+      }
+    },
+    "node_id": 22087,
+    "link_id_start": 331,
+    "link_id_end": 333,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22088": {
+    "position": {
+      "x": -1057.625,
+      "y": 86.125,
+      "z": 2149.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22087,
+        "link_length": 8
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22089,
+        "link_length": 37
+      }
+    },
+    "node_id": 22088,
+    "link_id_start": 333,
+    "link_id_end": 335,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22089": {
+    "position": {
+      "x": -1065.125,
+      "y": 86.625,
+      "z": 2186.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22088,
+        "link_length": 37
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22090,
+        "link_length": 37
+      }
+    },
+    "node_id": 22089,
+    "link_id_start": 335,
+    "link_id_end": 337,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22090": {
+    "position": {
+      "x": -1072.5,
+      "y": 87.0,
+      "z": 2223.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22089,
+        "link_length": 37
+      },
+      "Adjacent 1": {
+        "area_id": 50,
+        "node_id": 22091,
+        "link_length": 18
+      }
+    },
+    "node_id": 22090,
+    "link_id_start": 337,
+    "link_id_end": 339,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "22091": {
+    "position": {
+      "x": -1076.25,
+      "y": 87.125,
+      "z": 2242.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22090,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24954,
+        "link_length": 15
+      }
+    },
+    "node_id": 22091,
+    "link_id_start": 339,
+    "link_id_end": 341,
+    "area_id": 50,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24954": {
+    "position": {
+      "x": -1080.5,
+      "y": 86.625,
+      "z": 2256.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 50,
+        "node_id": 22091,
+        "link_length": 15
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24953,
+        "link_length": 15
+      }
+    },
+    "node_id": 24954,
+    "link_id_start": 2,
+    "link_id_end": 4,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24953": {
+    "position": {
+      "x": -1084.5,
+      "y": 86.125,
+      "z": 2271.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24956,
+        "link_length": 30
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24954,
+        "link_length": 15
+      }
+    },
+    "node_id": 24953,
+    "link_id_start": 0,
+    "link_id_end": 2,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24956": {
+    "position": {
+      "x": -1091.75,
+      "y": 85.375,
+      "z": 2301.25
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24953,
+        "link_length": 30
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24957,
+        "link_length": 15
+      }
+    },
+    "node_id": 24956,
+    "link_id_start": 6,
+    "link_id_end": 8,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24957": {
+    "position": {
+      "x": -1094.875,
+      "y": 85.25,
+      "z": 2316.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24955,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24956,
+        "link_length": 15
+      }
+    },
+    "node_id": 24957,
+    "link_id_start": 8,
+    "link_id_end": 10,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24955": {
+    "position": {
+      "x": -1097.125,
+      "y": 85.125,
+      "z": 2333.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24958,
+        "link_length": 38
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24957,
+        "link_length": 17
+      }
+    },
+    "node_id": 24955,
+    "link_id_start": 4,
+    "link_id_end": 6,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24958": {
+    "position": {
+      "x": -1100.75,
+      "y": 84.0,
+      "z": 2372.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24955,
+        "link_length": 38
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24988,
+        "link_length": 25
+      },
+      "Adjacent 2": {
+        "area_id": 58,
+        "node_id": 24960,
+        "link_length": 15
+      }
+    },
+    "node_id": 24958,
+    "link_id_start": 10,
+    "link_id_end": 13,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987427
+  },
+  "24988": {
+    "position": {
+      "x": -1104.0,
+      "y": 82.625,
+      "z": 2397.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24958,
+        "link_length": 25
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24989,
+        "link_length": 19
+      }
+    },
+    "node_id": 24988,
+    "link_id_start": 70,
+    "link_id_end": 72,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24989": {
+    "position": {
+      "x": -1108.375,
+      "y": 81.0,
+      "z": 2415.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24988,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24990,
+        "link_length": 17
+      }
+    },
+    "node_id": 24989,
+    "link_id_start": 72,
+    "link_id_end": 74,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24990": {
+    "position": {
+      "x": -1111.25,
+      "y": 79.875,
+      "z": 2432.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24989,
+        "link_length": 17
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24991,
+        "link_length": 18
+      }
+    },
+    "node_id": 24990,
+    "link_id_start": 74,
+    "link_id_end": 76,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24991": {
+    "position": {
+      "x": -1110.875,
+      "y": 79.625,
+      "z": 2450.875
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24990,
+        "link_length": 18
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24992,
+        "link_length": 19
+      }
+    },
+    "node_id": 24991,
+    "link_id_start": 76,
+    "link_id_end": 78,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24992": {
+    "position": {
+      "x": -1109.25,
+      "y": 79.625,
+      "z": 2470.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24991,
+        "link_length": 19
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24993,
+        "link_length": 20
+      }
+    },
+    "node_id": 24992,
+    "link_id_start": 78,
+    "link_id_end": 80,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24993": {
+    "position": {
+      "x": -1108.875,
+      "y": 79.75,
+      "z": 2490.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24992,
+        "link_length": 20
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24994,
+        "link_length": 22
+      }
+    },
+    "node_id": 24993,
+    "link_id_start": 80,
+    "link_id_end": 82,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24994": {
+    "position": {
+      "x": -1111.75,
+      "y": 79.5,
+      "z": 2512.5
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24993,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24995,
+        "link_length": 22
+      }
+    },
+    "node_id": 24994,
+    "link_id_start": 82,
+    "link_id_end": 84,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24995": {
+    "position": {
+      "x": -1119.125,
+      "y": 77.75,
+      "z": 2534.0
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24994,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24996,
+        "link_length": 22
+      }
+    },
+    "node_id": 24995,
+    "link_id_start": 84,
+    "link_id_end": 86,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24996": {
+    "position": {
+      "x": -1129.75,
+      "y": 74.625,
+      "z": 2553.125
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24987,
+        "link_length": 22
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24995,
+        "link_length": 22
+      }
+    },
+    "node_id": 24996,
+    "link_id_start": 86,
+    "link_id_end": 88,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24987": {
+    "position": {
+      "x": -1143.375,
+      "y": 70.625,
+      "z": 2570.375
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24998,
+        "link_length": 46
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24996,
+        "link_length": 22
+      }
+    },
+    "node_id": 24987,
+    "link_id_start": 68,
+    "link_id_end": 70,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24998": {
+    "position": {
+      "x": -1177.0,
+      "y": 61.75,
+      "z": 2601.75
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24987,
+        "link_length": 46
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 24999,
+        "link_length": 14
+      }
+    },
+    "node_id": 24998,
+    "link_id_start": 90,
+    "link_id_end": 92,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  },
+  "24999": {
+    "position": {
+      "x": -1187.625,
+      "y": 58.625,
+      "z": 2611.625
+    },
+    "adj_nodes": {
+      "Adjacent 0": {
+        "area_id": 58,
+        "node_id": 24998,
+        "link_length": 14
+      },
+      "Adjacent 1": {
+        "area_id": 58,
+        "node_id": 25000,
+        "link_length": 13
+      }
+    },
+    "node_id": 24999,
+    "link_id_start": 92,
+    "link_id_end": 94,
+    "area_id": 58,
+    "node_type": 1,
+    "flags": 987426
+  }
+}

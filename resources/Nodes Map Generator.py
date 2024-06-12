@@ -2,7 +2,7 @@ from PIL import Image
 from matplotlib import pyplot as plt
 
 from utils.vectors import Vector2
-from utils.json_utils import NODES_DATA_JSON
+from utils.json_utils import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA
 from utils.nodes_classes import PathNode
 from utils.map_conversions import ingame_to_image_coords, image_to_ingame_coords
 from resources.utils import json_utils
@@ -10,7 +10,7 @@ from resources.utils import json_utils
 
 MAP_PATH = 'data/map/map.png' # 6144x6144 pixels in this example
 
-MAP_LOGS = 'data/nodes_data/map_logs.json'
+MAP_LOGS = 'data/nodes_data/debug/map_logs.json'
 
 
 
@@ -66,7 +66,7 @@ def get_nodes_data(nodes_percent=100, only_display_nodes=[], only_display_segmen
 
 
     # Do not modify variables
-    nodes_data = json_utils.load_json(json_utils.NODES_DATA_JSON)
+    nodes_data = json_utils.load_json(json_utils.SOLVED_PATH_NODES_DATA)
 
     total_nodes = sum(len(segment) for segment in nodes_data.values())
     target_nodes = int(total_nodes * (nodes_percent / 100))
@@ -132,7 +132,7 @@ def get_nodes_pos_array(nodes_data):
 
 
 if __name__ == '__main__':
-    nodes_data = get_nodes_data(3)
+    nodes_data = get_nodes_data(100)
     nodes_pos_array = get_nodes_pos_array(nodes_data)
 
     display_map(nodes_pos_array)

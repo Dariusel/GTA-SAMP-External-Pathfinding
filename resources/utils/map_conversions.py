@@ -4,8 +4,7 @@ from utils.vectors import Vector2
 MAP_SIZE = 6000 # 6000x6000
 
 def image_to_ingame_coords(vector2, mapImg):
-    img = Image.open(mapImg)
-    imgSize = img.size[0]
+    imgSize = mapImg.size[0]
     image_to_ingame_ratio = MAP_SIZE / imgSize #6000 is the size of ingame map
 
     # Formula for conversion
@@ -16,8 +15,7 @@ def image_to_ingame_coords(vector2, mapImg):
     
 
 def ingame_to_image_coords(vector2, mapImg):
-    img = Image.open(mapImg)
-    imgSize = img.size[0]
+    imgSize = mapImg.size[0]
     ingame_to_image_ratio = imgSize / MAP_SIZE #6000 is the size of ingame map
     
     # Formula for conversion

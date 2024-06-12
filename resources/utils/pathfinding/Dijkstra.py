@@ -90,10 +90,10 @@ def pathfind_dijkstra(nodes_data, start_node, end_node): #nodes_arr = [PathNode(
     cur_solve_table_node = SolveTableNode.from_dict(solve_table[str(end_node.node_id)])
 
     while cur_solve_table_node.previous_node != None:
-        solved_path.append(cur_solve_table_node.previous_node.node_id)
+        solved_path.append(cur_solve_table_node.previous_node)
         cur_solve_table_node = SolveTableNode.from_dict(solve_table[str(cur_solve_table_node.previous_node.node_id)])
 
-    print(solved_path[::-1])
+    return(solved_path[::-1])
     
 
     #for solve_table_node_id, solve_table_node in solve_table.items():
