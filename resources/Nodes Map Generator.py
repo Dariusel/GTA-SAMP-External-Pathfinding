@@ -133,7 +133,7 @@ def get_nodes_pos_array(nodes_data):
 
 
 if __name__ == '__main__':
-    nodes_data = get_nodes_data(10)
+    nodes_data = get_nodes_data(100)
     nodes_pos_array = get_nodes_pos_array(nodes_data)
 
     display_map(nodes_pos_array)
