@@ -47,6 +47,8 @@ class MainGUI():
         self.solved_path = []
         self.path_line_ids = {}
 
+        self.autodriver = None
+
     def display_main(self):
         self.root.title('GTA-SAMP External Pathfinding')
         self.root.resizable(0, 0) # Dont allow user to resize window
@@ -75,6 +77,7 @@ class MainGUI():
 
         # Buttons
         self.button_run = Button(self.root, text='Run', width=20, height=2, command=self.run_button)
+        self.button_pause = Button(self.root, text='Pause', width=15, height=2, command=self.pause_button)
         self.button_compute = Button(self.root, text='Compute Path', width=20, height=2, command=self.compute_button)
         self.button_clear = Button(self.root, text='Clear Start/End', width=20, height=2, command=self.clear_button)
 
@@ -84,6 +87,7 @@ class MainGUI():
         under_map_label.grid(column=0, row=1, columnspan=3)
 
         self.button_run.grid(column=0, row=2, pady=10, padx=0)
+        self.button_pause.grid(column=0, row=3, pady=10, padx=0)
         self.button_compute.grid(column=1, row=2, pady=10, padx=0)
         self.button_clear.grid(column=2, row=2, pady=10, padx=0)
 
@@ -198,9 +202,19 @@ class MainGUI():
 
     def run_button(self):
         if self.solved_path:
-            autodriver = Autodriver(self.solved_path)
+            # If Autodriver exists and is paused resume it else create new instance and start driving
+            if self.autodriver:
+                if self.autodriver.is_paused:
+                    self.autodriver.pause_driving(False)
+                    
+                return
+            
+            self.autodriver = Autodriver(self.solved_path)
+            self.autodriver.start_driving()
 
-            autodriver.start_driving()
+
+    def pause_button(self):
+        self.autodriver.pause_driving(True)
 
     
     def compute_button(self):
