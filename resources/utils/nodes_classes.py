@@ -47,9 +47,9 @@ class PathNode():
 
 		for node in nodes_data.values():
 			node_obj = cls.from_dict(node)
-			node_pos = Vector2(node_obj.position.x, node_obj.position.z)
+			node_pos = Vector3(node_obj.position.x, node_obj.position.y, node_obj.position.z)
 
-			node_distance = Vector2.distance(node_pos, position)
+			node_distance = Vector3.distance(node_pos, position)
 
 			if node_distance < closest_node_distance:
 				closest_node = node_obj

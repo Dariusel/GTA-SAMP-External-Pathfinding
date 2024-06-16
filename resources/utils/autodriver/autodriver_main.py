@@ -15,8 +15,8 @@ class Autodriver():
     _instance = None
 
     #Config
-    distance_to_node_threshold = 10 # From what distance to the current node can autodriver switch to next node
-    angle_difference_threshold = 10 # How many degrees off can autodriver be when turning towards node
+    distance_to_node_threshold = 20 # From what distance to the current node can autodriver switch to next node
+    angle_difference_threshold = 7.5 # How many degrees off can autodriver be when turning towards node
     update_interval = 0.05 # Update interval for autodriver in seconds
 
     def __init__(self, path: List[PathNode]):
@@ -40,7 +40,7 @@ class Autodriver():
     def start_driving(self):
         self.is_paused = False
 
-        thread = Thread(target=self._start_driving, daemon=True)
+        thread = Thread(target=self._drive, daemon=True)
         thread.start()
 
     
@@ -51,7 +51,13 @@ class Autodriver():
             self.start_driving()
 
 
-    def _start_driving(self):
+    def destroy(self):
+        Autodriver._instance = None
+        self.is_paused = True
+        del self
+
+
+    def _drive(self):
         # Iterate over each node remaining in self.path
         for cur_node in self.path[self.current_node_index:]:
             driver_pos = Vector3(self.gta_sa.read_float(PLAYER_X),
@@ -62,7 +68,6 @@ class Autodriver():
             node_pos = cur_node.position
 
             driver_to_node_distance = Vector3.distance(driver_pos, node_pos)
-            print(f'Pos {node_pos}')
 
             # Drive to node while distance is smaller then threshold
             while driver_to_node_distance > Autodriver.distance_to_node_threshold:
