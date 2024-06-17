@@ -29,3 +29,20 @@ def calculate_look_at_angle(observer_pos: Vector3, observer_orientation, target_
 
     calculated_angle_rad = math.radians(calculated_angle_degrees)
     return calculated_angle_rad
+
+
+def calculate_angle_between_3_positions(node_a: Vector3, node_b: Vector3, node_c: Vector3): # Only horizontal angle doesnt care about y axis
+    ba_vector = Vector2(node_a.x - node_b.x, node_a.z - node_b.z)
+    bc_vector = Vector2(node_c.x - node_b.x, node_c.z - node_b.z)
+
+    babc_dot = (ba_vector.x*bc_vector.x) + (ba_vector.y*bc_vector.y)
+
+    ba_magnitude = math.sqrt(ba_vector.x**2 + ba_vector.y**2)
+    bc_magnitude = math.sqrt(bc_vector.x**2 + bc_vector.y**2)
+
+    # Limit cos_angle to [-1, 1]
+    cos_angle = babc_dot/(ba_magnitude*bc_magnitude)
+    cos_angle = max(-1, min(1, cos_angle))
+
+    calculated_angle = math.acos(cos_angle)
+    return calculated_angle

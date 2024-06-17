@@ -1,7 +1,7 @@
 from PIL import Image
 from matplotlib import pyplot as plt
 
-from utils.vectors import Vector2
+from utils.vectors import Vector2, Vector3
 from utils.file_paths import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA
 from utils.nodes_classes import PathNode
 from utils.map_conversions import ingame_to_image_coords, image_to_ingame_coords
@@ -22,8 +22,8 @@ def display_map(nodes_array=None):
 
     if nodes_array:
         for node in nodes_array:
-            node_pos = ingame_to_image_coords(Vector2(node.x, node.y), map_img)
-            plt.plot(node_pos.x, node_pos.y, 'r.', markersize=2)
+            node_pos = ingame_to_image_coords(Vector3(node.x, 0, node.y), map_img)
+            plt.plot(node_pos.x, node_pos.z, 'r.', markersize=2)
 
     fig.canvas.mpl_connect('button_press_event', on_figure_click)
 
@@ -31,7 +31,7 @@ def display_map(nodes_array=None):
 
 
 def on_figure_click(event):
-    click_pos = Vector2(event.xdata, event.ydata)
+    click_pos = Vector3(event.xdata, 0, event.ydata)
     map_img = Image.open(MAP_PATH)
     click_pos_ingame = image_to_ingame_coords(click_pos, map_img).round()
 
@@ -62,7 +62,7 @@ def get_closest_node_to_click(click_pos):
 
 def get_nodes_data(nodes_percent=100, only_display_nodes=[], only_display_segments=[]): # For performance reasons set nodes_percent to a lower number to only aquire that % of nodes
     # Changeable variables
-    only_display_nodes = [] # Format (x, y) x = Area ID, y = Node ID
+    only_display_nodes = [(32, 13916), (32, 13765)]#[(33, 14870), (33, 14763)] # Format (x, y) x = Area ID, y = Node ID
     only_display_segments = [] # Format [a,b,c...] where a,b,c = Area ID(segment)
 
 
