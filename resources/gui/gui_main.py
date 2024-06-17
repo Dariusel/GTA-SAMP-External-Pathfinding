@@ -17,6 +17,7 @@ from resources.utils.memory.memory_adresses import *
 from resources.utils.memory.utils.memory_utils import try_get_gta_sa
 from resources.utils.memory.memory_events import blip_changed_event, marker_changed_event
 from resources.utils.autodriver.autodriver_main import Autodriver
+from resources.utils.keypress import key_up
 
 
 
@@ -342,13 +343,18 @@ class MainGUI():
 
 
     def stop_autodriver(self):
-        print('STOPPED')
         if self.autodriver:
             self.autodriver.destroy()
             self.autodriver = None
 
             self.is_driving_to_blip = False
             self.is_driving_to_marker = False
+
+            # Release all pressed keys
+            key_up(ord('W'))
+            key_up(ord('S'))
+            key_up(ord('A'))
+            key_up(ord('D'))
 
             self.update_widget_states()
 
