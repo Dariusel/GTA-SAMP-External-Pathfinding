@@ -106,3 +106,9 @@ class NodeType(Enum):
 
 	def __repr__(self):
 		return self.value
+	
+
+class SlowdownType(Enum):
+	BRAKE = 0
+	SLOWDOWN = 1
+	FINISH = 2

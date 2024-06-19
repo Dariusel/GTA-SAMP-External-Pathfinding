@@ -11,16 +11,17 @@ This project provides an external pathfinding solution for GTA San Andreas Multi
 - **Memory Reading**: Reads the position and vehicle orientation directly from the `gta_sa.exe` memory.
 - **Automatic Driving**: Automatically drives the vehicle to the destination based on the pathfinding results.
 
-## Installation
-
-### Prerequisites
-
-- Python 3.x
-- Required Python libraries (listed in `requirements.txt`)
-
-### Steps
+## Installation Steps
 
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/yourusername/GTA-SAMP-External-Pathfinding.git
    cd GTA-SAMP-External-Pathfinding
+
+2. **Activate virtual enviroment**:
+   ```sh
+   call env/scripts/activate
+
+3. **Run**:
+   ```sh
+   python main.py

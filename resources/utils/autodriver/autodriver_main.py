@@ -1,36 +1,46 @@
 import sys, os
-import win32con, win32api
 import math
 from typing import List
 from time import sleep
 from threading import Thread
+from enum import Enum
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from resources.utils.memory.memory_adresses import *
-from resources.utils.nodes_classes import PathNode
+from resources.utils.nodes_classes import PathNode, SlowdownType
 from resources.utils.vectors import Vector3
 from resources.utils.keypress import key_down, key_up
 from resources.utils.math_utils import calculate_look_at_angle, calculate_angle_between_3_positions
 
+
 class Autodriver():
     _instance = None
 
-    #Config
-    update_interval = 0.04 # Update interval for autodriver in seconds
+    # Configuration
+    UPDATE_INTERVAL = 0.04  # Update interval for autodriver in seconds
 
-    distance_to_node_threshold = 15 # From what distance to the current node can autodriver switch to next node
-    angle_difference_threshold = 7.5 #7.5 How many degrees off can autodriver be when turning towards node
+    # Main
+    DISTANCE_TO_NODE_THRESHOLD = 15  # Distance threshold to switch to the next node
+    ANGLE_DIFFERENCE_THRESHOLD = 7.5  # Maximum allowable angle difference when turning towards node
 
-    max_speed = 0.8 # 1.2 for max car speeds
-    min_speed = 0
+    # Speed
+    MAX_SPEED = 0.8  # Maximum autodriver speed
+    MIN_SPEED = 0
 
-    slow_down_angle = 165 # Node angle where you should slow down
+    MAX_TURNING_SPEED = 0.35  # Maximum speed when turning
 
-    turn_min_angle = 130 #(110); Minimum angle thats considered a turn
-    slowdown_distance_from_turn = 70 # How far from the turn should the car start braking gradually
-    braking_distance_from_turn = 17.5 # How far from the turn should the car start full braking
-    max_turning_speed = 0.35 # 'CAR_SPEED' variable max number when turning
+    # Braking
+    INITIAL_BRAKING_DISTANCE = 70  # Distance from the turn to start braking gradually
+    FULL_BRAKING_DISTANCE = 17.5  # Distance from the turn to start full braking
 
-    braking_speed_difference_threshold = 0.175 # If speed difference between cur_speed and target_speed is more than this brake otherwise release throttle
+    BRAKING_SPEED_DIFFERENCE_THRESHOLD = 0.175  # Speed difference threshold for braking
+
+    # Slowdown Detection
+    ANGLE_DETECTION_THRESHOLD = 175 # If a slight angle is detected (<ANGLE_DETECTION_THRESHOLD) check real angle by getting the sum of the next ANGLE_DETECTION_COUNT nodes angles
+    ANGLE_DETECTION_COUNT = 5 # If found a slight angle, get the sum of the next ANGLE_DETECTION_COUNT nodes angles
+
+    SLOWDOWN_ANGLE = 145  # Node angle where the car should slow down
+    BRAKE_ANGLE = 110  # Minimum angle considered a turn
 
     def __init__(self, path: List[PathNode]):
         if Autodriver._instance:
@@ -57,7 +67,7 @@ class Autodriver():
         thread.start()
 
     
-    def pause_driving(self, bool):
+    def pause_driving(self, bool: bool):
         self.is_paused = bool
 
         if not self.is_paused:
@@ -70,26 +80,55 @@ class Autodriver():
         del self
 
 
-    def get_next_turn_node(self):
+    def get_next_slowdown_node(self):
         for i in range(self.current_node_index, len(self.path) - 1):
-            if self.path[i] != self.path[0] and self.path[i] != self.path[-1]:
-                if self.path[i] == self.path[self.current_node_index]:
+            # If not first or last element
+            if self.path[i] == self.path[0] or self.path[i] == self.path[-1]:
+                continue
+            
+            # Dont get the same node
+            if self.path[i] == self.path[self.current_node_index]:
+                continue
+            
+            node_angle_rad = calculate_angle_between_3_positions(self.path[i-1].position,
+                                                                     self.path[i].position,
+                                                                     self.path[i+1].position)
+            node_angle_deg = math.degrees(node_angle_rad)
+            print(f'(GNSN) - I: {i}, Cur_Node_Angle_Deg: {node_angle_deg}')
+
+            # If found slight angle then get sum angle of next ANGLE_DETECTION_COUNT nodes
+            if node_angle_deg <= Autodriver.ANGLE_DETECTION_THRESHOLD:
+                # Check if there are ANGLE_DETECTION_COUNT nodes in front of this before calculating
+                if i > (len(self.path) - Autodriver.ANGLE_DETECTION_COUNT):
                     continue
-                cur_node_angle_rad = calculate_angle_between_3_positions(self.path[i-1].position,
-                                                                         self.path[i].position,
-                                                                         self.path[i+1].position)
-                cur_node_angle_deg = math.degrees(cur_node_angle_rad)
-                # If found turn
-                if cur_node_angle_deg <= Autodriver.turn_min_angle:
-                    return self.path[i]
+
+                # Get sum of next angles
+                cur_angle_detection_sum_deg = 0
+                for j in range(i, i + Autodriver.ANGLE_DETECTION_COUNT):
+                    cur_node_angle_rad = calculate_angle_between_3_positions(self.path[j-1].position,
+                                                                             self.path[j].position,
+                                                                             self.path[j+1].position)
+                    cur_node_angle_deg = math.degrees(cur_node_angle_rad)
+
+                    cur_angle_detection_sum_deg += 180 - cur_node_angle_deg
+                cur_angle_detection_sum_deg = 180 - cur_angle_detection_sum_deg
+                print(f'(GNSN) - I: {i}, Angles_Sum_Deg: {cur_angle_detection_sum_deg}')
+
+                if cur_angle_detection_sum_deg <= Autodriver.BRAKE_ANGLE:
+                    return self.path[i], SlowdownType.BRAKE
+                
+                if cur_angle_detection_sum_deg <= Autodriver.SLOWDOWN_ANGLE:
+                    return self.path[i], SlowdownType.SLOWDOWN
+                
         
         # Return last node in path to brake when finish
-        return self.path[-1]
+        return self.path[-1], SlowdownType.FINISH
 
 
     def _drive(self):
         # Find first turn_node
-        turn_node = self.get_next_turn_node()
+        turn_node, turn_node_type = self.get_next_slowdown_node()
+        print(f'{turn_node.node_id} TYPE({turn_node_type})')
 
         # Iterate over each node remaining in self.path
         for i, cur_node in enumerate(self.path, start=self.current_node_index):
@@ -105,30 +144,32 @@ class Autodriver():
             driver_to_node_distance = Vector3.distance(driver_pos, node_pos)
         
             # Drive to node while distance is smaller then threshold
-            while driver_to_node_distance > Autodriver.distance_to_node_threshold:
+            while driver_to_node_distance > Autodriver.DISTANCE_TO_NODE_THRESHOLD:
                 if self.is_paused:
                     return
 
-                driver_pos = Vector3(self.gta_sa.read_float(PLAYER_X),
-                                 self.gta_sa.read_float(PLAYER_Y),
-                                 self.gta_sa.read_float(PLAYER_Z))
+                driver_pos = Vector3(
+                    self.gta_sa.read_float(PLAYER_X),
+                    self.gta_sa.read_float(PLAYER_Y),
+                    self.gta_sa.read_float(PLAYER_Z))
                 driver_orientation = self.gta_sa.read_float(PLAYER_ANGLE_RADIANS)
 
                 driver_to_node_angle = calculate_look_at_angle(driver_pos, driver_orientation, node_pos)
                 driver_to_node_angle = math.degrees(driver_to_node_angle)
 
+                driver_to_node_distance = Vector3.distance(driver_pos, node_pos)
                 driver_to_turn_node_distance = Vector3.distance(driver_pos, turn_node.position) if turn_node else float('inf')
                 
                 cur_speed = self.gta_sa.read_float(CAR_SPEED)
 
                 # Calculate target_speed
-                target_speed = Autodriver.max_speed * min(driver_to_turn_node_distance/(Autodriver.slowdown_distance_from_turn+Autodriver.distance_to_node_threshold),
-                                                          1)
-                if driver_to_turn_node_distance <= Autodriver.braking_distance_from_turn+Autodriver.distance_to_node_threshold:
-                    target_speed = Autodriver.max_turning_speed
+                target_speed = Autodriver.MAX_SPEED * min(
+                    driver_to_turn_node_distance/ (Autodriver.INITIAL_BRAKING_DISTANCE + Autodriver.DISTANCE_TO_NODE_THRESHOLD),
+                    1)
+                if driver_to_turn_node_distance <= Autodriver.FULL_BRAKING_DISTANCE+Autodriver.DISTANCE_TO_NODE_THRESHOLD:
+                    target_speed = Autodriver.MAX_TURNING_SPEED
 
-                # Throttle
-                #print(f'Cur({cur_speed}) - Target({target_speed})')
+                # Throttle Control
                 if cur_speed < target_speed:
                     key_down(ord('W'))
                     key_up(ord('S'))
@@ -136,12 +177,11 @@ class Autodriver():
                     key_up(ord('W'))
 
                     speed_difference = cur_speed - target_speed
-                    if speed_difference > Autodriver.braking_speed_difference_threshold:
+                    if speed_difference > Autodriver.BRAKING_SPEED_DIFFERENCE_THRESHOLD:
                         key_down(ord('S'))
 
-
-                # Turn left/right based on angle
-                if driver_to_node_angle.__abs__() > Autodriver.angle_difference_threshold:
+                # Direction Control
+                if driver_to_node_angle.__abs__() > Autodriver.ANGLE_DIFFERENCE_THRESHOLD:
                     
                     if driver_to_node_angle > 0:
                         key_down(ord('D'))
@@ -149,19 +189,18 @@ class Autodriver():
                     else:
                         key_down(ord('A'))
                         key_up(ord('D'))
-                # Release turning keys if angle is good
                 else:
                     key_up(ord('D'))
                     key_up(ord('A'))
-                
-                # Update driver_to_node distance
-                driver_to_node_distance = Vector3.distance(driver_pos, node_pos)
 
-                sleep(Autodriver.update_interval)
+                sleep(Autodriver.UPDATE_INTERVAL)
 
             if cur_node == turn_node:
-                turn_node = self.get_next_turn_node()
+                turn_node, turn_node_type = self.get_next_slowdown_node()
+                print(f'{turn_node.node_id} TYPE({turn_node_type})')
+
         key_up(ord('W'))
+        key_up(ord('S'))
                     
 
 
