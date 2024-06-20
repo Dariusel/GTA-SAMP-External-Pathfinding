@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from resources.utils.memory.memory_adresses import *
 from resources.utils.nodes_classes import PathNode, SlowdownType
 from resources.utils.vectors import Vector3
-from resources.utils.keypress import key_down, key_up
+from resources.utils.keypress import key_down, key_up, release_keys
 from resources.utils.math_utils import calculate_look_at_angle, calculate_angle_between_3_positions
 
 
@@ -26,8 +26,8 @@ class Autodriver():
     # Speed
     MAX_SPEED = 1.2  # Maximum autodriver speed
 
-    MAX_SLOWDOWN_SPEED = 0.6 # Maximum speed when having to slow down for a turn
-    MAX_BRAKING_SPEED = 0.3  # Maximum speed when having to brake/take a turn
+    MAX_SLOWDOWN_SPEED = 0.7 # Maximum speed when having to slow down for a turn
+    MAX_BRAKING_SPEED = 0.35  # Maximum speed when having to brake/take a turn
 
     # Braking
     SLOWDOWN_DISTANCE = 75 # Distance from the slowdown node to start braking
@@ -112,7 +112,7 @@ class Autodriver():
 
                     cur_angle_detection_sum_deg += 180 - cur_node_angle_deg
                 cur_angle_detection_sum_deg = 180 - cur_angle_detection_sum_deg
-                print(f'(GNSN) - I: {i}, Angles_Sum_Deg: {cur_angle_detection_sum_deg}')
+                #print(f'(GNSN) - I: {i}, Angles_Sum_Deg: {cur_angle_detection_sum_deg}')
 
                 if cur_angle_detection_sum_deg <= Autodriver.BRAKE_ANGLE:
                     return self.path[i], SlowdownType.BRAKE
@@ -128,7 +128,7 @@ class Autodriver():
     def _drive(self):
         # Find first slowdown_node
         slowdown_node, slowdown_node_type = self.get_slowdown_node()
-        print(f'{slowdown_node.node_id} TYPE({slowdown_node_type})')
+        #print(f'{slowdown_node.node_id} TYPE({slowdown_node_type})')
 
         # Iterate over each node remaining in self.path
         for i, cur_node in enumerate(self.path, start=self.current_node_index):
@@ -164,10 +164,11 @@ class Autodriver():
 
                 # Calculate target_speed
                 # Braking Logic
+                cur_speed_normalized = cur_speed / Autodriver.MAX_SPEED
                 if slowdown_node_type == SlowdownType.SLOWDOWN:
                     target_speed = max(
                         Autodriver.MAX_SPEED * min(
-                            (driver_to_slowdown_node_distance - Autodriver.DISTANCE_TO_NODE_THRESHOLD*1.5) / Autodriver.SLOWDOWN_DISTANCE,
+                            (driver_to_slowdown_node_distance - Autodriver.DISTANCE_TO_NODE_THRESHOLD*cur_speed_normalized) / Autodriver.SLOWDOWN_DISTANCE,
                             1
                         ),
                         Autodriver.MAX_SLOWDOWN_SPEED
@@ -177,7 +178,7 @@ class Autodriver():
                 elif slowdown_node_type == SlowdownType.BRAKE:
                     target_speed = max(
                         Autodriver.MAX_SPEED * min(
-                            (driver_to_slowdown_node_distance - Autodriver.DISTANCE_TO_NODE_THRESHOLD*1.25) / Autodriver.BRAKING_DISTANCE,
+                            (driver_to_slowdown_node_distance - Autodriver.DISTANCE_TO_NODE_THRESHOLD*cur_speed_normalized) / Autodriver.BRAKING_DISTANCE,
                             1
                         ),
                         Autodriver.MAX_BRAKING_SPEED
@@ -186,7 +187,7 @@ class Autodriver():
                 # Finish Logic
                 elif slowdown_node_type == SlowdownType.FINISH:
                     target_speed = Autodriver.MAX_SPEED * min(
-                        (driver_to_slowdown_node_distance - Autodriver.DISTANCE_TO_NODE_THRESHOLD*1.5) / Autodriver.FINISH_DISTANCE,
+                        driver_to_slowdown_node_distance / Autodriver.FINISH_DISTANCE,
                         1
                     )
 
@@ -218,10 +219,9 @@ class Autodriver():
 
             if cur_node == slowdown_node:
                 slowdown_node, slowdown_node_type = self.get_slowdown_node()
-                print(f'{slowdown_node.node_id} TYPE({slowdown_node_type})')
+                #print(f'{slowdown_node.node_id} TYPE({slowdown_node_type})')
 
-        key_up(ord('W'))
-        key_up(ord('S'))
+        release_keys()
                     
 
 

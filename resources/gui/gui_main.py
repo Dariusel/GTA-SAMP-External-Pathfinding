@@ -17,7 +17,7 @@ from resources.utils.memory.memory_adresses import *
 from resources.utils.memory.utils.memory_utils import try_get_gta_sa
 from resources.utils.memory.memory_events import blip_changed_event, marker_changed_event
 from resources.utils.autodriver.autodriver_main import Autodriver
-from resources.utils.keypress import key_up
+from resources.utils.keypress import release_keys
 
 
 
@@ -141,73 +141,81 @@ class MainGUI():
 
     def on_blip_update(self):
         if self.blip_autodrive:
-            if self.is_driving_to_marker:
-                self.is_driving_to_marker = False
-
-            if self.gta_sa:
-                # Stop autodriver if it was already running
-                if self.autodriver:
-                    self.stop_autodriver()
-                
-                player_position = Vector3(self.gta_sa.read_float(PLAYER_X),
-                                          self.gta_sa.read_float(PLAYER_Y),
-                                          self.gta_sa.read_float(PLAYER_Z))
-                
-                blip_position = Vector3(self.gta_sa.read_float(GPS_BLIP_X),
-                                               self.gta_sa.read_float(GPS_BLIP_Y),
-                                               self.gta_sa.read_float(GPS_BLIP_Z))
-                
-                nodes_data = load_json(NODES_DATA_JSON)
-                start_node = PathNode.get_closest_node_to_pos(nodes_data, player_position)
-                target_node = PathNode.get_closest_node_to_pos(nodes_data, blip_position)
-
-                self.solved_path = pathfind_dijkstra(nodes_data, start_node, target_node)
-                self.draw_solved_path()                
-
-                # Start driving with the current solved path
-                self.autodriver = Autodriver(self.solved_path)
-                self.autodriver.start_driving()
-
-                self.is_driving_to_blip = True
-
-                self.update_widget_states()
+            self.drive_to_blip()
 
 
     def on_marker_update(self):
         if self.marker_autodrive:
-            # If it's already driving to blip return since blip is priority
-            if self.is_driving_to_blip:
-                return
-            
-            if self.gta_sa:
-                # Stop autodriver if it was already running
-                if self.autodriver:
-                    self.stop_autodriver()
-                
-                player_position = Vector3(self.gta_sa.read_float(PLAYER_X),
-                                          self.gta_sa.read_float(PLAYER_Y),
-                                          self.gta_sa.read_float(PLAYER_Z))
-                
-                marker_position = Vector3(self.gta_sa.read_float(GPS_MARKER_X),
-                                               self.gta_sa.read_float(GPS_MARKER_Y),
-                                               self.gta_sa.read_float(GPS_MARKER_Z))
-                
-                print(marker_position)
-                
-                nodes_data = load_json(NODES_DATA_JSON)
-                start_node = PathNode.get_closest_node_to_pos(nodes_data, player_position)
-                target_node = PathNode.get_closest_node_to_pos(nodes_data, marker_position)
+            self.drive_to_marker()
 
-                self.solved_path = pathfind_dijkstra(nodes_data, start_node, target_node)
-                self.draw_solved_path()
 
-                # Start driving with the current solved path
-                self.autodriver = Autodriver(self.solved_path)
-                self.autodriver.start_driving()
+    def drive_to_blip(self):
+        if not self.gta_sa:
+            return
+        
+        if self.is_driving_to_marker:
+            self.is_driving_to_marker = False
 
-                self.is_driving_to_marker = True
+        # Stop autodriver if it was already running
+        if self.autodriver:
+            self.stop_autodriver()
+        
+        player_position = Vector3(self.gta_sa.read_float(PLAYER_X),
+                                  self.gta_sa.read_float(PLAYER_Y),
+                                  self.gta_sa.read_float(PLAYER_Z))
+        
+        blip_position = Vector3(self.gta_sa.read_float(GPS_BLIP_X),
+                                       self.gta_sa.read_float(GPS_BLIP_Y),
+                                       self.gta_sa.read_float(GPS_BLIP_Z))
+        
+        nodes_data = load_json(NODES_DATA_JSON)
+        start_node = PathNode.get_closest_node_to_pos(nodes_data, player_position)
+        target_node = PathNode.get_closest_node_to_pos(nodes_data, blip_position)
 
-                self.update_widget_states()
+        self.solved_path = pathfind_dijkstra(nodes_data, start_node, target_node)
+        self.draw_solved_path()      
+
+        # Start driving with the current solved path
+        self.autodriver = Autodriver(self.solved_path)
+        self.autodriver.start_driving()
+
+        self.is_driving_to_blip = True
+
+        self.update_widget_states()
+
+
+    def drive_to_marker(self):
+        if not self.gta_sa:
+            return
+        
+        if self.is_driving_to_blip:
+            self.is_driving_to_blip = False
+
+        if self.autodriver:
+            self.stop_autodriver()
+                
+        player_position = Vector3(self.gta_sa.read_float(PLAYER_X),
+                                  self.gta_sa.read_float(PLAYER_Y),
+                                  self.gta_sa.read_float(PLAYER_Z))
+        
+        marker_position = Vector3(self.gta_sa.read_float(GPS_MARKER_X),
+                                       self.gta_sa.read_float(GPS_MARKER_Y),
+                                       self.gta_sa.read_float(GPS_MARKER_Z))
+        
+        nodes_data = load_json(NODES_DATA_JSON)
+        start_node = PathNode.get_closest_node_to_pos(nodes_data, player_position)
+        target_node = PathNode.get_closest_node_to_pos(nodes_data, marker_position)
+
+        self.solved_path = pathfind_dijkstra(nodes_data, start_node, target_node)
+        self.draw_solved_path()
+
+        # Start driving with the current solved path
+        self.autodriver = Autodriver(self.solved_path)
+        self.autodriver.start_driving()
+
+        self.is_driving_to_marker = True
+
+        self.update_widget_states()
 
 
     def calculate_player_polygon(self, position: Vector3, angle_orientation):
@@ -350,11 +358,7 @@ class MainGUI():
             self.is_driving_to_blip = False
             self.is_driving_to_marker = False
 
-            # Release all pressed keys
-            key_up(ord('W'))
-            key_up(ord('S'))
-            key_up(ord('A'))
-            key_up(ord('D'))
+            release_keys()
 
             self.update_widget_states()
 
