@@ -2,8 +2,8 @@ from PIL import Image
 from matplotlib import pyplot as plt
 
 from utils.vectors import Vector2, Vector3
-from utils.file_paths import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA
-from utils.nodes_classes import PathNode
+from utils.file_paths import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA, NODES_DATA_DETAILED_JSON
+from utils.nodes_classes import PathNode, Navi
 from utils.map_conversions import ingame_to_image_coords, image_to_ingame_coords
 from resources.utils import json_utils
 
@@ -14,16 +14,19 @@ MAP_LOGS = 'data/nodes_data/debug/map_logs.json'
 
 
 
-def display_map(nodes_array=None):
+def display_map(nodes_array_1=None, nodes_array_2=None):
     map_img = Image.open(MAP_PATH)
 
     fig, ax = plt.subplots()
     plt.imshow(map_img)
 
-    if nodes_array:
-        for node in nodes_array:
-            node_pos = ingame_to_image_coords(Vector3(node.x, 0, node.y), map_img)
-            plt.plot(node_pos.x, node_pos.z, 'r.', markersize=2)
+    if nodes_array_1:
+        for node in nodes_array_1:
+            node_pos_image = ingame_to_image_coords(Vector3(node.x, 0, node.y), map_img)
+            plt.plot(node_pos_image.x, node_pos_image.z, 'r.', markersize=2)
+        for node in nodes_array_2:
+            node_pos_image = ingame_to_image_coords(Vector3(node.x, 0, node.y), map_img)
+            plt.plot(node_pos_image.x, node_pos_image.z, 'g.', markersize=2)
 
     fig.canvas.mpl_connect('button_press_event', on_figure_click)
 
@@ -40,30 +43,10 @@ def on_figure_click(event):
     print(f'ID: {clicked_node.node_id}\n{clicked_node.to_dict()}')
 
 
-def get_closest_node_to_click(click_pos):
-    closest_node = None
-    closest_node_distance = float('inf')
-    
-    for node_id, node in nodes_data.items():
-        node = PathNode.from_dict(node)
-        
-        node_pos = Vector2(node.position.x, node.position.z)
-        node_distance = round(Vector2.distance(node_pos, click_pos), 2)
-        if node_distance < closest_node_distance:
-            closest_node_distance = node_distance
-            closest_node = (node_id, node)
-
-    with open(MAP_LOGS, 'r+') as file:
-        cur_text = file.read()
-        file.write(f'{closest_node[1].to_dict()}\n')
-
-    return closest_node
-
-
 def get_nodes_data(nodes_percent=100, only_display_nodes=[], only_display_segments=[]): # For performance reasons set nodes_percent to a lower number to only aquire that % of nodes
     # Changeable variables
-    only_display_nodes = []#[(33, 14870), (33, 14763)] # Format (x, y) x = Area ID, y = Node ID
-    only_display_segments = [14, 15] # Format [a,b,c...] where a,b,c = Area ID(segment)
+    only_display_nodes = [(0,36)]#[(33, 14870), (33, 14763)] # Format (x, y) x = Area ID, y = Node ID
+    only_display_segments = [0] # Format [a,b,c...] where a,b,c = Area ID(segment)
 
 
     # Do not modify variables
@@ -85,22 +68,17 @@ def get_nodes_data(nodes_percent=100, only_display_nodes=[], only_display_segmen
         if len(only_display_nodes) != 0:
             nodes_to_remove.append(node_id) # Remove all nodes then add
 
-            for x, y in only_display_nodes:
-                if (node_obj.area_id, node_obj.node_id) == (x, y):
-                    nodes_to_add.append((node_id, node))
-                    continue
-            continue
+            if (node_obj.area_id, node_obj.node_id) in only_display_nodes:
+                nodes_to_add.append((node_id, node))
+                continue
         
         # Only display segments
         elif len(only_display_segments) != 0:
             nodes_to_remove.append(node_id) # Remove all then add
 
-            for segment_id in only_display_segments:
-                if segment_id == node_obj.area_id:
-                    nodes_to_add.append((node_id, node))
-                    continue
-            
-            continue
+            if node_obj.area_id in only_display_segments:
+                nodes_to_add.append((node_id, node))
+                continue
         
         # Display only % percent nodes
         elif nodes_percent != 100:
@@ -131,9 +109,30 @@ def get_nodes_pos_array(nodes_data):
     return nodes_pos_array
 
 
+def get_nodes_data_temp():
+    nodes_data_detailed = json_utils.load_json(NODES_DATA_DETAILED_JSON)
+    return nodes_data_detailed
+
+
+def get_nodes_pos_array_temp(nodes_data):
+    nodes_pos_array = []
+
+    display_only_navi_nodes = [(0,38),(0,41)]
+
+    for segment_i, segment in enumerate(nodes_data['navi'].values()):
+        for node_i, node in enumerate(segment.values()):
+            if (segment_i,node_i) in display_only_navi_nodes:
+                node_pos = node["position"] 
+                nodes_pos_array.append(Vector2(float(node_pos["x"]), float(node_pos["y"])))
+    
+    return nodes_pos_array
+
 
 if __name__ == '__main__':
-    nodes_data = get_nodes_data(100)
+    nodes_data = get_nodes_data()
     nodes_pos_array = get_nodes_pos_array(nodes_data)
 
-    display_map(nodes_pos_array)
+    nodes_data_temp = get_nodes_data_temp()
+    nodes_pos_array_temp = get_nodes_pos_array_temp(nodes_data_temp)
+
+    display_map(nodes_pos_array, nodes_pos_array_temp)

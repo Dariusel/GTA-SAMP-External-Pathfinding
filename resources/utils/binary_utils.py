@@ -12,16 +12,14 @@ def split_binary_to_chunks(binary, chunkSize=4):
 
     return processed
 
-def flags_data_extractor(flags ,bitA_index, bitB_index): # Ex for link nodes count: bitA_index = 0, bitB_index = 3    
+def flags_data_extractor(flags ,bitA_index, bitB_index): # Ex for link nodes count: bitA_index = 0, bitB_index = 3
     flags_binary = bin(int(flags))
-    str_flags_binary = str(flags_binary)
+    str_flags_binary = str(flags_binary)[2:].zfill(16) # Convert to string and slice off the initial 0b & Ensure binary is atleast 2bytes (16 digits)
 
     if bitA_index == 0:
         sliced_str_flags_binary = str_flags_binary[-bitB_index-1:]
     else:
-        sliced_str_flags_binary = str_flags_binary[-bitB_index-1:-bitA_index]
+        sliced_str_flags_binary = str_flags_binary[-bitB_index-1:-bitA_index-1]
 
-    if len(sliced_str_flags_binary) == 1:
-        return 0 if int(sliced_str_flags_binary) == 0 else 1
-    else:
-        return int(sliced_str_flags_binary, 2)
+    return int(sliced_str_flags_binary, 2)
+
