@@ -19,7 +19,6 @@ def parse_line_based_on_category(data, line, cur_category, cur_segment, cur_node
 		link_id_end = int(line_content[3]) + adj_nodes_amount
 
 		cur_node_optional = {
-			"area_id": cur_segment,
 			"link_id_start": line_content[3],
 			"link_id_end": link_id_end
 		}
@@ -28,6 +27,7 @@ def parse_line_based_on_category(data, line, cur_category, cur_segment, cur_node
 			Vector3(line_content[0], line_content[2], line_content[1]), # POS
 			None, # Adj Nodes
 			line_content[4], # Node ID
+			cur_segment,
 			line_content[6], # Node Type
 			line_content[7], # Flags
 			cur_node_optional # Optional Params
@@ -95,11 +95,11 @@ def assign_adjacent_nodes_after_parse(data):
 			node_obj = PathNode.from_dict(node)
 
 			# To not write dict path every time
-			links_dict = data[NodeType.Links.value][f"Segment {node_obj.optional['area_id']}"]
-			lengths_dict = data[NodeType.LinkLengths.value][f"Segment {node_obj.optional['area_id']}"]
+			links_dict = data[NodeType.Links.value][f"Segment {node_obj.area_id}"]
+			lengths_dict = data[NodeType.LinkLengths.value][f"Segment {node_obj.area_id}"]
 
 			navi_nodes_dict = data[NodeType.Navi.value]
-			navi_links_dict = data[NodeType.NaviLinks.value][f"Segment {node_obj.optional['area_id']}"]
+			navi_links_dict = data[NodeType.NaviLinks.value][f"Segment {node_obj.area_id}"]
 
 			# Add adjacent data to PathNode
 			adj_nodes = {}
@@ -147,8 +147,7 @@ def create_final_data(data):
 			lookup_table[(segment_id, node_id)]['long_node_id'] = long_node_id
 			long_node_id += 1
 
-	# Update adj_nodes node_id to use the format without area_id(segments)
-	# TODO - Also make adj_nodes navi components use the format without area_id
+	# Update adj_nodes and navi 'node_id' param to use the format without area_id(segments)
 	for node_id, node in data_final.items():
 		adj_nodes_path = data_final[node_id]['adj_nodes']
 

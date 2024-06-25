@@ -2,10 +2,11 @@ from enum import Enum
 from resources.utils.vectors import Vector3, Vector2
 
 class PathNode():
-	def __init__(self, position=None, adj_nodes=None, node_id=None, node_type=None, flags=None, optional = {}):
+	def __init__(self, position=None, adj_nodes=None, node_id=None, area_id=None, node_type=None, flags=None, optional = {}):
 		self.position = position
 		self.adj_nodes = adj_nodes
 		self.node_id = int(node_id) if not isinstance(node_id, int) else node_id
+		self.area_id = int(area_id) if not isinstance(area_id, int) else area_id
 		self.node_type = int(node_type) if node_type is not None else node_type # 1,2,3,4[...] Belongs to type of node (cars, race-tracks, boats)
 		self.flags = int(flags) if flags is not None else flags
 		self.optional = optional
@@ -19,10 +20,28 @@ class PathNode():
 			},
 			"adj_nodes": self.adj_nodes,
 			"node_id": self.node_id,
+			"area_id": self.area_id,
 			"node_type": self.node_type,
 			"flags": self.flags,
 			"optional": self.optional
 		}
+	
+	def __str__(self):
+		adj_nodes_str = '\n'.join(str(adj) for adj in self.adj_nodes.values())
+
+		return (
+		# Main Info
+		f'=~=~=~=~   Node {self.node_id}   ~=~=~=~=\n'
+        f'Pos: ({self.position.x}, {self.position.y}, {self.position.z}), '
+        f'ID: {self.node_id}, '
+        f'Area: {self.area_id}, '
+        f'Type: {self.node_type}, '
+        f'Flags: {self.flags}\n\n'
+		
+		# Adj Info
+		f'Adjacent Nodes:\n'
+		f'{adj_nodes_str}\n\n'
+    )
 	
 	@classmethod
 	def from_dict(cls, dict_data):
@@ -30,6 +49,7 @@ class PathNode():
 			 Vector3(dict_data["position"]["x"], dict_data["position"]["y"], dict_data["position"]["z"]),
 			 dict_data["adj_nodes"],
 			 dict_data["node_id"],
+			 dict_data["area_id"],
 			 dict_data["node_type"],
 			 dict_data["flags"],
 			 dict_data["optional"])
@@ -75,6 +95,14 @@ class Navi():
 			"flags": self.flags,
 			"optional": self.optional
 		}
+
+	def __str__(self):
+		return(
+			f'Pos: ({self.position.x}, {self.position.y}), '
+			f'ID: {self.node_id}, '
+			f'Direction: ({self.direction.x}, {self.direction.y}), '
+			f'Flags: {self.flags}'
+		)
 	
 	@classmethod
 	def from_dict(cls, dict_data):
@@ -114,6 +142,16 @@ class AdjacentNode():
 			"navi": self.navi.to_dict(),
 			"optional": self.optional
 		}
+	
+	def __str__(self):
+		return(
+			# Adj Info
+			f'ID: {self.node_id}, '
+			f'Link-Length: {self.link_length}, '
+			
+			# Navi Info
+			f'{self.navi}'
+		)
 	
 	@classmethod
 	def from_dict(cls, dict_data):
