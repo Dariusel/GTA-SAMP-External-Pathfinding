@@ -7,33 +7,40 @@ from resources.utils.nodes_classes import PathNode, SlowdownType
 from resources.utils.math_utils import calculate_angle_between_2_vectors
 from resources.utils.vectors import Vector2
 
+driver = Autodriver._instance
 
-def calculate_target_speed(cur_speed: float, driver_to_slowdown_node_distance: float, slowdown_node_type: SlowdownType):
+def calculate_target_speed(cur_speed: float, driver_to_slowdown_node_distance: float, slowdown_node_type: SlowdownType, driver_to_node_angle: float):
+        driver_to_node_angle = driver_to_node_angle.__abs__()
+        driver_to_node_angle_multiplier = max(1 - (driver_to_node_angle / 45), 0) # Remap from [0,90] to [0,1] and inverse it so its [1,0]
+
         # Braking Logic
-        cur_speed_normalized = cur_speed / Autodriver.MAX_SPEED
+        cur_speed_normalized = cur_speed / driver.MAX_SPEED + (driver.MAX_SPEED*0.2) # Second part only tweaks it so it brakes later
         if slowdown_node_type == SlowdownType.SLOWDOWN:
             return max(
-                Autodriver.MAX_SPEED * min(
-                    (driver_to_slowdown_node_distance - Autodriver.DISTANCE_TO_NODE_THRESHOLD*cur_speed_normalized) / Autodriver.SLOWDOWN_DISTANCE,
+                driver.MAX_SPEED * driver_to_node_angle_multiplier * min(
+                    (driver_to_slowdown_node_distance - driver.DISTANCE_TO_NODE_THRESHOLD*cur_speed_normalized) / driver.SLOWDOWN_DISTANCE,
                     1
                 ),
-                Autodriver.MAX_SLOWDOWN_SPEED
+                driver.MAX_SLOWDOWN_SPEED
             )
         # Slow-down Logic
         elif slowdown_node_type == SlowdownType.BRAKE:
             return max(
-                Autodriver.MAX_SPEED * min(
-                    (driver_to_slowdown_node_distance - Autodriver.DISTANCE_TO_NODE_THRESHOLD*cur_speed_normalized) / Autodriver.BRAKING_DISTANCE,
+                driver.MAX_SPEED * driver_to_node_angle_multiplier * min(
+                    (driver_to_slowdown_node_distance - driver.DISTANCE_TO_NODE_THRESHOLD*cur_speed_normalized) / driver.BRAKING_DISTANCE,
                     1
                 ),
-                Autodriver.MAX_BRAKING_SPEED
+                driver.MAX_BRAKING_SPEED
             )
         # Finish Logic
         elif slowdown_node_type == SlowdownType.FINISH:
-            return Autodriver.MAX_SPEED * min(
-                driver_to_slowdown_node_distance / Autodriver.FINISH_DISTANCE,
+            return max(
+                 driver.MAX_SPEED * driver_to_node_angle_multiplier * min(
+                (driver_to_slowdown_node_distance-driver.DISTANCE_TO_NODE_THRESHOLD/2) / driver.FINISH_DISTANCE,
                 1
-            )
+            ),
+            driver.MAX_FINISH_SPEED
+        )
         
 
 def get_slowdown_node(current_node_index, path):
@@ -52,14 +59,14 @@ def get_slowdown_node(current_node_index, path):
             node_angle_deg = math.degrees(node_angle_rad)
 
             # If found slight angle then get sum angle of next ANGLE_DETECTION_COUNT nodes
-            if node_angle_deg <= Autodriver.ANGLE_DETECTION_THRESHOLD:
+            if node_angle_deg <= driver.ANGLE_DETECTION_THRESHOLD:
                 # Check if there are ANGLE_DETECTION_COUNT nodes in front of this before calculating
-                if i >= (len(path) - Autodriver.ANGLE_DETECTION_COUNT):
+                if i >= (len(path) - driver.ANGLE_DETECTION_COUNT):
                     continue
 
                 # Get sum of next angles
                 cur_angle_detection_sum_deg = 0
-                for j in range(i, i + Autodriver.ANGLE_DETECTION_COUNT):
+                for j in range(i, i + driver.ANGLE_DETECTION_COUNT):
                     ba_vector = Vector2(path[j-1].position.x - path[j].position.x, path[j-1].position.z - path[j].position.z)
                     bc_vector = Vector2(path[j+1].position.x - path[j].position.x, path[j+1].position.z - path[j].position.z)
                     cur_node_angle_rad = calculate_angle_between_2_vectors(ba_vector, bc_vector)
@@ -69,10 +76,10 @@ def get_slowdown_node(current_node_index, path):
                 cur_angle_detection_sum_deg = 180 - cur_angle_detection_sum_deg
                 #print(f'(GNSN) - I: {i}, Angles_Sum_Deg: {cur_angle_detection_sum_deg}')
 
-                if cur_angle_detection_sum_deg <= Autodriver.BRAKE_ANGLE:
+                if cur_angle_detection_sum_deg <= driver.BRAKE_ANGLE:
                     return path[i], SlowdownType.BRAKE
                 
-                if cur_angle_detection_sum_deg <= Autodriver.SLOWDOWN_ANGLE:
+                if cur_angle_detection_sum_deg <= driver.SLOWDOWN_ANGLE:
                     return path[i], SlowdownType.SLOWDOWN
                 
         
@@ -97,12 +104,12 @@ def throttle_control(cur_speed: float, target_speed: float):
     else:
         key_up(ord('W'))
         speed_difference = cur_speed - target_speed
-        if speed_difference > Autodriver.BRAKING_SPEED_DIFFERENCE_THRESHOLD:
+        if speed_difference > driver.BRAKING_SPEED_DIFFERENCE_THRESHOLD:
             key_down(ord('S'))
 
 
 def direction_control(driver_to_node_angle: float):
-    if driver_to_node_angle.__abs__() > Autodriver.ANGLE_DIFFERENCE_THRESHOLD:           
+    if driver_to_node_angle.__abs__() > driver.ANGLE_DIFFERENCE_THRESHOLD:           
         if driver_to_node_angle > 0:
             key_down(ord('D'))
             key_up(ord('A'))

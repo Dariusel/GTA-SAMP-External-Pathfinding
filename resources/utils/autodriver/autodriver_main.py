@@ -3,6 +3,7 @@ import math
 from typing import List
 from time import sleep
 from threading import Thread
+import configparser
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from resources.utils.memory.memory_adresses import *
@@ -14,33 +15,7 @@ from resources.utils.math_utils import calculate_look_at_angle
 
 class Autodriver():
     _instance = None
-
-    # Configuration
-    UPDATE_INTERVAL = 0.04  # Update interval for autodriver in seconds
-
-    # Main
-    DISTANCE_TO_NODE_THRESHOLD = 17.5  # Distance threshold to switch to the next node
-    ANGLE_DIFFERENCE_THRESHOLD = 6  # Maximum allowable angle difference when turning towards node
-
-    # Speed
-    MAX_SPEED = 1.2  # Maximum autodriver speed
-
-    MAX_SLOWDOWN_SPEED = 0.7 # Maximum speed when having to slow down for a turn
-    MAX_BRAKING_SPEED = 0.35  # Maximum speed when having to brake/take a turn
-
-    # Braking
-    SLOWDOWN_DISTANCE = 75 # Distance from the slowdown node to start braking
-    BRAKING_DISTANCE = 75  # Distance from the turn to start braking
-    FINISH_DISTANCE = 45 # Distance from the finish node to start braking
-
-    BRAKING_SPEED_DIFFERENCE_THRESHOLD = 0.175  # Speed difference threshold for braking
-
-    # Slowdown Detection
-    ANGLE_DETECTION_THRESHOLD = 175 # If a slight angle is detected (<ANGLE_DETECTION_THRESHOLD) check real angle by getting the sum of the next ANGLE_DETECTION_COUNT nodes angles
-    ANGLE_DETECTION_COUNT = 5 # If found a slight angle, get the sum of the next ANGLE_DETECTION_COUNT nodes angles
-
-    SLOWDOWN_ANGLE = 145  # Node angle where the car should slow down
-    BRAKE_ANGLE = 117.5  # Minimum angle considered a turn
+    _config_file = None
 
     def __init__(self, path: List[PathNode]):
         if Autodriver._instance:
@@ -58,6 +33,38 @@ class Autodriver():
 
         self.path = path
         self.current_node_index = 0
+
+        # region Configuration
+        self.config_file = configparser.ConfigParser()
+        self.config_file.read(Autodriver._config_file)
+
+        self.UPDATE_INTERVAL = float(self.config_file.get('AutodriverConfig', 'UPDATE_INTERVAL'))  # Update interval for autodriver in seconds
+
+        # Main
+        self.DISTANCE_TO_NODE_THRESHOLD = float(self.config_file.get('AutodriverConfig', 'DISTANCE_TO_NODE_THRESHOLD'))  # Distance threshold to switch to the next node
+        self.ANGLE_DIFFERENCE_THRESHOLD = float(self.config_file.get('AutodriverConfig', 'ANGLE_DIFFERENCE_THRESHOLD'))  # Maximum allowable angle difference when turning towards node
+
+        # Speed
+        self.MAX_SPEED = float(self.config_file.get('AutodriverConfig', 'MAX_SPEED'))  # Maximum autodriver speed
+
+        self.MAX_SLOWDOWN_SPEED = float(self.config_file.get('AutodriverConfig', 'MAX_SLOWDOWN_SPEED')) # Maximum speed when having to slow down for a turn
+        self.MAX_BRAKING_SPEED = float(self.config_file.get('AutodriverConfig', 'MAX_BRAKING_SPEED'))  # Maximum speed when having to brake/take a turn
+        self.MAX_FINISH_SPEED = float(self.config_file.get('AutodriverConfig', 'MAX_FINISH_SPEED')) # Max speed when coming to a stop for finishing
+
+        # Braking
+        self.SLOWDOWN_DISTANCE = float(self.config_file.get('AutodriverConfig', 'SLOWDOWN_DISTANCE')) # Distance from the slowdown node to start braking
+        self.BRAKING_DISTANCE = float(self.config_file.get('AutodriverConfig', 'BRAKING_DISTANCE'))  # Distance from the turn to start braking
+        self.FINISH_DISTANCE = float(self.config_file.get('AutodriverConfig', 'FINISH_DISTANCE')) # Distance from the finish node to start braking
+
+        self.BRAKING_SPEED_DIFFERENCE_THRESHOLD = float(self.config_file.get('AutodriverConfig', 'BRAKING_SPEED_DIFFERENCE_THRESHOLD'))  # Speed difference threshold for braking
+
+        # Slowdown Detection
+        self.ANGLE_DETECTION_THRESHOLD = float(self.config_file.get('AutodriverConfig', 'ANGLE_DETECTION_THRESHOLD')) # If a slight angle is detected (<ANGLE_DETECTION_THRESHOLD) check real angle by getting the sum of the next ANGLE_DETECTION_COUNT nodes angles
+        self.ANGLE_DETECTION_COUNT = int(self.config_file.get('AutodriverConfig', 'ANGLE_DETECTION_COUNT')) # If found a slight angle, get the sum of the next ANGLE_DETECTION_COUNT nodes angles
+
+        self.SLOWDOWN_ANGLE = float(self.config_file.get('AutodriverConfig', 'SLOWDOWN_ANGLE'))  # Node angle where the car should slow down
+        self.BRAKE_ANGLE = float(self.config_file.get('AutodriverConfig', 'BRAKE_ANGLE'))  # Minimum angle considered a turn
+        #endregion
 
     
     def start_driving(self):
@@ -98,7 +105,7 @@ class Autodriver():
             driver_to_node_distance = Vector3.distance(driver_pos, cur_node.position)
         
             # Drive to node while distance is smaller then threshold
-            while driver_to_node_distance > Autodriver.DISTANCE_TO_NODE_THRESHOLD:
+            while driver_to_node_distance > self.DISTANCE_TO_NODE_THRESHOLD:
                 if self.is_paused:
                     return
 
@@ -119,7 +126,8 @@ class Autodriver():
                 cur_speed = self.gta_sa.read_float(CAR_SPEED)
 
                 # Calculate target_speed
-                target_speed = calculate_target_speed(cur_speed, driver_to_slowdown_node_distance, slowdown_node_type)
+                target_speed = calculate_target_speed(cur_speed, driver_to_slowdown_node_distance, slowdown_node_type, driver_to_node_angle)
+                print(target_speed)
 
                 # Throttle Control
                 throttle_control(cur_speed, target_speed)
@@ -127,7 +135,7 @@ class Autodriver():
                 # Direction Control
                 direction_control(driver_to_node_angle)
 
-                sleep(Autodriver.UPDATE_INTERVAL)
+                sleep(self.UPDATE_INTERVAL)
 
             if cur_node == slowdown_node:
                 slowdown_node, slowdown_node_type = get_slowdown_node(self.current_node_index, self.path)

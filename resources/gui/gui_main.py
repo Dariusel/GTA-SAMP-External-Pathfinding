@@ -6,7 +6,7 @@ from PIL import ImageTk, Image
 import math
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from resources.utils.file_paths import MAP_IMG_PATH, NODES_DATA_JSON
+from resources.utils.file_paths import MAP_IMG_PATH, NODES_DATA_JSON, AUTODRIVER_CONFIGS_DIR
 from resources.utils.vectors import Vector2, Vector3
 from resources.utils.map_conversions import image_to_ingame_coords, ingame_to_image_coords
 from resources.utils.nodes_classes import PathNode
@@ -71,6 +71,13 @@ class MainGUI():
 
         self.autodriver = None
 
+        self.config_files = {}
+        for config in os.listdir(AUTODRIVER_CONFIGS_DIR):
+            if config.endswith('.ini'):
+                config_path = os.path.join(AUTODRIVER_CONFIGS_DIR, config)
+                self.config_files[config] = config_path
+        Autodriver._config_file = self.config_files['default.ini']
+
 
     def display_main(self):
         self.root.title('GTA-SAMP External Pathfinding')
@@ -84,6 +91,12 @@ class MainGUI():
         pathfind_menu = Menu(menu_bar, tearoff=0)
         menu_bar.add_cascade(label='Pathfind', menu=pathfind_menu)
         pathfind_menu.add_command(label='TEST', command=lambda: print("TEST"))
+
+        # 'Config' Menu
+        config_menu = Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label='Config', menu=config_menu)
+        for config_name in self.config_files.keys():
+            config_menu.add_command(label=config_name, command=lambda name=config_name: self.switch_autodriver_config(name))
 
         # Canvas for map image
         self.canvas = Canvas(self.root, width=512, height=512)
@@ -137,6 +150,10 @@ class MainGUI():
 
         self.root.mainloop()
     
+
+    def switch_autodriver_config(self, config):
+        Autodriver._config_file = self.config_files[config]
+
 
     def on_blip_update(self):
         if self.blip_autodrive:
