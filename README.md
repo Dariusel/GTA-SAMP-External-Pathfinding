@@ -21,7 +21,7 @@ This project provides an external pathfinding solution for GTA San Andreas Multi
 2. **Activate virtual enviroment**:
    ```sh
    call env/scripts/activate
-Or just run `terminal.bat` and it will automatically activate venv.
+  Or just run `terminal.bat` and it will automatically activate venv.
 
 3. **Install requirements**:
    ```sh
