@@ -1,14 +1,35 @@
 from resources.utils.pathfinding.utils.dijkstra_classes import SolveTableNode
-from resources.utils.nodes_classes import PathNode, AdjacentNode
-from resources.utils.vectors import Vector3
+from resources.utils.math_utils import vector_to_angle
+from resources.utils.nodes_classes import PathNode, AdjacentNode, Navi
+from resources.utils.vectors import Vector3, Vector2
+from resources.utils.binary_utils import flags_data_extractor
 
-import sys
 import time
+import math
 
+
+def is_valid_direction(cur_direction, adj_direction, right_lanes, left_lanes):
+    cur_angle_deg = cur_direction
+    adj_angle_deg = adj_direction
+    if isinstance(cur_direction, Vector2):
+        cur_angle_deg = math.degrees(vector_to_angle(cur_direction))
+    if isinstance(adj_direction, Vector2):
+        adj_angle_deg = math.degrees(vector_to_angle(adj_direction))
+
+    direction_angle_difference = (adj_angle_deg - cur_angle_deg).__abs__()
+
+    if direction_angle_difference < 90: # Going relatively same direction
+        if left_lanes != 0:
+            return True
+        return False
+    else: # Not going same direction
+        if right_lanes != 0:
+            return True
+        return False
 
 
 def pathfind_dijkstra(nodes_data, start_node, end_node): #nodes_arr = [PathNode()] | start_node = PathNode() | end_node = PathNode()
-    start_time = time.time()
+    #start_time = time.time()
     solve_table = {} 
 
     open_nodes = {} # To visit
@@ -48,6 +69,10 @@ def pathfind_dijkstra(nodes_data, start_node, end_node): #nodes_arr = [PathNode(
         # Solve adjacent nodes for the previously calculated node (shortest_dist_node)
         for adj_node in current_node.adj_nodes.values():
             adj_node_obj = AdjacentNode.from_dict(adj_node)
+            navi_obj = Navi.from_dict(adj_node_obj.navi)
+
+            adj_node_pos_path = nodes_data[str(adj_node_obj.node_id)]['position']
+            adj_node_pos = Vector3(adj_node_pos_path['x'], adj_node_pos_path['y'], adj_node_pos_path['z'])
 
             # Continue if adj_node is explored
             if str(adj_node_obj.node_id) in closed_nodes.keys():
@@ -66,9 +91,12 @@ def pathfind_dijkstra(nodes_data, start_node, end_node): #nodes_arr = [PathNode(
             if current_node.node_id == start_node.node_id:
                 adj_node_solve_table.previous_node = current_node
 
-            if adj_node_dist < adj_node_solve_table.distance:
-                adj_node_solve_table.distance = adj_node_dist
-                adj_node_solve_table.previous_node = current_node
+            current_direction = Vector2(adj_node_pos.x, adj_node_pos.z) - Vector2(current_node.position.x, current_node.position.z)
+            right_lanes, left_lanes = flags_data_extractor(navi_obj.flags, 11, 13), flags_data_extractor(navi_obj.flags, 8, 10)
+            if is_valid_direction(current_direction, navi_obj.direction, right_lanes, left_lanes):
+                if adj_node_dist < adj_node_solve_table.distance:
+                    adj_node_solve_table.distance = adj_node_dist
+                    adj_node_solve_table.previous_node = current_node
             
             # Update solve_table values
             solve_table[str(adj_node_obj.node_id)] = adj_node_solve_table.to_dict()
@@ -82,8 +110,8 @@ def pathfind_dijkstra(nodes_data, start_node, end_node): #nodes_arr = [PathNode(
     
 
     # --- LOGGING ---
-    finish_time = round(time.time() - start_time, 3)
-    print(f'Finished in: {finish_time}')
+    #finish_time = round(time.time() - start_time, 3)
+    #print(f'Finished in: {finish_time}')
 
     # Solution
     solved_path = [] # PathNode[]
@@ -94,12 +122,4 @@ def pathfind_dijkstra(nodes_data, start_node, end_node): #nodes_arr = [PathNode(
         cur_solve_table_node = SolveTableNode.from_dict(solve_table[str(cur_solve_table_node.previous_node.node_id)])
 
     return(solved_path[::-1])
-    
-
-    #for solve_table_node_id, solve_table_node in solve_table.items():
-    #    solve_table_node = SolveTableNode.from_dict(solve_table_node)
-    #    
-    #    if solve_table_node.previous_node != None:
-    #        print(f'{solve_table_node_id} -> {solve_table_node.distance}, {solve_table_node.previous_node.node_id}')
-    #        continue
             

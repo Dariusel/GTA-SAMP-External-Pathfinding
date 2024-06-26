@@ -1,13 +1,7 @@
 ﻿import sys, os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'resources')))
-import resources.utils.keybinds_manager
-from resources.utils.math_utils import calculate_angle_between_3_positions
-from resources.utils.vectors import Vector3
-from resources.utils.json_utils import load_json, save_json
-from resources.utils.file_paths import NODES_DATA_JSON
-from resources.utils.pathfinding.Dijkstra import pathfind_dijkstra
-from resources.utils.nodes_classes import PathNode
+import resources.utils.keybinds_manager # IMPORTANT - DO NOT REMOVE
 from resources.gui.gui_main import MainGUI
 from resources.utils.memory.memory_adresses import *
 from resources.utils.memory.utils.memory_utils import *

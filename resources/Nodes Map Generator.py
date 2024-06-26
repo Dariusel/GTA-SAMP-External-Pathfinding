@@ -14,7 +14,7 @@ MAP_LOGS = 'data/nodes_data/debug/map_logs.json'
 
 
 
-def display_map(nodes_array_1=None):
+def display_map(nodes_array_1=None, nodes_array_2={}):
     map_img = Image.open(MAP_PATH)
 
     fig, ax = plt.subplots()
@@ -24,6 +24,10 @@ def display_map(nodes_array_1=None):
         for node in nodes_array_1:
             node_pos_image = ingame_to_image_coords(Vector3(node.x, 0, node.y), map_img)
             plt.plot(node_pos_image.x, node_pos_image.z, 'r.', markersize=2)
+    if nodes_array_2:
+        for node in nodes_array_2:
+            node_pos_image = ingame_to_image_coords(Vector3(node.x, 0, node.y), map_img)
+            plt.plot(node_pos_image.x, node_pos_image.z, 'g.', markersize=2)
 
     fig.canvas.mpl_connect('button_press_event', on_figure_click)
 
@@ -107,8 +111,25 @@ def get_nodes_pos_array(nodes_data):
     return nodes_pos_array
 
 
+def get_navi_pos_array(nodes_data):
+    navis_pos_array = []
+
+    for segment in nodes_data['navi'].values():
+        for navi in segment.values():
+            navi_pos = navi["position"] 
+            navis_pos_array.append(Vector2(float(navi_pos["x"]), float(navi_pos["y"])))
+    
+    return navis_pos_array
+
+
 if __name__ == '__main__':
-    nodes_data = get_nodes_data(nodes_percent=10)
+    nodes_data = get_nodes_data(nodes_percent=100)
     nodes_pos_array = get_nodes_pos_array(nodes_data)
+
+    #display_map(nodes_pos_array)
+
+    # Display navi nodes
+    navis_data = json_utils.load_json(NODES_DATA_DETAILED_JSON)
+    navis_pos_array = get_navi_pos_array(navis_data)
 
     display_map(nodes_pos_array)

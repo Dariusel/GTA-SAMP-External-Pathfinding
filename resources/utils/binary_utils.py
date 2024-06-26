@@ -1,10 +1,10 @@
-def split_binary_to_chunks(binary, chunkSize=4):
+def split_binary_to_chunks(str, chunkSize=4):
     processed = ''
     
-    if binary.startswith('0b'):
-        binary = binary[2:]
+    if str.startswith('0b'):
+        str = str[2:]
 
-    for x, i in enumerate(str(binary)):
+    for x, i in enumerate(str):
         processed += i
 
         if (x+1) % chunkSize == 0:
@@ -19,7 +19,7 @@ def flags_data_extractor(flags ,bitA_index, bitB_index): # Ex for link nodes cou
     if bitA_index == 0:
         sliced_str_flags_binary = str_flags_binary[-bitB_index-1:]
     else:
-        sliced_str_flags_binary = str_flags_binary[-bitB_index-1:-bitA_index-1]
+        sliced_str_flags_binary = str_flags_binary[-bitB_index-1:-bitA_index]
 
     return int(sliced_str_flags_binary, 2)
 

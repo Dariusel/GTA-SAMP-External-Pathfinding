@@ -1,7 +1,6 @@
 import sys, os
 from tkinter import *
 from tkinter import font
-from pymem import Pymem
 from PIL import ImageTk, Image
 
 import math

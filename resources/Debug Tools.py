@@ -9,10 +9,10 @@ while True:
 
     data = input('> ')
     if selection == 1:
-        num_binary = bin(int(data))
+        num_binary_str = str(bin(int(data)))[2:].zfill(20)
 
-        print(f'{split_binary_to_chunks(num_binary, 4)}')
-        print('NMLK JIHG FEDC BA54 3210')
+        print(f'{split_binary_to_chunks(num_binary_str, 4)}')
+        print('9876 5432 1098 7654 3210')
 
     elif selection == 2:
         num_int = int(data, 2)

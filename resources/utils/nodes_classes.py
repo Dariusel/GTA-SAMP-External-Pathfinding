@@ -158,7 +158,7 @@ class AdjacentNode():
 		return cls(
 			dict_data["node_id"],
 			dict_data["link_length"],
-			AdjacentNode.from_dict(dict_data["navi"]),
+			dict_data["navi"],
 			dict_data["optional"])
 
 

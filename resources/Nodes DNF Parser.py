@@ -110,7 +110,7 @@ def assign_adjacent_nodes_after_parse(data):
 				adj_navi_link_area_node_id = navi_links_dict[f"Navi Link {link}"]["node_area_id"]
 
 				adj_navi_node_id = flags_data_extractor(adj_navi_link_area_node_id, 0, 9)
-				adj_navi_area_id = flags_data_extractor(adj_navi_link_area_node_id, 9, 15)
+				adj_navi_area_id = flags_data_extractor(adj_navi_link_area_node_id, 10, 15)
 
 				adj_navi_obj = Navi.from_dict(navi_nodes_dict[f"Segment {adj_navi_area_id}"][f"Node {adj_navi_node_id}"])
 
