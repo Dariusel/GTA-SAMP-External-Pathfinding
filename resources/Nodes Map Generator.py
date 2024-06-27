@@ -1,10 +1,12 @@
 from PIL import Image
 from matplotlib import pyplot as plt
+import sys, os
 
-from utils.vectors import Vector2, Vector3
-from utils.file_paths import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA, NODES_DATA_DETAILED_JSON
-from utils.nodes_classes import PathNode, Navi
-from utils.map_conversions import ingame_to_image_coords, image_to_ingame_coords
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from resources.utils.vectors import Vector2, Vector3
+from resources.utils.file_paths import NODES_DATA_JSON, SOLVED_PATH_NODES_DATA, NODES_DATA_DETAILED_JSON
+from resources.utils.nodes_classes import PathNode, Navi
+from resources.utils.map_conversions import ingame_to_image_coords, image_to_ingame_coords
 from resources.utils import json_utils
 
 

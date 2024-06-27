@@ -112,7 +112,7 @@ class MainGUI():
         under_map_label = Label(text='LMB = Start Marker | RMB = End Marker', font=font.Font(family="Segoe UI", weight="bold"))
 
         # Buttons
-        self.button_drive = Button(self.root, text='Drive', width=20, height=2, command=self.drive_button)
+        self.button_drive = Button(self.root, text='Drive', width=20, height=2, command=self.drive_path)
         self.button_pause = Button(self.root, text='Pause', width=9, height=2, command=self.pause_button)
         self.button_stop = Button(self.root, text='Stop', width=9, height=2, command=self.stop_autodriver)
         self.button_compute = Button(self.root, text='Compute Path', width=20, height=2, command=self.compute_button)
@@ -342,7 +342,7 @@ class MainGUI():
         self.update_widget_states()
 
 
-    def drive_button(self):
+    def drive_path(self):
         if self.solved_path:
             # If Autodriver exists and is paused resume it else create new instance and start driving
             if self.autodriver:

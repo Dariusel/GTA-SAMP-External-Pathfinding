@@ -10,7 +10,7 @@ from resources.utils.memory.memory_adresses import *
 from resources.utils.nodes_classes import PathNode
 from resources.utils.vectors import Vector3
 from resources.utils.keypress import key_down, key_up, release_keys
-from resources.utils.math_utils import calculate_look_at_angle
+from resources.utils.math_utils import calculate_look_at_angle, angle_to_vector
 
 
 class Autodriver():
@@ -88,19 +88,26 @@ class Autodriver():
 
 
     def _drive(self):
-        from resources.utils.autodriver.utils.autodriver_utils import calculate_target_speed, get_slowdown_node, get_navi_node, throttle_control, direction_control
+        from resources.utils.autodriver.utils.autodriver_utils import calculate_target_speed, get_slowdown_node, get_navi_node_and_vector
+        from resources.utils.autodriver.utils.autodriver_utils import throttle_control, direction_control, get_lane_offset_based_on_navi
+        from resources.utils.autodriver.utils.autodriver_utils import apply_lane_offset_to_node
         # Find first slowdown_node
         slowdown_node, slowdown_node_type = get_slowdown_node(self.current_node_index, self.path)
         #print(f'{slowdown_node.node_id} TYPE({slowdown_node_type})')
 
         # Iterate over each node remaining in self.path
         for i, cur_node in enumerate(self.path, start=self.current_node_index):
-            self.current_node_index = i
+            self.current_node_index = i            
     
             driver_pos = Vector3(self.gta_sa.read_float(PLAYER_X),
                                  self.gta_sa.read_float(PLAYER_Y),
                                  self.gta_sa.read_float(PLAYER_Z))
             driver_orientation = self.gta_sa.read_float(PLAYER_ANGLE_RADIANS)
+
+            cur_navi, target_node_direction_vector = get_navi_node_and_vector(self.current_node_index, self.path)
+            if cur_navi and target_node_direction_vector:
+                lane_offset = get_lane_offset_based_on_navi(cur_navi, target_node_direction_vector)
+                cur_node = apply_lane_offset_to_node(cur_node, cur_navi.direction, lane_offset)
 
             driver_to_node_distance = Vector3.distance(driver_pos, cur_node.position)
         
@@ -120,8 +127,6 @@ class Autodriver():
 
                 driver_to_node_distance = Vector3.distance(driver_pos, cur_node.position)
                 driver_to_slowdown_node_distance = Vector3.distance(driver_pos, slowdown_node.position) if slowdown_node else float('inf')
-
-                cur_navi = get_navi_node(self.current_node_index, self.path)
                 
                 cur_speed = self.gta_sa.read_float(CAR_SPEED)
 

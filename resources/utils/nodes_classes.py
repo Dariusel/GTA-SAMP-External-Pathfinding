@@ -1,4 +1,5 @@
 from enum import Enum
+
 from resources.utils.vectors import Vector3, Vector2
 
 class PathNode():

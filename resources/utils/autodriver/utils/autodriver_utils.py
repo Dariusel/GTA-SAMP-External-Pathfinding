@@ -3,9 +3,10 @@ from typing import List
 
 from resources.utils.keypress import key_down, key_up
 from resources.utils.autodriver.autodriver_main import Autodriver
-from resources.utils.nodes_classes import PathNode, SlowdownType
-from resources.utils.math_utils import calculate_angle_between_2_vectors
-from resources.utils.vectors import Vector2
+from resources.utils.nodes_classes import PathNode, SlowdownType, Navi
+from resources.utils.math_utils import calculate_angle_between_2_vectors, vector_to_angle
+from resources.utils.vectors import Vector2, Vector3
+from resources.utils.binary_utils import flags_data_extractor
 
 driver = Autodriver._instance
 
@@ -87,15 +88,46 @@ def get_slowdown_node(current_node_index, path):
         return path[-1], SlowdownType.FINISH
 
 
-def get_navi_node(current_node_index, path: List[PathNode]):
+def get_navi_node_and_vector(current_node_index, path: List[PathNode]):
         cur_navi = None
         if current_node_index < len(path)-1:
             next_node_id = path[current_node_index+1].node_id
             for adj_node in path[current_node_index].adj_nodes.values():
                 if adj_node['node_id'] == next_node_id:
-                    cur_navi = adj_node['navi']
-                    return cur_navi
+                    cur_navi = Navi.from_dict(adj_node['navi'])
+                    direction_vector = path[current_node_index+1].position - path[current_node_index].position
+                    direction_vector = Vector2(direction_vector.x, direction_vector.z)
+                    return cur_navi, direction_vector
+        return None, None
                 
+
+def get_lane_offset_based_on_navi(navi_node: Navi, direction: Vector2, preffered_lane: int=2):
+    angle_difference = calculate_angle_between_2_vectors(navi_node.direction, direction)
+    angle_difference = math.degrees(angle_difference)
+
+    r_lanes, l_lanes = int(flags_data_extractor(navi_node.flags, 11, 13)), int(flags_data_extractor(navi_node.flags, 8, 10))
+    
+    preffered_lane -= 1 # Remap preffered lane if its 1 it will be 0, if its 2 it will be 1 etc
+    if angle_difference < 90:
+        if l_lanes > 1:
+            return -2.5 + (preffered_lane*5)
+        return 2.5
+    else:
+        if r_lanes > 1:
+            return 2.5 - (preffered_lane*5)
+        return -2.5
+
+
+def apply_lane_offset_to_node(node: PathNode, node_direction: Vector2, offset: float):
+    node_angle = vector_to_angle(node_direction)
+    node_angle = math.degrees(node_angle)
+
+    perpendicular_node_angle = node_angle - 90
+
+    node.position += Vector3(math.cos(perpendicular_node_angle)*offset, 0, math.sin(perpendicular_node_angle)*offset)
+
+    return node
+
 
 def throttle_control(cur_speed: float, target_speed: float):
     if cur_speed < target_speed:
