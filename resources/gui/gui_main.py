@@ -1,6 +1,7 @@
 import sys, os
 from tkinter import *
 from tkinter import font
+from tkinter import filedialog, messagebox
 from PIL import ImageTk, Image
 
 import math
@@ -10,13 +11,14 @@ from resources.utils.file_paths import MAP_IMG_PATH, NODES_DATA_JSON, AUTODRIVER
 from resources.utils.vectors import Vector2, Vector3
 from resources.utils.map_conversions import image_to_ingame_coords, ingame_to_image_coords
 from resources.utils.nodes_classes import PathNode
-from resources.utils.json_utils import load_json
+from resources.utils.json_utils import load_json, save_json
 from resources.utils.pathfinding.Dijkstra import pathfind_dijkstra
 from resources.utils.memory.memory_adresses import *
 from resources.utils.memory.utils.memory_utils import try_get_gta_sa
 from resources.utils.memory.memory_events import blip_changed_event, marker_changed_event
 from resources.utils.autodriver.autodriver_main import Autodriver
 from resources.utils.keypress import release_keys
+from resources.gui.utils.gui_classes import GuidingMarker
 
 
 
@@ -48,7 +50,9 @@ class MainGUI():
         self.gta_sa = try_get_gta_sa()
 
         self.player_marker = None
+
         self.start_marker = None
+        self.guiding_markers = []
         self.end_marker = None
 
         self.start_marker_position_ingame = None
@@ -62,9 +66,12 @@ class MainGUI():
 
         self.blip_autodrive_boolvar = BooleanVar()
         self.marker_autodrive_boolvar = BooleanVar()
+        self.is_circuit_boolvar = BooleanVar()
 
         self.blip_autodrive = False
         self.marker_autodrive = False
+
+        self.is_circuit = False
 
         self.is_driving_to_blip = False
         self.is_driving_to_marker = False
@@ -89,8 +96,9 @@ class MainGUI():
 
         # 'Pathfind' Menu
         pathfind_menu = Menu(menu_bar, tearoff=0)
-        menu_bar.add_cascade(label='Pathfind', menu=pathfind_menu)
-        pathfind_menu.add_command(label='TEST', command=lambda: print("TEST"))
+        menu_bar.add_cascade(label='Path', menu=pathfind_menu)
+        pathfind_menu.add_command(label='Save Path', command=self.save_path)
+        pathfind_menu.add_command(label='Load Path', command=self.load_path)
 
         # 'Config' Menu
         config_menu = Menu(menu_bar, tearoff=0)
@@ -101,6 +109,7 @@ class MainGUI():
         # Canvas for map image
         self.canvas = Canvas(self.root, width=512, height=512)
         self.canvas.bind('<Button-1>', self.set_start_position) # LMB -> start_marker
+        self.canvas.bind('<Button-2>', self.set_guider_position) # LMB -> start_marker
         self.canvas.bind('<Button-3>', self.set_end_position) # RMB -> end_marker
 
 
@@ -109,20 +118,22 @@ class MainGUI():
         self.canvas.create_image(0, 0, image=map_img_tk, anchor='nw')
 
         # Labels
-        under_map_label = Label(text='LMB = Start Marker | RMB = End Marker', font=font.Font(family="Segoe UI", weight="bold"))
+        under_map_label = Label(text='LMB = Start Marker | MMB = Guiding Marker | RMB = End Marker', font=font.Font(family="Segoe UI", weight="bold"))
 
         # Buttons
         self.button_drive = Button(self.root, text='Drive', width=20, height=2, command=self.drive_path)
         self.button_pause = Button(self.root, text='Pause', width=9, height=2, command=self.pause_button)
         self.button_stop = Button(self.root, text='Stop', width=9, height=2, command=self.stop_autodriver)
         self.button_compute = Button(self.root, text='Compute Path', width=20, height=2, command=self.compute_button)
-        self.button_clear = Button(self.root, text='Clear Start/End', width=20, height=2, command=self.clear_button)
+        self.button_clear = Button(self.root, text='Clear Start/End', width=20, height=2, command=self.clear_canvas)
 
         # Checkbuttons
         self.checkbutton_blip_autodrive = Checkbutton(self.root, text='Blip Autodrive (PRIORITY)', variable=self.blip_autodrive_boolvar,
-                                                      command=self.blip_autodrive_check)
+                                                      command=self.checkbuttons_update)
         self.checkbutton_marker_autodrive = Checkbutton(self.root, text='Marker Autodrive', variable=self.marker_autodrive_boolvar,
-                                                        command=self.marker_autodrive_check)
+                                                        command=self.checkbuttons_update)
+        self.checkbutton_is_circuit = Checkbutton(self.root, text='Is Circuit', variable=self.is_circuit_boolvar,
+                                                  command=self.checkbuttons_update)
 
         # Grid
         self.canvas.grid(row=0, column=0, columnspan=3, pady=10, padx=10)
@@ -137,6 +148,7 @@ class MainGUI():
 
         self.checkbutton_blip_autodrive.grid(column=0, row=2, pady=2, padx=10, sticky='w')
         self.checkbutton_marker_autodrive.grid(column=0, row=3, pady=2, padx=10, sticky='w')
+        self.checkbutton_is_circuit.grid(column=1, row=3, pady=2, padx=10, sticky='w')
 
         # Checks
         self.update_widget_states()
@@ -150,6 +162,79 @@ class MainGUI():
 
         self.root.mainloop()
     
+
+    def save_path(self):
+        if not self.solved_path:
+            messagebox.showwarning('No existing path', 'You have to create a path before saving it.')
+            return
+        
+        # Select save path
+        default_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'saves', 'paths'))
+                                      
+        save_path = filedialog.asksaveasfilename(
+            title="Select 'path' file",
+            filetypes=[("JSON files", "*.json")],
+            initialdir=default_dir
+        )
+        if not save_path.endswith('.json'):
+            save_path += '.json'
+
+        # Convert self.solved_path to JSON
+        path_json = {
+            "header": {
+                "is_circuit": self.is_circuit
+            },
+            "path":{
+
+            }
+        }
+        for node in self.solved_path:
+            path_json['path'][str(node.node_id)] = node.to_dict()
+
+        save_json(path_json, save_path)
+
+
+    def load_path(self):
+        # Select file
+        default_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'saves', 'paths'))
+                                      
+        path_file = filedialog.askopenfilename(
+            title="Select 'path' file",
+            filetypes=[("JSON files", "*.json")],
+            initialdir=default_dir
+        )
+
+        if not path_file:
+            return
+        
+        # Read file and place in self.solved_path
+        self.clear_canvas()
+
+        path_json = load_json(path_file)
+        self.solved_path = []
+        self.solved_path.extend(PathNode.from_dict(node) for node in path_json['path'].values())
+
+        self.is_circuit = path_json['header']['is_circuit']
+        self.is_circuit_boolvar.set(self.is_circuit)
+
+        # Updates canvas, buttons, checkbuttons
+        self.draw_solved_path()
+        self.update_widget_states()
+
+        # Draw start and end marker after drawing path so markers are on top
+        start_marker_pos_image = ingame_to_image_coords(self.solved_path[0].position, self.map_img_resized)
+
+        self.start_marker = self.canvas.create_oval(start_marker_pos_image.x - self.marker_size, start_marker_pos_image.z - self.marker_size,
+                                                    start_marker_pos_image.x + self.marker_size, start_marker_pos_image.z + self.marker_size,
+                                                    fill='green')
+        
+        # Only draw end marker if path is not circuit
+        if not self.is_circuit:
+            end_marker_pos_image = ingame_to_image_coords(self.solved_path[len(self.solved_path)-1].position, self.map_img_resized)
+            self.end_marker = self.canvas.create_oval(end_marker_pos_image.x - self.marker_size, end_marker_pos_image.z - self.marker_size,
+                                                      end_marker_pos_image.x + self.marker_size, end_marker_pos_image.z + self.marker_size,
+                                                      fill='red')
+
 
     def switch_autodriver_config(self, config):
         Autodriver._config_file = self.config_files[config]
@@ -172,6 +257,10 @@ class MainGUI():
         if self.is_driving_to_marker:
             self.is_driving_to_marker = False
 
+        if self.is_circuit:
+            self.is_circuit = False
+            self.is_circuit_boolvar.set(False)
+
         # Stop autodriver if it was already running
         if self.autodriver:
             self.stop_autodriver()
@@ -193,7 +282,7 @@ class MainGUI():
 
         # Start driving with the current solved path
         self.autodriver = Autodriver(self.solved_path)
-        self.autodriver.start_driving()
+        self.autodriver.start_driving(self.is_circuit)
 
         self.is_driving_to_blip = True
 
@@ -206,6 +295,10 @@ class MainGUI():
         
         if self.is_driving_to_blip:
             self.is_driving_to_blip = False
+
+        if self.is_circuit:
+            self.is_circuit = False
+            self.is_circuit_boolvar.set(False)
 
         if self.autodriver:
             self.stop_autodriver()
@@ -227,7 +320,7 @@ class MainGUI():
 
         # Start driving with the current solved path
         self.autodriver = Autodriver(self.solved_path)
-        self.autodriver.start_driving()
+        self.autodriver.start_driving(self.is_circuit)
 
         self.is_driving_to_marker = True
 
@@ -290,6 +383,21 @@ class MainGUI():
         self.update_widget_states()
 
 
+    def set_guider_position(self, event):
+        clicked_pos = Vector2(event.x, event.y)
+        clicked_pos_v3 = Vector3(clicked_pos.x, 0, clicked_pos.y)
+
+        guiding_markers_index = len(self.guiding_markers)
+        self.guiding_markers.append(GuidingMarker(
+            self.canvas.create_oval(clicked_pos.x - self.marker_size, clicked_pos.y - self.marker_size,
+                                                 clicked_pos.x + self.marker_size, clicked_pos.y + self.marker_size,
+                                                 fill='blue'),
+            image_to_ingame_coords(clicked_pos_v3, self.map_img_resized)   
+        ))
+
+        self.update_widget_states()
+
+
     def set_end_position(self, event):
         clicked_pos = Vector2(event.x, event.y)
         clicked_pos_v3 = Vector3(clicked_pos.x, 0, clicked_pos.y)
@@ -324,21 +432,25 @@ class MainGUI():
                 widget.configure(bg=theme['bg'], highlightthickness=0)
 
 
-    def blip_autodrive_check(self):
+    def checkbuttons_update(self):
+        # Blip Autodrive
         if self.blip_autodrive_boolvar.get():
             self.blip_autodrive = True
         else:
             self.blip_autodrive = False
 
-        self.update_widget_states()
-
-
-    def marker_autodrive_check(self):
+        # Marker Autodrive
         if self.marker_autodrive_boolvar.get():
             self.marker_autodrive = True
         else:
             self.marker_autodrive = False
-            
+
+        # Is Circuit
+        if self.is_circuit_boolvar.get():
+            self.is_circuit = True
+        else:
+            self.is_circuit = False
+
         self.update_widget_states()
 
 
@@ -353,7 +465,7 @@ class MainGUI():
                 return
             
             self.autodriver = Autodriver(self.solved_path)
-            self.autodriver.start_driving()
+            self.autodriver.start_driving(self.is_circuit)
 
             self.blip_autodrive_boolvar.set(False)
             self.marker_autodrive_boolvar.set(False)
@@ -405,6 +517,19 @@ class MainGUI():
             # Store 
             self.path_line_ids[i] = path_line_id
 
+        # Connect start and end node if circuit
+        if self.is_circuit:
+            start_node_pos = self.solved_path[0].position
+            end_node_pos = self.solved_path[len(self.solved_path)-1].position
+            start_node_pos_to_image = ingame_to_image_coords(start_node_pos, self.map_img_resized)
+            end_node_pos_to_image = ingame_to_image_coords(end_node_pos, self.map_img_resized)
+
+            path_line_id = self.canvas.create_line(start_node_pos_to_image.x, start_node_pos_to_image.z,
+                                                                end_node_pos_to_image.x, end_node_pos_to_image.z,
+                                                                width=2, fill='orange')
+            
+            self.path_line_ids[str(len(self.path_line_ids))] = path_line_id
+
 
     def compute_button(self):
         nodes_data = load_json(NODES_DATA_JSON)
@@ -412,27 +537,65 @@ class MainGUI():
         closest_node_to_start_marker = PathNode.get_closest_node_to_pos(nodes_data, self.start_marker_position_ingame)
         closest_node_to_end_marker = PathNode.get_closest_node_to_pos(nodes_data, self.end_marker_position_ingame)
 
-        self.solved_path = pathfind_dijkstra(nodes_data, closest_node_to_start_marker, closest_node_to_end_marker)
+        self.solved_path = []
+        if self.guiding_markers:
+            last_guider_node = None
+            for i, guider in enumerate(self.guiding_markers):
+                cur_guider_node = PathNode.get_closest_node_to_pos(nodes_data, guider.ingame_pos)
+
+                # If first guider
+                if i == 0:
+                    solved_path_segment = pathfind_dijkstra(nodes_data, closest_node_to_start_marker, cur_guider_node)
+                    self.solved_path.extend(solved_path_segment[:-1])
+
+                    last_guider_node = cur_guider_node
+
+                    continue
+                
+                solved_path_segment = pathfind_dijkstra(nodes_data, last_guider_node, cur_guider_node)
+                last_guider_node = cur_guider_node
+
+                self.solved_path.extend(solved_path_segment[:-1])
+
+            # Last guider
+            solved_path_segment = pathfind_dijkstra(nodes_data, last_guider_node, closest_node_to_end_marker)
+            self.solved_path.extend(solved_path_segment[:-1])
+
+        else:
+            self.solved_path = pathfind_dijkstra(nodes_data, closest_node_to_start_marker, closest_node_to_end_marker)
+        
+        # If circuit
+        if self.is_circuit:
+            solved_path_segment = pathfind_dijkstra(nodes_data, closest_node_to_end_marker, closest_node_to_start_marker)
+            self.solved_path.extend(solved_path_segment[:-1])
 
         self.draw_solved_path()
 
         self.update_widget_states()
 
 
-    def clear_button(self):
-        if self.start_marker != None:
+    def clear_canvas(self):
+        if self.start_marker:
             self.canvas.delete(self.start_marker)
             self.start_marker = None
 
-        if self.end_marker != None:
+        if self.end_marker:
             self.canvas.delete(self.end_marker)
             self.end_marker = None
+
+        if self.guiding_markers:
+            for marker in self.guiding_markers:
+                self.canvas.delete(marker.canvas_id)
+            self.guiding_markers = []
 
         if self.path_line_ids:
             for path_line_id in self.path_line_ids.values():
                 self.canvas.delete(path_line_id)
 
             self.path_line_ids = {}
+
+        if self.solved_path:
+            self.solved_path = []
 
         self.update_widget_states()
 
@@ -472,7 +635,7 @@ class MainGUI():
         # Check 'clear' button if it can be enabled
         if hasattr(self, 'button_clear'):
             self.button_clear.config(state=DISABLED)
-            if self.start_marker or self.end_marker:
+            if self.start_marker or self.end_marker or self.guiding_markers or self.solved_path:
                 self.button_clear.config(state=NORMAL)
 
         # Check 'blip_autodrive' checkbutton if it can be enabled
@@ -486,6 +649,13 @@ class MainGUI():
             self.checkbutton_marker_autodrive.config(state=DISABLED)
             if not self.autodriver:
                 self.checkbutton_marker_autodrive.config(state=NORMAL)
+
+        # Check 'is_circuit' checkbutton if it can be enabled
+        if hasattr(self, 'checkbutton_is_circuit'):
+            self.checkbutton_is_circuit.config(state=NORMAL)
+            if self.solved_path:
+                self.checkbutton_is_circuit.config(state=DISABLED)
+
 
         # Check if 'gta_sa.exe' exists and draw text on canvas if not
         if not self.gta_sa:

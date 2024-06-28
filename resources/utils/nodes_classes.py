@@ -163,7 +163,6 @@ class AdjacentNode():
 			dict_data["optional"])
 
 
-
 class NodeType(Enum):
 	PathNodes = 'cars'
 	Peds = 'peds'

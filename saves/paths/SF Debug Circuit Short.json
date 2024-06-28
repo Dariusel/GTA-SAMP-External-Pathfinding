@@ -1,0 +1,2533 @@
+{
+  "header": {
+    "is_circuit": true
+  },
+  "path": {
+    "10388": {
+      "position": {
+        "x": -2809.0,
+        "y": 6.0,
+        "z": -180.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10387,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.875,
+              "y": -185.625
+            },
+            "node_id": 10387,
+            "direction": {
+              "x": 1.0,
+              "y": -99.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10389,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2808.875,
+              "y": -175.25
+            },
+            "node_id": 10388,
+            "direction": {
+              "x": -1.0,
+              "y": -99.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10388,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10387": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -191.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10386,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -195.625
+            },
+            "node_id": 10386,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10388,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.875,
+              "y": -185.625
+            },
+            "node_id": 10387,
+            "direction": {
+              "x": 1.0,
+              "y": -99.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10387,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10386": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -200.125
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10218,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2809.0,
+              "y": -202.75
+            },
+            "node_id": 10218,
+            "direction": {
+              "x": -3.0,
+              "y": -99.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10387,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -195.625
+            },
+            "node_id": 10386,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10386,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10218": {
+      "position": {
+        "x": -2809.25,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10219,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2809.5,
+              "y": -218.375
+            },
+            "node_id": 10218,
+            "direction": {
+              "x": 3.0,
+              "y": 99.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10257,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2802.125,
+              "y": -210.375
+            },
+            "node_id": 10218,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 2": {
+          "node_id": 10386,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2809.0,
+              "y": -202.75
+            },
+            "node_id": 10218,
+            "direction": {
+              "x": -3.0,
+              "y": -99.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10218,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987139,
+      "optional": {}
+    },
+    "10257": {
+      "position": {
+        "x": -2799.0,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10218,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2802.125,
+              "y": -210.375
+            },
+            "node_id": 10218,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10258,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2795.75,
+              "y": -210.25
+            },
+            "node_id": 10257,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10257,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10258": {
+      "position": {
+        "x": -2792.75,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10257,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2795.75,
+              "y": -210.25
+            },
+            "node_id": 10257,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10259,
+          "link_length": 12,
+          "navi": {
+            "position": {
+              "x": -2786.5,
+              "y": -210.25
+            },
+            "node_id": 10258,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10258,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10259": {
+      "position": {
+        "x": -2780.5,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10256,
+          "link_length": 14,
+          "navi": {
+            "position": {
+              "x": -2773.25,
+              "y": -210.25
+            },
+            "node_id": 10256,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10258,
+          "link_length": 12,
+          "navi": {
+            "position": {
+              "x": -2786.5,
+              "y": -210.25
+            },
+            "node_id": 10258,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10259,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10256": {
+      "position": {
+        "x": -2766.25,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10260,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2762.75,
+              "y": -210.25
+            },
+            "node_id": 10256,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10259,
+          "link_length": 14,
+          "navi": {
+            "position": {
+              "x": -2773.25,
+              "y": -210.25
+            },
+            "node_id": 10256,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10256,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10260": {
+      "position": {
+        "x": -2757.25,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10256,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2762.75,
+              "y": -210.25
+            },
+            "node_id": 10256,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10267,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2757.25,
+              "y": -204.625
+            },
+            "node_id": 10260,
+            "direction": {
+              "x": 1.0,
+              "y": -99.0
+            },
+            "flags": "2048",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 2": {
+          "node_id": 10262,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2751.375,
+              "y": -210.25
+            },
+            "node_id": 10260,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10260,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987139,
+      "optional": {}
+    },
+    "10262": {
+      "position": {
+        "x": -2748.75,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10260,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2751.375,
+              "y": -210.25
+            },
+            "node_id": 10260,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10263,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2745.0,
+              "y": -210.25
+            },
+            "node_id": 10262,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10262,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10263": {
+      "position": {
+        "x": -2741.375,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10262,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2745.0,
+              "y": -210.25
+            },
+            "node_id": 10262,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10264,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2736.75,
+              "y": -210.25
+            },
+            "node_id": 10263,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10263,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10264": {
+      "position": {
+        "x": -2732.375,
+        "y": 6.0,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10263,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2736.75,
+              "y": -210.25
+            },
+            "node_id": 10263,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10265,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2728.125,
+              "y": -210.25
+            },
+            "node_id": 10264,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10264,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10265": {
+      "position": {
+        "x": -2724.0,
+        "y": 4.75,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10261,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2720.625,
+              "y": -210.25
+            },
+            "node_id": 10261,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10264,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2728.125,
+              "y": -210.25
+            },
+            "node_id": 10264,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10265,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10261": {
+      "position": {
+        "x": -2717.5,
+        "y": 3.5,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 9924,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2714.25,
+              "y": -210.25
+            },
+            "node_id": 9924,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10265,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2720.625,
+              "y": -210.25
+            },
+            "node_id": 10261,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10261,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "9924": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -210.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10261,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2714.25,
+              "y": -210.25
+            },
+            "node_id": 9924,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10295,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2698.375,
+              "y": -210.25
+            },
+            "node_id": 9924,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 2": {
+          "node_id": 10308,
+          "link_length": 17,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -202.625
+            },
+            "node_id": 9924,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 9924,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987139,
+      "optional": {}
+    },
+    "10308": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -192.625
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 9924,
+          "link_length": 17,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -202.625
+            },
+            "node_id": 9924,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10313,
+          "link_length": 12,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -186.375
+            },
+            "node_id": 10308,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10308,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10313": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -180.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10308,
+          "link_length": 12,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -186.375
+            },
+            "node_id": 10308,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10312,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -174.75
+            },
+            "node_id": 10312,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10313,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10311": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -160.0
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10310,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -156.0
+            },
+            "node_id": 10310,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10312,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -164.625
+            },
+            "node_id": 10311,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10311,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10310": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -152.0
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10309,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -148.5
+            },
+            "node_id": 10309,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10311,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -156.0
+            },
+            "node_id": 10310,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10310,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10309": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -145.125
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10302,
+          "link_length": 15,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -140.25
+            },
+            "node_id": 10302,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10310,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -148.5
+            },
+            "node_id": 10309,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10309,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10302": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -129.75
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10309,
+          "link_length": 15,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -140.25
+            },
+            "node_id": 10302,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10307,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -123.875
+            },
+            "node_id": 10302,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10302,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10307": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -118.125
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10302,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -123.875
+            },
+            "node_id": 10302,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10306,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -113.25
+            },
+            "node_id": 10306,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10307,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10306": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -108.625
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10305,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -104.375
+            },
+            "node_id": 10305,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10307,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -113.25
+            },
+            "node_id": 10306,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10306,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10305": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -100.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10304,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -94.25
+            },
+            "node_id": 10304,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10306,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -104.375
+            },
+            "node_id": 10305,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10305,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10304": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -88.5
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10303,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -85.375
+            },
+            "node_id": 10303,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10305,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -94.25
+            },
+            "node_id": 10304,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10304,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10303": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -82.375
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 9925,
+          "link_length": 12,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -77.75
+            },
+            "node_id": 9925,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10304,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -85.375
+            },
+            "node_id": 10303,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10303,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "9925": {
+      "position": {
+        "x": -2706.25,
+        "y": 3.125,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10417,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -63.25
+            },
+            "node_id": 9925,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10303,
+          "link_length": 12,
+          "navi": {
+            "position": {
+              "x": -2706.25,
+              "y": -77.75
+            },
+            "node_id": 9925,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 2": {
+          "node_id": 10327,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2698.875,
+              "y": -70.25
+            },
+            "node_id": 9925,
+            "direction": {
+              "x": -99.0,
+              "y": -1.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 3": {
+          "node_id": 10320,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2713.125,
+              "y": -70.25
+            },
+            "node_id": 9925,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 9925,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987140,
+      "optional": {}
+    },
+    "10320": {
+      "position": {
+        "x": -2717.375,
+        "y": 3.375,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 9925,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2713.125,
+              "y": -70.25
+            },
+            "node_id": 9925,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10325,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2720.5,
+              "y": -70.125
+            },
+            "node_id": 10320,
+            "direction": {
+              "x": 99.0,
+              "y": -1.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10320,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10324": {
+      "position": {
+        "x": -2730.875,
+        "y": 5.25,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10323,
+          "link_length": 5,
+          "navi": {
+            "position": {
+              "x": -2733.625,
+              "y": -70.125
+            },
+            "node_id": 10323,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10325,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2727.25,
+              "y": -70.125
+            },
+            "node_id": 10324,
+            "direction": {
+              "x": -99.0,
+              "y": -1.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10324,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10323": {
+      "position": {
+        "x": -2736.5,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10322,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2740.5,
+              "y": -70.125
+            },
+            "node_id": 10322,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10324,
+          "link_length": 5,
+          "navi": {
+            "position": {
+              "x": -2733.625,
+              "y": -70.125
+            },
+            "node_id": 10323,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10323,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10322": {
+      "position": {
+        "x": -2744.75,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10321,
+          "link_length": 5,
+          "navi": {
+            "position": {
+              "x": -2747.5,
+              "y": -70.125
+            },
+            "node_id": 10321,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10323,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2740.5,
+              "y": -70.125
+            },
+            "node_id": 10322,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10322,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10321": {
+      "position": {
+        "x": -2750.5,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10283,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2752.375,
+              "y": -70.5
+            },
+            "node_id": 10283,
+            "direction": {
+              "x": -99.0,
+              "y": -1.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10322,
+          "link_length": 5,
+          "navi": {
+            "position": {
+              "x": -2747.5,
+              "y": -70.125
+            },
+            "node_id": 10321,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10321,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10283": {
+      "position": {
+        "x": -2758.0,
+        "y": 6.375,
+        "z": -70.375
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10276,
+          "link_length": 15,
+          "navi": {
+            "position": {
+              "x": -2757.625,
+              "y": -78.125
+            },
+            "node_id": 10276,
+            "direction": {
+              "x": 4.0,
+              "y": -99.0
+            },
+            "flags": "2048",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10314,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2763.0,
+              "y": -70.375
+            },
+            "node_id": 10283,
+            "direction": {
+              "x": 99.0,
+              "y": -1.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 2": {
+          "node_id": 10321,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2752.375,
+              "y": -70.5
+            },
+            "node_id": 10283,
+            "direction": {
+              "x": -99.0,
+              "y": -1.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 3": {
+          "node_id": 10285,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2758.0,
+              "y": -63.75
+            },
+            "node_id": 10283,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2048",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10283,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987140,
+      "optional": {}
+    },
+    "10314": {
+      "position": {
+        "x": -2766.25,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10283,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2763.0,
+              "y": -70.375
+            },
+            "node_id": 10283,
+            "direction": {
+              "x": 99.0,
+              "y": -1.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10319,
+          "link_length": 4,
+          "navi": {
+            "position": {
+              "x": -2768.375,
+              "y": -70.125
+            },
+            "node_id": 10314,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10314,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10319": {
+      "position": {
+        "x": -2770.625,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10314,
+          "link_length": 4,
+          "navi": {
+            "position": {
+              "x": -2768.375,
+              "y": -70.125
+            },
+            "node_id": 10314,
+            "direction": {
+              "x": 100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10318,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2774.125,
+              "y": -70.125
+            },
+            "node_id": 10318,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10319,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10318": {
+      "position": {
+        "x": -2777.875,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10317,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2781.75,
+              "y": -70.125
+            },
+            "node_id": 10317,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10319,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2774.125,
+              "y": -70.125
+            },
+            "node_id": 10318,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10318,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10317": {
+      "position": {
+        "x": -2785.75,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10316,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2789.125,
+              "y": -70.125
+            },
+            "node_id": 10316,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10318,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2781.75,
+              "y": -70.125
+            },
+            "node_id": 10317,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10317,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10316": {
+      "position": {
+        "x": -2792.75,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10315,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2795.75,
+              "y": -70.125
+            },
+            "node_id": 10315,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10317,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2789.125,
+              "y": -70.125
+            },
+            "node_id": 10316,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10316,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10315": {
+      "position": {
+        "x": -2798.875,
+        "y": 6.0,
+        "z": -70.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 9923,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2801.125,
+              "y": -70.25
+            },
+            "node_id": 9923,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10316,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2795.75,
+              "y": -70.125
+            },
+            "node_id": 10315,
+            "direction": {
+              "x": -100.0,
+              "y": 0.0
+            },
+            "flags": "149760",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10315,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10395": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -82.375
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 9923,
+          "link_length": 12,
+          "navi": {
+            "position": {
+              "x": -2808.875,
+              "y": -77.625
+            },
+            "node_id": 9923,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "84224",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10397,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -85.25
+            },
+            "node_id": 10395,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10395,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10397": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -88.375
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10395,
+          "link_length": 6,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -85.25
+            },
+            "node_id": 10395,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10396,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -91.875
+            },
+            "node_id": 10396,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10397,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10396": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -95.5
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10385,
+          "link_length": 13,
+          "navi": {
+            "position": {
+              "x": -2808.875,
+              "y": -100.25
+            },
+            "node_id": 10385,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10397,
+          "link_length": 7,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -91.875
+            },
+            "node_id": 10396,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10396,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10385": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -108.75
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10396,
+          "link_length": 13,
+          "navi": {
+            "position": {
+              "x": -2808.875,
+              "y": -100.25
+            },
+            "node_id": 10385,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10394,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -114.375
+            },
+            "node_id": 10385,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10385,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10394": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -120.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10385,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -114.375
+            },
+            "node_id": 10385,
+            "direction": {
+              "x": 0.0,
+              "y": 100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10393,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -126.0
+            },
+            "node_id": 10393,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10394,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10393": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -131.875
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10392,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -136.0
+            },
+            "node_id": 10392,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10394,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -126.0
+            },
+            "node_id": 10393,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10393,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10392": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -140.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10391,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -144.625
+            },
+            "node_id": 10391,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10393,
+          "link_length": 8,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -136.0
+            },
+            "node_id": 10392,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10392,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10391": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -149.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10390,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -154.625
+            },
+            "node_id": 10390,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10392,
+          "link_length": 9,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -144.625
+            },
+            "node_id": 10391,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10391,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    },
+    "10390": {
+      "position": {
+        "x": -2808.875,
+        "y": 6.0,
+        "z": -160.25
+      },
+      "adj_nodes": {
+        "Adjacent 0": {
+          "node_id": 10389,
+          "link_length": 10,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -165.25
+            },
+            "node_id": 10389,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        },
+        "Adjacent 1": {
+          "node_id": 10391,
+          "link_length": 11,
+          "navi": {
+            "position": {
+              "x": -2808.75,
+              "y": -154.625
+            },
+            "node_id": 10390,
+            "direction": {
+              "x": 0.0,
+              "y": -100.0
+            },
+            "flags": "2304",
+            "optional": {}
+          },
+          "optional": {}
+        }
+      },
+      "node_id": 10390,
+      "area_id": 24,
+      "node_type": 1,
+      "flags": 987138,
+      "optional": {}
+    }
+  }
+}

@@ -12,7 +12,7 @@ GOTO_MARKER = frozenset([Key.ctrl_l, Key.alt_l, 'M'])
 
 # Functionality
 def start_autodriver():
-    pass
+    MainGUI._instance.drive_path()
 
 
 def stop_autodriver():
