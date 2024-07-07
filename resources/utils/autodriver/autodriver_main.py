@@ -1,7 +1,7 @@
 import sys, os
 import math
 from typing import List
-from time import sleep
+from time import sleep, time
 from threading import Thread
 import configparser
 
@@ -93,9 +93,9 @@ class Autodriver():
 
     def _drive(self):
         from resources.utils.autodriver.utils.autodriver_utils import (
-            calculate_target_speed, get_slowdown_node, get_navi_node_and_vector,
-            throttle_control, direction_control, get_lane_offset_based_on_navi,
-            apply_lane_offset_to_node, update_autodriver_instance, driver
+            calculate_target_speed, get_slowdown_node, get_lane_offset_based_on_navi,
+            throttle_control, direction_control, get_navi_node_and_vector,
+            update_autodriver_instance, apply_lane_offset_to_node
         )
         update_autodriver_instance()
 
@@ -116,16 +116,17 @@ class Autodriver():
             driver_orientation = self.gta_sa.read_float(PLAYER_ANGLE_RADIANS)
 
             # Lane detection system
-            #cur_navi, target_node_direction_vector = get_navi_node_and_vector(self.current_node_index, self.path)
-            #if cur_navi and target_node_direction_vector:
-            #    lane_offset = get_lane_offset_based_on_navi(cur_navi, target_node_direction_vector, 1)
-            #    target_node = apply_lane_offset_to_node(target_node, cur_navi.direction, lane_offset)
+            cur_navi, target_node_direction_vector = get_navi_node_and_vector(self.current_node_index, self.path)
+            if cur_navi and target_node_direction_vector:
+                lane_offset = get_lane_offset_based_on_navi(cur_navi, target_node_direction_vector, 2)
+                target_node = apply_lane_offset_to_node(target_node, cur_navi.direction, lane_offset)
 
             # Calculate the distance to the target node
             driver_to_node_distance = Vector3.distance(driver_pos, target_node.position)
         
             # Drive to the target node while the distance is greater than the threshold
             while driver_to_node_distance > self.DISTANCE_TO_NODE_THRESHOLD:
+                start_time = time()
                 if self.is_paused:
                     return
 
@@ -149,14 +150,18 @@ class Autodriver():
 
                 # Calculate the target speed
                 target_speed = calculate_target_speed(cur_speed, driver_to_slowdown_node_distance, slowdown_node_type, driver_to_node_angle)
-                print(f'Targ: {round(target_speed, 2)} | Dist: {round(driver_to_slowdown_node_distance, 2)}, Angle: {round(driver_to_node_angle, 2)} | Type: {slowdown_node_type}')
+                #print(f'Targ: {round(target_speed, 2)} | Dist: {round(driver_to_slowdown_node_distance, 2)}, Angle: {round(driver_to_node_angle, 2)} | Type: {slowdown_node_type}')
 
                 # Control the throttle and direction
                 throttle_control(cur_speed, target_speed)
                 direction_control(driver_to_node_angle)
 
                 # Pause for the update interval
-                sleep(self.UPDATE_INTERVAL)
+                iteration_time = time() - start_time
+                if iteration_time < self.UPDATE_INTERVAL:
+                    remainder = self.UPDATE_INTERVAL - iteration_time
+                    sleep(remainder)
+
 
             # Update the slowdown node if the current node is the slowdown node
             if cur_node == slowdown_node:

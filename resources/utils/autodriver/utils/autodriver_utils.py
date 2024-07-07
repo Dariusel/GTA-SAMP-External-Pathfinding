@@ -115,7 +115,7 @@ def get_navi_node_and_vector(current_node_index, path: List[PathNode]):
         return None, None
                 
 
-def get_lane_offset_based_on_navi(navi_node: Navi, direction: Vector2, preffered_lane: int=2):
+def get_lane_offset_based_on_navi(navi_node: Navi, direction: Vector2, preffered_lane: int=1):
     angle_difference = calculate_angle_between_2_vectors(navi_node.direction, direction)
     angle_difference = math.degrees(angle_difference)
 
@@ -124,11 +124,11 @@ def get_lane_offset_based_on_navi(navi_node: Navi, direction: Vector2, preffered
     preffered_lane -= 1 # Remap preffered lane if its 1 it will be 0, if its 2 it will be 1 etc
     if angle_difference < 90:
         if l_lanes > 1:
-            return -2.5 + (preffered_lane*5)
+            return 2.5 - (preffered_lane*5)
         return 2.5
     else:
         if r_lanes > 1:
-            return 2.5 - (preffered_lane*5)
+            return -2.5 + (preffered_lane*5)
         return -2.5
 
 
@@ -137,8 +137,10 @@ def apply_lane_offset_to_node(path_node: PathNode, node_direction: Vector2, offs
     node_angle = math.degrees(node_angle)
 
     perpendicular_node_angle = node_angle - 90
+    perpendicular_node_angle_rad = math.radians(perpendicular_node_angle)
+    #print(f'{perpendicular_node_angle}* - ({math.cos(perpendicular_node_angle_rad)}, {math.sin(perpendicular_node_angle_rad)})')
 
-    path_node.position += Vector3(math.cos(perpendicular_node_angle)*offset, 0, math.sin(perpendicular_node_angle)*offset)
+    path_node.position += Vector3(math.cos(perpendicular_node_angle_rad)*offset, 0, math.sin(perpendicular_node_angle_rad)*offset)
 
     return path_node
 

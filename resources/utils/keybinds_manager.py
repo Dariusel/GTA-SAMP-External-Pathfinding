@@ -4,6 +4,7 @@ from resources.gui.gui_main import MainGUI
 
 # Keybinds
 START_AUTODRIVER = frozenset([Key.ctrl_l, Key.alt_l, 'R']) # 'r' from run
+PAUSE_AUTODRIVER = frozenset([Key.ctrl_l, Key.alt, 'P'])
 STOP_AUTODRIVER = frozenset([Key.ctrl_l, Key.alt_l, 'Q']) # 'q' from quit
 
 GOTO_BLIP = frozenset([Key.ctrl_l, Key.alt_l, 'B'])
@@ -13,6 +14,10 @@ GOTO_MARKER = frozenset([Key.ctrl_l, Key.alt_l, 'M'])
 # Functionality
 def start_autodriver():
     MainGUI._instance.drive_path()
+
+
+def pause_autodriver():
+    MainGUI._instance.pause_autodriver()
 
 
 def stop_autodriver():
@@ -31,6 +36,7 @@ def goto_marker():
 # Functions Map
 hotkey_function_map = {
     START_AUTODRIVER: start_autodriver,
+    PAUSE_AUTODRIVER: pause_autodriver,
     STOP_AUTODRIVER: stop_autodriver,
     GOTO_BLIP: goto_blip,
     GOTO_MARKER: goto_marker,

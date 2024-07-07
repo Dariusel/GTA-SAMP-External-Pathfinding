@@ -122,7 +122,7 @@ class MainGUI():
 
         # Buttons
         self.button_drive = Button(self.root, text='Drive', width=20, height=2, command=self.drive_path)
-        self.button_pause = Button(self.root, text='Pause', width=9, height=2, command=self.pause_button)
+        self.button_pause = Button(self.root, text='Pause', width=9, height=2, command=self.pause_autodriver)
         self.button_stop = Button(self.root, text='Stop', width=9, height=2, command=self.stop_autodriver)
         self.button_compute = Button(self.root, text='Compute Path', width=20, height=2, command=self.compute_button)
         self.button_clear = Button(self.root, text='Clear Start/End', width=20, height=2, command=self.clear_canvas)
@@ -472,8 +472,11 @@ class MainGUI():
             self.update_widget_states()
 
 
-    def pause_button(self):
-        self.autodriver.pause_driving(True)
+    def pause_autodriver(self):
+        if not self.autodriver._instance.is_paused:
+            self.autodriver.pause_driving(True)
+        else:
+            self.autodriver.pause_driving(False)
 
         self.update_widget_states()
 

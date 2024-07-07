@@ -49,7 +49,7 @@ def on_figure_click(event):
 def get_nodes_data(nodes_percent=100, only_display_nodes=[], only_display_segments=[]): # For performance reasons set nodes_percent to a lower number to only aquire that % of nodes
     # Changeable variables
     only_display_nodes = []#[(42, 18996), (42, 19110)]#[(33, 14870), (33, 14763)] # Format (x, y) x = Area ID, y = Node ID
-    only_display_segments = [42] # Format [a,b,c...] where a,b,c = Area ID(segment)
+    only_display_segments = [16,24] # Format [a,b,c...] where a,b,c = Area ID(segment)
 
 
     # Do not modify variables
