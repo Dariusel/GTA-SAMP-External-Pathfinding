@@ -7,7 +7,7 @@ from PIL import ImageTk, Image
 import math
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from resources.utils.file_paths import MAP_IMG_PATH, NODES_DATA_JSON, AUTODRIVER_CONFIGS_DIR
+from resources.utils.file_paths import MAP_IMG_PATH, NODES_DATA_JSON, AUTODRIVER_CONFIGS_DIR, SCRIPTS_DIR
 from resources.utils.vectors import Vector2, Vector3
 from resources.utils.map_conversions import image_to_ingame_coords, ingame_to_image_coords
 from resources.utils.nodes_classes import PathNode
@@ -15,10 +15,13 @@ from resources.utils.json_utils import load_json, save_json
 from resources.utils.pathfinding.Dijkstra import pathfind_dijkstra
 from resources.utils.memory.memory_adresses import *
 from resources.utils.memory.utils.memory_utils import try_get_gta_sa
-from resources.utils.memory.memory_events import blip_changed_event, marker_changed_event
+from resources.utils.events.event_manager import EventManager, EventType
 from resources.utils.autodriver.autodriver_main import Autodriver
 from resources.utils.keypress import release_keys
 from resources.gui.utils.gui_classes import GuidingMarker
+from resources.gui.utils.utils import change_theme, Themes
+from resources.gui.nodes_editor.nodes_editor import NodesEditor
+from resources.utils.memory.memory_variables import GameData
 
 
 
@@ -29,14 +32,6 @@ class MainGUI():
     get_gta_sa_interval_ms = 2500
     marker_size = 4 # start/end marker
     player_marker_size = 10
-
-    theme_dark = {
-        'bg': '#333333',
-        'menu_bg': '#262626',
-        'text_color': '#c5c5c5',
-        'button_bg': '#262626',
-        'button_border': '#1a9ef7'
-    }
 
     def __init__(self):
         if MainGUI._instance:
@@ -61,8 +56,8 @@ class MainGUI():
         self.solved_path = []
         self.path_line_ids = {}
 
-        blip_changed_event.add_subscriber(self.on_blip_update)
-        marker_changed_event.add_subscriber(self.on_marker_update)
+        EventManager.subscribe(self.on_blip_update, EventType.BlipChangedEvent)
+        EventManager.subscribe(self.on_marker_update, EventType.MarkerChangedEvent)
 
         self.blip_autodrive_boolvar = BooleanVar()
         self.marker_autodrive_boolvar = BooleanVar()
@@ -85,6 +80,10 @@ class MainGUI():
                 self.config_files[config] = config_path
         Autodriver._config_file = self.config_files['default.ini']
 
+        self.selected_script = None
+
+        self.nodes_editor = None
+
 
     def display_main(self):
         self.root.title('GTA-SAMP External Pathfinding')
@@ -94,11 +93,11 @@ class MainGUI():
         menu_bar = Menu(self.root)
         self.root.config(menu=menu_bar)
 
-        # 'Pathfind' Menu
-        pathfind_menu = Menu(menu_bar, tearoff=0)
-        menu_bar.add_cascade(label='Path', menu=pathfind_menu)
-        pathfind_menu.add_command(label='Save Path', command=self.save_path)
-        pathfind_menu.add_command(label='Load Path', command=self.load_path)
+        # 'Path' Menu
+        path_menu = Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label='Path', menu=path_menu)
+        path_menu.add_command(label='Save Path', command=self.save_path)
+        path_menu.add_command(label='Load Path', command=self.load_path)
 
         # 'Config' Menu
         config_menu = Menu(menu_bar, tearoff=0)
@@ -106,10 +105,20 @@ class MainGUI():
         for config_name in self.config_files.keys():
             config_menu.add_command(label=config_name, command=lambda name=config_name: self.switch_autodriver_config(name))
 
+        # 'Scripts' Menu
+        scripts_menu = Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label='Scripts', menu=scripts_menu)
+        scripts_menu.add_command(label='Load Script', command=self.load_script)
+
+        # 'Tools' Menu
+        tools_menu = Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label='Tools', menu=tools_menu)
+        tools_menu.add_command(label='Nodes Editor', command=lambda: NodesEditor(self.root))
+
         # Canvas for map image
         self.canvas = Canvas(self.root, width=512, height=512)
         self.canvas.bind('<Button-1>', self.set_start_position) # LMB -> start_marker
-        self.canvas.bind('<Button-2>', self.set_guider_position) # LMB -> start_marker
+        self.canvas.bind('<Button-2>', self.set_guider_position) # MMB -> guider
         self.canvas.bind('<Button-3>', self.set_end_position) # RMB -> end_marker
 
 
@@ -154,9 +163,10 @@ class MainGUI():
         self.update_widget_states()
 
         # Theme
-        self.change_theme(self.theme_dark)
+        change_theme(self.root, Themes.theme_dark)
 
         # Misc
+        #self.root.protocol('WM_DELETE_WINDOW', self.on_close)
         self.update_player_on_map()
 
 
@@ -240,6 +250,22 @@ class MainGUI():
         Autodriver._config_file = self.config_files[config]
 
 
+    def load_script(self):
+        # Select file
+        default_dir = SCRIPTS_DIR
+
+        script_file = filedialog.askopenfilename(
+            title="Select 'script' file",
+            filetypes=[("Python", "*.py")],
+            initialdir=default_dir
+        )
+
+        if not script_file:
+            return
+
+        self.selected_script = script_file
+
+
     def on_blip_update(self):
         if self.blip_autodrive:
             self.drive_to_blip()
@@ -265,17 +291,9 @@ class MainGUI():
         if self.autodriver:
             self.stop_autodriver()
         
-        player_position = Vector3(self.gta_sa.read_float(PLAYER_X),
-                                  self.gta_sa.read_float(PLAYER_Y),
-                                  self.gta_sa.read_float(PLAYER_Z))
-        
-        blip_position = Vector3(self.gta_sa.read_float(GPS_BLIP_X),
-                                       self.gta_sa.read_float(GPS_BLIP_Y),
-                                       self.gta_sa.read_float(GPS_BLIP_Z))
-        
         nodes_data = load_json(NODES_DATA_JSON)
-        start_node = PathNode.get_closest_node_to_pos(nodes_data, player_position)
-        target_node = PathNode.get_closest_node_to_pos(nodes_data, blip_position)
+        start_node = PathNode.get_closest_node_to_pos(nodes_data, GameData.player_pos)
+        target_node = PathNode.get_closest_node_to_pos(nodes_data, GameData.blip_pos)
 
         self.solved_path = pathfind_dijkstra(nodes_data, start_node, target_node)
         self.draw_solved_path()      
@@ -302,18 +320,10 @@ class MainGUI():
 
         if self.autodriver:
             self.stop_autodriver()
-                
-        player_position = Vector3(self.gta_sa.read_float(PLAYER_X),
-                                  self.gta_sa.read_float(PLAYER_Y),
-                                  self.gta_sa.read_float(PLAYER_Z))
-        
-        marker_position = Vector3(self.gta_sa.read_float(GPS_MARKER_X),
-                                       self.gta_sa.read_float(GPS_MARKER_Y),
-                                       self.gta_sa.read_float(GPS_MARKER_Z))
         
         nodes_data = load_json(NODES_DATA_JSON)
-        start_node = PathNode.get_closest_node_to_pos(nodes_data, player_position)
-        target_node = PathNode.get_closest_node_to_pos(nodes_data, marker_position)
+        start_node = PathNode.get_closest_node_to_pos(nodes_data, GameData.player_pos)
+        target_node = PathNode.get_closest_node_to_pos(nodes_data, GameData.marker_pos)
 
         self.solved_path = pathfind_dijkstra(nodes_data, start_node, target_node)
         self.draw_solved_path()
@@ -357,10 +367,10 @@ class MainGUI():
         if self.player_marker:
             self.canvas.delete(self.player_marker)
 
-        player_position = Vector3(self.gta_sa.read_float(PLAYER_X), self.gta_sa.read_float(PLAYER_Y), self.gta_sa.read_float(PLAYER_Z))
+        player_position = GameData.player_pos
         player_position_to_image_pos = ingame_to_image_coords(player_position, self.map_img_resized)
 
-        player_orientation = self.gta_sa.read_float(PLAYER_ANGLE_RADIANS)
+        player_orientation = GameData.player_angle_radians
         self.player_marker = self.canvas.create_polygon(self.calculate_player_polygon(player_position_to_image_pos, math.degrees(player_orientation)),
                                                         fill='#FF00EC')
         
@@ -411,25 +421,6 @@ class MainGUI():
                                                     fill='red')
         
         self.update_widget_states()
-    
-
-    def change_theme(self, theme):
-        self.root.config(bg=theme['bg'])
-
-        # Apply to widgets
-        for widget in self.root.winfo_children():
-            widget_type = widget.winfo_class()
-
-            if widget_type == 'Menu':
-                pass
-            elif widget_type == 'Label':
-                widget.configure(bg=theme['bg'], fg=theme['text_color'])
-            elif widget_type == 'Button':
-                widget.configure(bg=theme['button_bg'], fg=theme['text_color'], bd=2)
-            elif widget_type == 'Checkbutton':
-                widget.configure(bg=theme['bg'], fg=theme['text_color'], selectcolor=theme['menu_bg'], activebackground=theme['menu_bg'])
-            elif widget_type == 'Canvas':
-                widget.configure(bg=theme['bg'], highlightthickness=0)
 
 
     def checkbuttons_update(self):
@@ -575,7 +566,7 @@ class MainGUI():
         self.draw_solved_path()
 
         self.update_widget_states()
-
+        
 
     def clear_canvas(self):
         if self.start_marker:

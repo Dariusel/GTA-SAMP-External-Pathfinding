@@ -30,7 +30,7 @@ def display_map(nodes_array_1=None, nodes_array_2={}):
         for node in nodes_array_2:
             node_pos_image = ingame_to_image_coords(Vector3(node.x, 0, node.y), map_img)
             plt.plot(node_pos_image.x, node_pos_image.z, 'g.', markersize=2)
-
+    
     fig.canvas.mpl_connect('button_press_event', on_figure_click)
 
     plt.show()

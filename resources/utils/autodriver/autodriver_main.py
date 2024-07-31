@@ -12,6 +12,8 @@ from resources.utils.nodes_classes import PathNode, SlowdownType
 from resources.utils.vectors import Vector3
 from resources.utils.keypress import key_down, key_up, release_keys
 from resources.utils.math_utils import calculate_look_at_angle, angle_to_vector
+from resources.utils.memory.memory_variables import GameData
+from utils.events.event_manager import EventManager, EventType
 
 
 class Autodriver():
@@ -110,10 +112,8 @@ class Autodriver():
             target_node = copy(cur_node)
 
             # Read the current driver position and orientation
-            driver_pos = Vector3(self.gta_sa.read_float(PLAYER_X),
-                                 self.gta_sa.read_float(PLAYER_Y),
-                                 self.gta_sa.read_float(PLAYER_Z))
-            driver_orientation = self.gta_sa.read_float(PLAYER_ANGLE_RADIANS)
+            driver_pos = GameData.player_pos
+            driver_orientation = GameData.player_angle_radians
 
             # Lane detection system
             cur_navi, target_node_direction_vector = get_navi_node_and_vector(self.current_node_index, self.path)
@@ -131,11 +131,8 @@ class Autodriver():
                     return
 
                 # Update the driver position and orientation
-                driver_pos = Vector3(
-                    self.gta_sa.read_float(PLAYER_X),
-                    self.gta_sa.read_float(PLAYER_Y),
-                    self.gta_sa.read_float(PLAYER_Z))
-                driver_orientation = self.gta_sa.read_float(PLAYER_ANGLE_RADIANS)
+                driver_pos = GameData.player_pos
+                driver_orientation = GameData.player_angle_radians
 
                 # Calculate the angle and distance to the target node
                 driver_to_node_angle = calculate_look_at_angle(driver_pos, driver_orientation, target_node.position)
@@ -146,7 +143,7 @@ class Autodriver():
                 driver_to_slowdown_node_distance = Vector3.distance(driver_pos, slowdown_node.position) if slowdown_node else float('inf')
                 
                 # Read the current speed of the car
-                cur_speed = self.gta_sa.read_float(CAR_SPEED)
+                cur_speed = GameData.car_speed
 
                 # Calculate the target speed
                 target_speed = calculate_target_speed(cur_speed, driver_to_slowdown_node_distance, slowdown_node_type, driver_to_node_angle)
@@ -169,6 +166,9 @@ class Autodriver():
 
         # Release control keys after the path is completed
         release_keys()
+
+        # Trigger the OnDestinationReached event
+        EventManager.send_event(EventType.DestinationReachedEvent)
         
         # If it's a circuit, restart the drive from the beginning
         if self.is_circuit:

@@ -37,3 +37,11 @@ SOLVED_PATH_NODES_DATA = os.path.join(main_dir,
 AUTODRIVER_CONFIGS_DIR = os.path.join(main_dir,
                                       'configs',
                                       'Autodriver')
+
+SCRIPTS_DIR = os.path.join(main_dir,
+                           'scripts')
+
+SOUNDS_DIR = os.path.join(main_dir,
+                          'resources',
+                          'data',
+                          'sounds')

@@ -33,3 +33,18 @@ if gta_sa:
     GPS_MARKER_Z = get_address_from_offsets(samp_dll_base_address + 0x21A10C, [0x10])
     
     CAR_SPEED = gta_sa_base_adress + 0x76F270
+else:
+    PLAYER_X = None
+    PLAYER_Y = None
+    PLAYER_Z = None
+    PLAYER_ANGLE_RADIANS = None
+
+    GPS_BLIP_X = None
+    GPS_BLIP_Y = None
+    GPS_BLIP_Z = None
+
+    GPS_MARKER_X = None
+    GPS_MARKER_Y = None
+    GPS_MARKER_Z = None
+
+    CAR_SPEED = None
