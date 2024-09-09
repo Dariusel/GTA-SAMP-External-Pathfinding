@@ -6,6 +6,7 @@ matplotlib==3.9.0
 numpy==2.0.0
 packaging==24.1
 pillow==10.3.0
+pygame==2.6.0
 Pymem==1.13.1
 pynput==1.7.7
 pyparsing==3.1.2

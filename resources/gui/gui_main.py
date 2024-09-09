@@ -13,8 +13,8 @@ from resources.utils.map_conversions import image_to_ingame_coords, ingame_to_im
 from resources.utils.nodes_classes import PathNode
 from resources.utils.json_utils import load_json, save_json
 from resources.utils.pathfinding.Dijkstra import pathfind_dijkstra
-from resources.utils.memory.memory_adresses import *
 from resources.utils.memory.utils.memory_utils import try_get_gta_sa
+from resources.utils.memory.memory_adresses import *
 from resources.utils.events.event_manager import EventManager, EventType
 from resources.utils.autodriver.autodriver_main import Autodriver
 from resources.utils.keypress import release_keys
@@ -28,8 +28,8 @@ from resources.utils.memory.memory_variables import GameData
 class MainGUI():
     _instance = None
 
+    get_gta_sa_interval = 2500 # miliseconds
     map_img_resized = Image.open(MAP_IMG_PATH).resize((512, 512), Image.Resampling.LANCZOS)
-    get_gta_sa_interval_ms = 2500
     marker_size = 4 # start/end marker
     player_marker_size = 10
 
@@ -42,7 +42,7 @@ class MainGUI():
         # Define root
         self.root = Tk()
 
-        self.gta_sa = try_get_gta_sa()
+        self.gta_sa = self.check_gta_sa_running()
 
         self.player_marker = None
 
@@ -83,6 +83,12 @@ class MainGUI():
         self.selected_script = None
 
         self.nodes_editor = None
+
+
+    def check_gta_sa_running(self):
+        try_get_gta_sa()
+
+        self.root.after(MainGUI.get_gta_sa_interval, self.check_gta_sa_running)
 
 
     def display_main(self):
@@ -277,7 +283,7 @@ class MainGUI():
 
 
     def drive_to_blip(self):
-        if not self.gta_sa:
+        if GameData.gta_sa:
             return
         
         if self.is_driving_to_marker:
@@ -361,7 +367,7 @@ class MainGUI():
 
     def update_player_on_map(self):
         # Return if gta_sa process is not found
-        if self.gta_sa == None:
+        if GameData.gta_sa == None:
             return
         
         if self.player_marker:
@@ -598,7 +604,7 @@ class MainGUI():
         # Check 'run' button if it can be enabled
         if hasattr(self, 'button_drive'):
             self.button_drive.config(state=DISABLED)
-            if self.gta_sa:
+            if GameData.gta_sa:
                 # Disable button if autodriver is running already
                 if self.autodriver:
                     if self.autodriver.is_paused:

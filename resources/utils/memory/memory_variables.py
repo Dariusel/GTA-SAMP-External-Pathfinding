@@ -65,7 +65,7 @@ class GameData:
             try:
                self.assign_values()
             except:
-                print('gta sa not found')
+                print('GTA:SA suddenly closed.')
                 GameData.gta_sa = None
             
             sleep(GameData.update_interval)

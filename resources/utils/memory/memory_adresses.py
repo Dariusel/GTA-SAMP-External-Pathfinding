@@ -17,6 +17,7 @@ if gta_sa:
 
 
 # If gta_sa exists assign addresses
+TEMP_GPS_ENABLED = False
 if gta_sa:
     # Variables
     PLAYER_X = gta_sa_base_adress + 0x76FF74 
@@ -24,9 +25,9 @@ if gta_sa:
     PLAYER_Z = gta_sa_base_adress + 0x76FF78
     PLAYER_ANGLE_RADIANS = gta_sa_base_adress + 0x76FAB0
 
-    GPS_BLIP_X = get_address_from_offsets(gta_sa_base_adress + 0x690750, [0x0, 0x0, 0x0, 0x0, 0x3C])
-    GPS_BLIP_Y = get_address_from_offsets(gta_sa_base_adress + 0x690750, [0x0, 0x0, 0x0, 0x0, 0x44])
-    GPS_BLIP_Z = get_address_from_offsets(gta_sa_base_adress + 0x690750, [0x0, 0x0, 0x0, 0x0, 0x40])
+    GPS_BLIP_X = get_address_from_offsets(gta_sa_base_adress + 0x690750, [0x0, 0x0, 0x0, 0x0, 0x3C]) if TEMP_GPS_ENABLED else float('-inf')
+    GPS_BLIP_Y = get_address_from_offsets(gta_sa_base_adress + 0x690750, [0x0, 0x0, 0x0, 0x0, 0x44]) if TEMP_GPS_ENABLED else float('-inf')
+    GPS_BLIP_Z = get_address_from_offsets(gta_sa_base_adress + 0x690750, [0x0, 0x0, 0x0, 0x0, 0x40]) if TEMP_GPS_ENABLED else float('-inf')
 
     GPS_MARKER_X = get_address_from_offsets(samp_dll_base_address + 0x21A10C, [0xC])
     GPS_MARKER_Y = get_address_from_offsets(samp_dll_base_address + 0x21A10C, [0x14])

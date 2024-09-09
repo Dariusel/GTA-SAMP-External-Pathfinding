@@ -9,11 +9,6 @@ from resources.utils.autodriver.autodriver_main import *
 
 
 if __name__ == '__main__':
-    #p1 = Vector3(4,0,0)
-    #p2 = Vector3(0,0,0)
-    #p3 = Vector3(2,0,2)
-
-    #print(calculate_angle_between_3_positions(p1,p2,p3))
     # Start the gui
     gui = MainGUI()
     
